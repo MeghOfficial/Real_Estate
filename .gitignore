@@ -2,3 +2,5 @@
 venv/
 __pycache__/
 .ipynb_checkpoints/
+# CatBoost training logs and metadata
+catboost_info/
