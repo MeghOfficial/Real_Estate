@@ -1,0 +1,1305 @@
+Price,Area,Bathrooms,Balconies,Current_Floor,Total_Floors,Furnishing_Status,Mapped_Area,Facing,Property_Age,Bedrooms,Area_Type,Property_Status
+126.0,2916.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+51.99,1755.0,3.0,2.0,3.0,7.0,Unknown,Pethapur,Unknown,New,3.0,Super Built-up,Under_Construction
+97.0,1908.0,3.0,2.0,4.0,8.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+125.0,2205.0,2.0,2.0,9.0,13.0,Unknown,Raysan,Unknown,New,3.0,Carpet,Ready_to_Move
+79.0,1755.0,3.0,1.0,8.0,13.0,unfurnished,Randesan,Unknown,5-10 years,3.0,Carpet,Ready_to_Move
+120.0,2475.0,3.0,1.0,6.0,13.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+167.0,3690.0,4.0,2.0,6.0,13.0,Unknown,Sargasan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+125.0,2124.0,3.0,2.0,7.0,9.0,Unknown,Sargasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+75.0,980.0,3.0,2.0,5.0,8.0,semi-furnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+97.0,483.0,1.0,1.0,27.0,33.0,unfurnished,Gift City,Unknown,New,1.0,Carpet,Under_Construction
+168.0,4714.5882,4.0,4.0,4.0,8.0,Unknown,Koba,Unknown,New,4.0,Carpet,Ready_to_Move
+95.0,2016.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+59.0,1422.0,2.0,1.0,4.0,8.0,furnished,Raysan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+60.5,1107.0,2.0,3.0,7.0,7.0,unfurnished,Vavol,East,1-5 years,2.0,Carpet,Ready_to_Move
+165.0,3875.04,4.0,2.0,12.0,14.0,Unknown,Koba,Unknown,New,4.0,Super Built-up,Ready_to_Move
+155.0,1581.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+54.0,706.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+60.0,1528.0,3.0,1.0,2.0,6.0,semi-furnished,Sargasan,Other,New,3.0,Super Built-up,Ready_to_Move
+95.0,2016.0,3.0,1.0,1.0,5.0,unfurnished,Kudasan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+95.0,2088.0,2.0,1.0,4.0,8.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Ready_to_Move
+65.0,930.0,2.0,1.0,5.0,8.0,Unknown,Kudasan,North-East,5-10 years,2.0,Carpet,Ready_to_Move
+103.0,2070.0,3.0,1.0,4.0,7.0,unfurnished,Kudasan,Unknown,New,3.0,Built-up,Ready_to_Move
+70.0,1449.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Ready_to_Move
+77.0,1845.0,3.0,2.0,2.0,5.0,unfurnished,Sargasan,North-East,5-10 years,3.0,Built-up,Ready_to_Move
+100.0,1935.0,3.0,1.0,13.0,13.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+145.0,3230.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+65.0,1582.2933,2.0,1.0,5.0,6.0,unfurnished,Kudasan,North-West,10-20 years,2.0,Super Built-up,Ready_to_Move
+120.0,2232.0,2.0,1.0,4.0,14.0,unfurnished,Kudasan,East,New,2.0,Super Built-up,Ready_to_Move
+129.0,2835.0,3.0,1.0,12.0,13.0,unfurnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+141.0,2250.0,3.0,1.0,2.0,6.0,unfurnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+62.0,1350.0,2.0,1.0,4.0,8.0,semi-furnished,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+145.0,2637.0,3.0,3.0,4.0,7.0,Unknown,Kudasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+120.0,2250.0,3.0,1.0,8.0,9.0,unfurnished,Koba,North-East,1-5 years,3.0,Super Built-up,Ready_to_Move
+111.0,2466.0,3.0,2.0,1.0,13.0,semi-furnished,Sargasan,South,New,3.0,Carpet,Ready_to_Move
+78.0,1980.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+60.0,1089.0,2.0,2.0,1.0,3.0,Unknown,Vavol,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+125.0,2277.0,3.0,2.0,8.0,9.0,Unknown,Raysan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+110.0,1090.0,3.0,1.0,2.0,7.0,unfurnished,Kudasan,East,1-5 years,3.0,Carpet,Ready_to_Move
+80.0,1710.0,3.0,1.0,4.0,4.0,Unknown,Randesan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+52.0,828.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+85.0,1773.0,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+139.0,2880.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+65.0,1305.0,2.0,1.0,2.0,7.0,unfurnished,Kudasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+120.0,2313.0,3.0,1.0,5.0,14.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+79.6,1791.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+57.0,852.0,2.0,1.0,1.0,7.0,unfurnished,Randesan,East,5-10 years,2.0,Carpet,Ready_to_Move
+75.0,1170.0,3.0,2.0,2.0,8.0,Unknown,Randesan,East,New,3.0,Carpet,Ready_to_Move
+79.0,1584.0,2.0,1.0,5.0,5.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+105.0,2358.0,3.0,1.0,4.0,13.0,unfurnished,Sargasan,East,New,3.0,Carpet,Ready_to_Move
+184.0,2637.0,3.0,3.0,4.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.6,1998.0,3.0,1.0,5.0,13.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.0,2540.2804,3.0,3.0,8.0,9.0,semi-furnished,Sargasan,East,1-5 years,3.0,Built-up,Ready_to_Move
+325.0,2800.0,5.0,3.0,1.0,7.0,unfurnished,Sargasan,East,1-5 years,4.0,Carpet,Ready_to_Move
+75.0,791.0,3.0,1.0,7.0,11.0,unfurnished,Sargasan,East,New,3.0,Carpet,Ready_to_Move
+150.0,1574.0,3.0,1.0,1.0,12.0,unfurnished,Raysan,East,New,3.0,Carpet,Ready_to_Move
+110.0,2142.0,3.0,1.0,4.0,5.0,unfurnished,Sargasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+220.00000000000003,4410.0,4.0,2.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,4.0,Built-up,Ready_to_Move
+155.0,2263.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+130.0,2520.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+95.0,1845.0,3.0,1.0,2.0,5.0,unfurnished,Kudasan,East,10-20 years,3.0,Super Built-up,Ready_to_Move
+82.0,1260.0,3.0,1.0,4.0,8.0,furnished,Kudasan,Unknown,5-10 years,3.0,Carpet,Ready_to_Move
+49.5,1107.0,2.0,3.0,7.0,7.0,unfurnished,Vavol,East,1-5 years,2.0,Carpet,Ready_to_Move
+77.0,1845.0,3.0,2.0,2.0,5.0,unfurnished,Sargasan,North-East,5-10 years,3.0,Built-up,Ready_to_Move
+65.0,930.0,2.0,1.0,5.0,8.0,unfurnished,Kudasan,North-East,5-10 years,2.0,Carpet,Ready_to_Move
+103.0,2070.0,3.0,1.0,4.0,7.0,unfurnished,Kudasan,Unknown,New,3.0,Built-up,Ready_to_Move
+90.0,1845.0,3.0,1.0,4.0,8.0,unfurnished,Kudasan,Other,New,3.0,Super Built-up,Ready_to_Move
+155.0,2448.0,3.0,1.0,3.0,9.0,unfurnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+72.0,1782.0,3.0,1.0,2.0,8.0,unfurnished,Kudasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+65.0,1323.0,2.0,1.0,7.0,11.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+140.0,1095.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Ready_to_Move
+129.0,2250.0,3.0,1.0,5.0,8.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+51.0,1485.0,2.0,1.0,3.0,7.0,unfurnished,Randheja,East,New,2.0,Super Built-up,Ready_to_Move
+120.0,1447.0,3.0,1.0,4.0,9.0,furnished,Raysan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+80.0,1800.0,3.0,1.0,4.0,8.0,semi-furnished,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.0,1215.0,3.0,1.0,2.0,7.0,Unknown,Kudasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+65.0,1440.0,2.0,1.0,9.0,11.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+60.0,708.0,2.0,1.0,2.0,8.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+68.0,1485.0,3.0,3.0,1.0,7.0,Unknown,Randheja,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+60.0,1323.0,2.0,1.0,3.0,7.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+65.0,1323.0,2.0,1.0,3.0,5.0,semi-furnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+105.0,2079.0,3.0,1.0,2.0,7.0,unfurnished,Sargasan,East,1-5 years,3.0,Carpet,Ready_to_Move
+60.0,1323.0,2.0,1.0,3.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+68.0,765.0,2.0,1.0,3.0,7.0,unfurnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+97.0,2160.0,3.0,3.0,5.0,7.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+250.0,3450.0,4.0,3.0,5.0,7.0,Unknown,Uvarsad,East,New,4.0,Super Built-up,Ready_to_Move
+45.0,1008.0,2.0,1.0,1.0,5.0,unfurnished,Kudasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+85.0,1800.0,3.0,1.0,2.0,6.0,furnished,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+142.0,3879.0,3.0,3.0,14.0,14.0,Unknown,Sargasan,North-East,New,3.0,Carpet,Ready_to_Move
+61.0,1453.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,New,2.0,Super Built-up,Ready_to_Move
+100.0,1890.0,3.0,1.0,4.0,5.0,semi-furnished,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+110.0,2610.0,3.0,3.0,3.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+75.0,1530.0,2.0,1.0,11.0,14.0,unfurnished,Sargasan,East,New,2.0,Carpet,Ready_to_Move
+120.0,2277.0,3.0,1.0,2.0,4.0,unfurnished,Sargasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+70.0,1935.0,3.0,1.0,3.0,10.0,unfurnished,Vavol,East,New,3.0,Super Built-up,Ready_to_Move
+67.0,1449.0,2.0,1.0,1.0,10.0,unfurnished,Kudasan,East,1-5 years,2.0,Carpet,Ready_to_Move
+105.0,2142.0,3.0,1.0,4.0,12.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+25.5,1050.0,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,New,2.0,Carpet,Ready_to_Move
+124.0,2863.224,3.0,1.0,2.0,2.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+45.0,1368.0,2.0,1.0,1.0,7.0,Unknown,Chiloda,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+127.0,2196.0,3.0,2.0,2.0,11.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+50.0,1134.0,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+65.0,1305.0,2.0,1.0,5.0,7.0,unfurnished,Kudasan,East,5-10 years,2.0,Carpet,Ready_to_Move
+40.0,1125.0,2.0,1.0,1.0,5.0,unfurnished,Vavol,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+139.0,2518.776,3.0,1.0,5.0,10.0,unfurnished,Koba,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+61.0,1305.0,2.0,1.0,4.0,8.0,unfurnished,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+43.5,1008.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+260.0,2400.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+100.0,2115.0,3.0,2.0,5.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+100.0,2115.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+100.0,1636.128,3.0,1.0,3.0,5.0,Unknown,Randesan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+36.0,1390.3514352,2.0,2.0,3.0,7.0,semi-furnished,Randheja,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+36.0,1334.7236,2.0,2.0,3.0,7.0,Unknown,Randheja,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+90.0,1845.0,1.0,2.0,6.0,13.0,furnished,Uvarsad,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+65.0,1269.0,2.0,1.0,4.0,8.0,furnished,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+54.0,1629.0,3.0,2.0,3.0,7.0,Unknown,Pethapur,East,Unknown,3.0,Built-up,Under_Construction
+125.0,955.0,3.0,1.0,2.0,14.0,furnished,Sargasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+75.0,1001.052,3.0,1.0,5.0,7.0,semi-furnished,Kudasan,Unknown,10-20 years,3.0,Carpet,Ready_to_Move
+155.0,1304.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+100.0,4000.0,3.0,3.0,12.0,12.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.0,736.0,1.0,1.0,15.0,31.0,Unknown,Gift City,Unknown,New,1.0,Super Built-up,Under_Construction
+34.0,904.176,1.0,1.0,2.0,6.0,unfurnished,Sargasan,Unknown,5-10 years,1.0,Super Built-up,Ready_to_Move
+78.0,1485.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+48.85,1453.14,2.0,1.0,5.0,5.0,unfurnished,Pethapur,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+75.0,1377.0,2.0,3.0,5.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+75.0,1200.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+40.0,351.0,1.0,1.0,1.0,5.5,furnished,Sargasan,Unknown,New,1.0,Carpet,Ready_to_Move
+50.0,1044.0,2.0,1.0,4.5,7.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+55.0,1215.0,2.0,1.0,4.0,8.0,unfurnished,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+70.0,1305.0,2.0,1.0,7.0,14.0,semi-furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+85.0,2023.632,3.0,1.0,3.0,5.0,semi-furnished,Randesan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+55.0,950.0,3.0,3.0,3.0,7.0,Unknown,Randheja,Unknown,New,3.0,Carpet,Ready_to_Move
+119.0,1325.0,2.0,2.0,12.0,22.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+150.0,1302.0,2.0,2.0,6.0,31.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+157.0,1200.0,3.0,2.0,0.0,1.0,Unknown,Sector 11,Unknown,New,3.0,Carpet,Ready_to_Move
+35.5,600.0,2.0,1.0,5.0,6.0,unfurnished,Vavol,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+70.0,1755.0,2.0,1.0,2.0,5.0,Unknown,Koba,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+67.0,1485.0,2.0,1.0,3.0,9.0,unfurnished,Sargasan,Other,New,2.0,Built-up,Ready_to_Move
+90.0,950.0,3.0,2.0,4.0,8.0,Unknown,Sughad,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+500.0,9000.0,5.0,4.0,10.0,13.0,unfurnished,Sargasan,Unknown,1-5 years,6.0,Carpet,Ready_to_Move
+33.5,747.0,1.0,2.0,1.0,5.5,Unknown,Koba,Unknown,New,1.0,Super Built-up,Ready_to_Move
+136.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+49.0,1422.0,2.0,1.0,12.0,14.0,Unknown,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+58.0,1030.95,2.0,3.0,0.0,1.0,semi-furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+55.0,846.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+55.0,1404.0,2.0,3.0,2.0,5.0,semi-furnished,Sargasan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+90.0,1584.0,3.0,1.0,5.0,13.0,Unknown,Kudasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+75.0,1575.0,3.0,3.0,6.0,13.0,Unknown,Randheja,Unknown,New,3.0,Super Built-up,Ready_to_Move
+145.0,1511.0,2.0,2.0,7.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+141.0,1590.0,2.0,1.0,17.0,34.0,unfurnished,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+72.0,850.0,3.0,2.0,4.0,12.0,unfurnished,Karai,Unknown,New,3.0,Carpet,Ready_to_Move
+32.0,828.0,2.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,New,1.0,Carpet,Ready_to_Move
+60.0,1179.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Other,New,2.0,Super Built-up,Ready_to_Move
+77.0,1845.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+69.0,1557.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+115.0,1122.56,3.0,1.0,2.0,5.0,furnished,Sargasan,Other,New,3.0,Carpet,Ready_to_Move
+77.0,1845.0,3.0,2.0,2.0,5.0,furnished,Gift City,Unknown,New,3.0,Built-up,Ready_to_Move
+118.0,1275.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+46.0,981.0,2.0,1.0,7.0,7.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+121.0,2550.0,3.0,1.0,4.0,8.0,unfurnished,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+65.0,1377.0,2.0,1.0,5.0,8.0,Unknown,Randesan,North,New,2.0,Super Built-up,Ready_to_Move
+100.0,2100.0,3.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+148.0,3420.0,4.0,2.0,5.0,8.0,Unknown,Randesan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+91.0,2124.0,3.0,3.0,5.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+55.0,1296.0,2.0,1.0,4.5,7.0,semi-furnished,Karai,Unknown,New,2.0,Carpet,Ready_to_Move
+125.0,2000.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Other,New,3.0,Super Built-up,Ready_to_Move
+65.0,1404.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,North-East,New,2.0,Carpet,Ready_to_Move
+85.0,2160.0,3.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+105.0,2655.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+26.0,861.112,2.0,2.0,1.0,5.5,unfurnished,Adalaj,North,New,1.0,Carpet,Ready_to_Move
+130.0,2025.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Other,New,3.0,Carpet,Ready_to_Move
+93.0,945.0,3.0,1.0,6.0,13.0,Unknown,Randesan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+24.0,1305.0,2.0,1.0,2.0,5.0,unfurnished,Kalol,Unknown,5-10 years,2.0,Built-up,Under_Construction
+55.0,1130.0,2.0,2.0,2.0,3.0,Unknown,Vavol,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+100.0,2690.0,3.0,1.0,13.0,14.0,unfurnished,Kudasan,Unknown,New,3.0,Super Built-up,Under_Construction
+102.0,1068.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+151.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+32.5,1085.0,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+60.0,1743.7518,3.0,2.0,7.0,8.0,semi-furnished,Vavol,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+95.0,1530.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+35.5,780.0,2.0,3.0,3.0,5.0,semi-furnished,Vavol,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+300.0,2205.0,3.0,2.0,9.0,13.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+51.0,1395.0,2.0,1.0,2.0,3.0,furnished,Vavol,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+99.0,1091.0,3.0,1.0,9.0,13.0,unfurnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+90.0,405.0,1.0,1.0,20.0,31.0,unfurnished,Gift City,Unknown,New,1.0,Carpet,Under_Construction
+300.0,6633.0,3.0,3.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,5.0,Carpet,Ready_to_Move
+59.0,1140.0,2.0,3.0,10.0,16.0,unfurnished,SP Ring Road,East,10-20 years,2.0,Built-up,Ready_to_Move
+78.0,1620.0,2.0,3.0,4.0,8.0,unfurnished,Sargasan,Other,New,3.0,Carpet,Ready_to_Move
+47.0,600.0,2.0,1.0,5.0,8.0,unfurnished,Pethapur,Unknown,New,2.0,Carpet,Ready_to_Move
+163.0,1307.0,2.0,3.0,14.0,31.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+75.0,980.0,3.0,4.0,7.0,7.0,semi-furnished,Chiloda,Unknown,New,3.0,Carpet,Ready_to_Move
+45.0,1125.0,2.0,1.0,2.0,4.0,unfurnished,Sargasan,East,10-20 years,2.0,Carpet,Ready_to_Move
+82.0,1773.0,3.0,1.0,5.0,8.0,furnished,Kudasan,Unknown,10-20 years,3.0,Super Built-up,Ready_to_Move
+63.0,1395.0,2.0,1.0,2.0,6.0,unfurnished,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+95.0,1845.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+75.0,1386.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+125.0,724.0,2.0,1.0,11.0,24.0,Unknown,Gift City,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+80.0,1656.0,3.0,1.0,4.0,5.0,unfurnished,Sargasan,Unknown,10-20 years,3.0,Super Built-up,Ready_to_Move
+50.0,1305.0,2.0,1.0,3.0,7.0,furnished,Vavol,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+175.0,880.0,2.0,1.0,25.0,34.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+37.0,780.0,2.0,2.0,2.0,6.0,Unknown,Chiloda,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+72.0,786.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+45.0,697.0,2.0,3.0,3.0,4.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Built-up,Ready_to_Move
+72.0,861.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+81.5,1602.0,2.0,3.0,11.0,14.0,furnished,Uvarsad,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+242.0,1180.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Carpet,Under_Construction
+140.0,2400.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Other,New,3.0,Super Built-up,Ready_to_Move
+75.0,782.0,2.0,1.0,11.0,14.0,semi-furnished,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+56.0,1296.0,2.0,1.0,4.0,8.0,furnished,Kudasan,Other,New,2.0,Carpet,Ready_to_Move
+48.5,1134.0,2.0,1.0,2.0,7.0,unfurnished,Sargasan,North-East,New,2.0,Carpet,Ready_to_Move
+79.0,881.0,2.0,1.0,4.0,10.0,semi-furnished,Raysan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+70.0,1071.0,2.0,1.0,2.0,6.0,furnished,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+300.0,2671.0,3.0,2.0,9.0,34.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+78.0,1845.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+65.75,1197.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+15.0,350.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+65.0,1476.0,2.0,1.0,4.0,13.0,semi-furnished,Raysan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+259.0,1180.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Carpet,Under_Construction
+46.0,1602.0,2.0,2.0,3.0,7.0,Unknown,Randheja,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+165.0,1319.0,3.0,1.0,4.0,8.0,furnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+44.17,1668.4045,2.0,1.0,5.0,12.0,unfurnished,Karai,Unknown,New,2.0,Carpet,Under_Construction
+95.0,1791.0,3.0,1.0,13.0,13.0,furnished,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+84.0,2303.4746,3.0,1.0,3.0,8.0,unfurnished,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+450.0,3552.087,2.0,1.0,0.0,1.0,Unknown,Sector 22,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+105.0,1404.0,2.0,3.0,13.0,13.0,unfurnished,Sargasan,East,1-5 years,2.0,Built-up,Ready_to_Move
+46.0,1400.0,2.0,2.0,8.0,13.0,Unknown,SP Ring Road,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+65.0,1359.0,2.0,1.0,5.0,7.0,furnished,Randesan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+72.0,786.0,2.0,1.0,7.0,9.0,unfurnished,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+115.0,1962.0,3.0,1.0,6.0,13.0,unfurnished,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+135.0,2475.0,3.0,1.0,10.0,14.0,unfurnished,Sargasan,North-East,New,3.0,Super Built-up,Ready_to_Move
+165.0,871.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Under_Construction
+50.0,1215.0,2.0,1.0,2.0,10.0,semi-furnished,Sargasan,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+95.0,1935.0,3.0,1.0,1.0,5.5,unfurnished,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+50.0,1242.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+67.0,1359.0,2.0,1.0,3.0,3.0,Unknown,Randesan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+170.0,1875.0,3.0,2.0,2.0,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+47.0,1224.0,2.0,1.0,2.0,6.0,semi-furnished,Vavol,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+51.0,1323.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,North,5-10 years,2.0,Super Built-up,Ready_to_Move
+50.0,1323.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,North,5-10 years,2.0,Super Built-up,Ready_to_Move
+53.0,1197.0,2.0,1.0,4.0,8.0,furnished,Sargasan,Other,New,2.0,Built-up,Ready_to_Move
+90.0,1935.0,3.0,1.0,2.0,5.0,unfurnished,Sargasan,Unknown,10-20 years,3.0,Super Built-up,Ready_to_Move
+30.0,990.0,2.0,2.0,1.0,4.0,semi-furnished,Kalol,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+110.0,2151.0,3.0,3.0,4.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+110.0,1000.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+85.0,782.0,2.0,1.0,3.0,7.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+114.0,1410.0,3.0,1.0,4.0,8.0,unfurnished,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+115.0,2412.0,2.0,1.0,2.0,6.0,semi-furnished,Randesan,East,Unknown,3.0,Carpet,Ready_to_Move
+80.0,1650.0,2.0,1.0,4.0,7.0,furnished,Kudasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+166.0,1511.0,2.0,1.0,5.0,8.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+100.0,843.0,3.0,1.0,5.0,8.0,unfurnished,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+110.0,1183.0,3.0,1.0,13.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+45.0,1170.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,West,10-20 years,2.0,Super Built-up,Ready_to_Move
+68.0,859.0,3.0,1.0,4.0,9.0,Unknown,Valad,East,Unknown,3.0,Carpet,Ready_to_Move
+76.0,1773.0,3.0,3.0,2.0,6.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+58.0,1548.0,3.0,2.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+55.0,819.0,2.0,1.0,5.0,5.0,semi-furnished,Sargasan,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+55.0,1395.0,2.0,1.0,5.0,5.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+140.0,2475.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+215.0,4383.0,4.0,2.0,2.0,12.0,furnished,Raysan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+58.0,1386.0,2.0,1.0,1.0,5.0,Unknown,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+52.0,635.0,2.0,1.0,2.0,4.0,semi-furnished,Raysan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+45.0,1170.0,2.0,3.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+114.0,1325.0,2.0,1.0,7.0,25.0,unfurnished,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+65.0,1278.0,2.0,1.0,2.0,6.0,furnished,Sargasan,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+210.0,3240.0,4.0,3.0,10.0,13.0,unfurnished,Kudasan,South-West,1-5 years,4.0,Super Built-up,Ready_to_Move
+95.0,529.0,1.0,2.0,7.0,33.0,Unknown,Gift City,Unknown,New,1.0,Carpet,Under_Construction
+40.0,1242.0,2.0,1.0,3.0,3.0,unfurnished,Pethapur,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+110.0,2300.0,3.0,1.0,13.0,14.0,semi-furnished,Koba,North-East,New,3.0,Built-up,Ready_to_Move
+37.74,970.0,3.0,2.0,3.0,7.0,Unknown,Kolavada,Unknown,New,3.0,Carpet,Ready_to_Move
+75.0,1935.0,3.0,1.0,5.0,5.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+52.0,1215.0,2.0,1.0,4.0,8.0,furnished,Kudasan,East,New,2.0,Super Built-up,Ready_to_Move
+43.0,1350.0,2.0,1.0,4.0,8.0,Unknown,Kalol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+145.0,3230.0,4.0,3.0,6.0,13.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+50.0,900.0,2.0,1.0,5.0,8.0,furnished,Randesan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+63.72,1593.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+22.0,365.0,1.0,1.0,0.0,5.0,unfurnished,Kalol,Unknown,5-10 years,1.0,Carpet,Ready_to_Move
+137.0,2844.0,3.0,3.0,2.0,12.0,Unknown,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+50.0,1625.3489,2.0,1.0,3.0,7.0,furnished,Kolavada,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+53.0,1152.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+60.0,1377.0,2.0,2.0,4.0,5.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+35.0,678.1256999999999,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,New,3.0,Carpet,Ready_to_Move
+93.0,2109.0,3.0,2.0,12.0,14.0,semi-furnished,Sargasan,Other,New,3.0,Carpet,Ready_to_Move
+95.0,1377.0,2.0,2.0,4.0,8.0,Unknown,Raysan,Unknown,New,2.0,Carpet,Ready_to_Move
+325.0,3100.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+80.0,2025.0,3.0,1.0,5.0,8.0,semi-furnished,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+100.0,2385.0,3.0,1.0,10.0,13.0,unfurnished,Randesan,West,New,3.0,Super Built-up,Under_Construction
+65.0,1260.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+100.0,1134.0,3.0,2.0,2.0,6.0,Unknown,Adalaj,South-East,Unknown,3.0,Carpet,Ready_to_Move
+145.0,2655.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+75.0,1791.0,3.0,2.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+50.0,1250.0,2.0,1.0,2.0,5.0,furnished,Vavol,Other,5-10 years,2.0,Carpet,Ready_to_Move
+80.0,1890.0,3.0,1.0,4.0,6.0,semi-furnished,Sargasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+35.0,675.0,1.0,1.0,4.0,8.0,Unknown,SG Highway,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+60.0,1135.0,2.0,2.0,3.0,7.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+53.0,1287.0,2.0,1.0,10.0,13.0,Unknown,Pethapur,Unknown,New,2.0,Super Built-up,Under_Construction
+65.0,1260.0,2.0,1.0,4.0,8.0,furnished,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+180.0,4248.0,3.0,2.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,5.0,Carpet,Ready_to_Move
+110.0,529.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Carpet,Under_Construction
+115.0,2475.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Under_Construction
+52.0,850.0,2.0,2.0,3.0,7.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+62.3,612.0,2.0,1.0,5.0,13.0,unfurnished,Gift City,Unknown,New,2.0,Carpet,Ready_to_Move
+46.0,2098.9605,3.0,2.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+72.0,2066.6688,3.0,1.0,1.0,13.0,unfurnished,Kalol,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+60.0,1245.0,2.0,1.0,13.0,14.0,furnished,Sargasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+137.0,2313.0,3.0,1.0,10.0,11.0,unfurnished,Sargasan,North-East,New,3.0,Carpet,Ready_to_Move
+120.0,2376.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+58.0,1260.0,2.0,3.0,3.0,5.0,Unknown,Randesan,Unknown,New,2.0,Carpet,Ready_to_Move
+72.0,1190.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,New,3.0,Carpet,Ready_to_Move
+51.0,1332.0,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+205.0,2907.0,4.0,2.0,4.0,8.0,semi-furnished,Sargasan,Unknown,New,4.0,Built-up,Ready_to_Move
+175.0,2232.0,3.0,1.0,5.0,8.0,furnished,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+115.0,1177.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+365.0,3942.0,6.0,1.0,4.0,7.0,Unknown,Sargasan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+34.99,1125.0,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+247.00000000000003,2030.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+161.0,2250.0,3.0,1.0,4.0,8.0,furnished,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+142.0,1599.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+155.0,630.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+90.0,3204.0,1.0,1.0,3.0,7.0,furnished,Vavol,Unknown,New,2.0,Built-up,Ready_to_Move
+130.0,786.0,2.0,1.0,12.0,21.0,unfurnished,Gift City,North,New,2.0,Built-up,Ready_to_Move
+48.0,1200.0,2.0,2.0,5.0,8.0,Unknown,Koba,Unknown,New,2.0,Super Built-up,Ready_to_Move
+70.0,1575.0,3.0,3.0,3.0,7.0,furnished,Randheja,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+56.0,1278.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+140.0,3186.0,4.0,2.0,4.0,8.0,Unknown,Sargasan,Other,Unknown,4.0,Built-up,Under_Construction
+55.0,1200.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+36.0,693.0,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,1.0,Super Built-up,Ready_to_Move
+150.0,1310.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+69.0,1332.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,2.0,Carpet,Under_Construction
+140.0,3186.0,4.0,2.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,4.0,Carpet,Ready_to_Move
+140.0,2669.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+80.0,842.0,3.0,1.0,1.0,13.0,unfurnished,Sargasan,North-West,1-5 years,3.0,Carpet,Ready_to_Move
+86.0,1890.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+110.0,2142.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+101.0,2439.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+20.0,650.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+120.0,2502.0,3.0,1.0,5.0,10.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+97.0,1030.0,3.0,1.0,6.0,13.0,Unknown,Koba,Unknown,New,3.0,Carpet,Under_Construction
+70.0,1530.0,2.0,1.0,5.0,8.0,Unknown,Kudasan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+71.0,791.0,2.0,3.0,7.0,11.0,unfurnished,Sargasan,West,New,3.0,Carpet,Ready_to_Move
+90.0,2368.058,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+207.0,4248.0,4.0,3.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,5.0,Super Built-up,Ready_to_Move
+83.0,1836.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+141.0,2970.0,4.0,2.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,4.0,Built-up,Ready_to_Move
+85.0,2025.0,3.0,1.0,2.0,5.0,unfurnished,Kudasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+78.8,1845.0,3.0,1.0,6.0,13.0,unfurnished,Raysan,East,New,3.0,Super Built-up,Under_Construction
+169.0,1875.0,3.0,1.0,2.0,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+71.5,1656.0,2.0,1.0,4.0,8.0,Unknown,Raysan,East,New,2.0,Super Built-up,Under_Construction
+96.0,1845.0,3.0,1.0,4.0,5.0,unfurnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+113.0,2412.0,4.0,3.0,6.0,18.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Under_Construction
+175.0,4005.0,4.0,3.0,4.0,8.0,Unknown,Sargasan,East,New,4.0,Super Built-up,Under_Construction
+93.0,2394.0,4.0,2.0,6.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+107.0,2025.0,3.0,1.0,11.0,13.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+99.0,2106.0,3.0,1.0,10.0,13.0,Unknown,Koba,East,New,3.0,Super Built-up,Under_Construction
+95.0,2475.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+375.0,6750.0,4.0,1.0,10.0,18.0,unfurnished,Koba,North-West,New,4.0,Super Built-up,Under_Construction
+230.0,3645.0,4.0,1.0,3.0,20.0,Unknown,Khoraj,West,New,4.0,Super Built-up,Under_Construction
+132.0,2790.0,3.0,1.0,3.0,12.0,unfurnished,Koba,West,New,3.0,Super Built-up,Under_Construction
+131.0,2412.0,3.0,1.0,2.0,8.0,unfurnished,Raysan,West,New,3.0,Super Built-up,Ready_to_Move
+425.0,6075.0,6.0,1.0,12.0,20.0,Unknown,Khoraj,West,New,6.0,Super Built-up,Under_Construction
+450.0,6300.0,6.0,1.0,7.0,20.0,Unknown,Khoraj,West,New,6.0,Super Built-up,Under_Construction
+250.0,3807.0,4.0,1.0,12.0,20.0,Unknown,Khoraj,West,New,4.0,Super Built-up,Under_Construction
+240.0,3699.0,4.0,1.0,13.0,20.0,Unknown,Khoraj,West,New,4.0,Super Built-up,Under_Construction
+220.00000000000003,3537.0,4.0,1.0,9.0,20.0,unfurnished,Khoraj,West,New,4.0,Super Built-up,Under_Construction
+115.0,1231.0,3.0,2.0,4.0,9.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+121.0,2259.0,3.0,1.0,5.0,13.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+78.0,1845.0,3.0,1.0,2.0,14.0,unfurnished,Khoraj,East,New,3.0,Super Built-up,Ready_to_Move
+55.0,819.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Other,New,2.0,Carpet,Ready_to_Move
+55.0,1054.8622,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Other,Unknown,2.0,Carpet,Ready_to_Move
+60.0,1548.0,2.0,1.0,5.0,7.0,semi-furnished,Randesan,East,New,2.0,Super Built-up,Ready_to_Move
+35.0,990.0,1.0,1.0,2.0,4.0,Unknown,Vavol,East,New,1.0,Super Built-up,Ready_to_Move
+190.0,3358.0,4.0,3.0,7.0,7.0,semi-furnished,Uvarsad,North-East,1-5 years,4.0,Super Built-up,Ready_to_Move
+55.0,1125.0,2.0,1.0,1.0,4.0,semi-furnished,Vavol,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+130.0,2970.0,4.0,1.0,6.0,13.0,unfurnished,Randesan,East,New,4.0,Super Built-up,Ready_to_Move
+142.0,3015.0,3.0,1.0,3.0,12.0,Unknown,Koba,West,New,3.0,Super Built-up,Under_Construction
+145.0,2520.0,3.0,1.0,2.0,8.0,unfurnished,Raysan,West,New,3.0,Super Built-up,Ready_to_Move
+110.0,1380.0,2.0,1.0,18.0,25.0,unfurnished,Gift City,East,New,2.0,Super Built-up,Under_Construction
+85.0,1845.0,3.0,2.0,4.0,10.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+250.0,2804.0,3.0,2.0,0.0,2.0,unfurnished,Kudasan,East,New,3.0,Carpet,Ready_to_Move
+130.0,1302.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+75.0,1674.0,3.0,1.0,5.0,8.0,unfurnished,Vavol,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+60.0,1305.0,2.0,1.0,7.0,8.0,semi-furnished,Koba,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+67.0,1485.0,2.0,1.0,4.0,13.0,unfurnished,Koba,East,New,2.0,Super Built-up,Ready_to_Move
+120.0,2925.0,3.0,3.0,4.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Under_Construction
+165.0,3690.0,4.0,2.0,6.0,10.0,unfurnished,Sargasan,East,New,4.0,Super Built-up,Ready_to_Move
+115.0,2475.0,3.0,2.0,9.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Super Built-up,Ready_to_Move
+65.0,1728.0,3.0,2.0,1.0,6.0,unfurnished,Sargasan,Other,10-20 years,3.0,Super Built-up,Ready_to_Move
+260.0,4788.0,4.0,1.0,3.0,12.0,unfurnished,Koba,East,New,4.0,Super Built-up,Under_Construction
+150.0,3006.0,3.0,1.0,1.0,12.0,unfurnished,Koba,East,New,3.0,Super Built-up,Under_Construction
+140.0,2916.0,3.0,1.0,3.0,12.0,unfurnished,Koba,West,New,3.0,Super Built-up,Under_Construction
+160.0,3105.0,3.0,1.0,4.0,8.0,Unknown,Koba,East,New,3.0,Super Built-up,Under_Construction
+235.0,4329.0,4.0,1.0,4.0,12.0,unfurnished,Raysan,East,New,4.0,Super Built-up,Ready_to_Move
+425.0,7650.0,4.0,1.0,6.0,18.0,Unknown,Koba,North-West,New,4.0,Super Built-up,Under_Construction
+76.0,1300.0,3.0,1.0,4.0,11.0,unfurnished,SP Ring Road,North-East,1-5 years,3.0,Super Built-up,Ready_to_Move
+84.0,1800.0,3.0,1.0,5.0,13.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Under_Construction
+125.0,1629.0,4.0,3.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+74.0,1152.0,2.0,1.0,5.0,5.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+75.0,1494.0,2.0,1.0,2.0,13.0,Unknown,Randesan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+73.0,1719.0,3.0,1.0,3.0,5.0,unfurnished,Sargasan,North-East,5-10 years,3.0,Super Built-up,Ready_to_Move
+225.0,3915.0,4.0,2.0,4.0,6.0,Unknown,Randesan,Unknown,Unknown,4.0,Super Built-up,Ready_to_Move
+60.0,1260.0,2.0,2.0,3.0,5.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+212.0,4383.0,4.0,2.0,6.0,12.0,unfurnished,Kudasan,East,New,4.0,Super Built-up,Ready_to_Move
+160.0,2700.0,3.0,1.0,4.5,7.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+116.0,2610.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Other,Unknown,3.0,Super Built-up,Ready_to_Move
+125.0,2115.0,3.0,1.0,4.0,13.0,unfurnished,Randesan,North-East,1-5 years,3.0,Super Built-up,Ready_to_Move
+85.0,1215.0,2.0,1.0,0.0,4.0,unfurnished,Raysan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+67.0,1620.0,3.0,1.0,3.0,8.0,unfurnished,Raysan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+53.0,1089.0,2.0,1.0,3.0,5.0,unfurnished,Kudasan,East,10-20 years,2.0,Built-up,Ready_to_Move
+65.0,1080.0,2.0,1.0,0.0,4.0,unfurnished,Raysan,North-East,10-20 years,2.0,Super Built-up,Ready_to_Move
+78.0,1845.0,3.0,1.0,2.0,9.0,unfurnished,Raysan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+65.0,1467.0,2.0,1.0,4.0,10.0,Unknown,Raysan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+115.0,2475.0,3.0,1.0,6.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+97.0,2142.0,3.0,1.0,6.0,11.0,unfurnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+95.0,2142.0,3.0,1.0,3.0,7.0,unfurnished,Kudasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+121.0,2493.0,3.0,1.0,4.0,13.0,unfurnished,Koba,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+68.0,1485.0,2.0,1.0,4.0,8.0,unfurnished,Raysan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+65.0,594.0,2.0,1.0,3.0,9.0,unfurnished,Koba,East,1-5 years,2.0,Built-up,Ready_to_Move
+195.0,2835.0,4.0,1.0,3.0,7.0,unfurnished,Kudasan,East,1-5 years,4.0,Super Built-up,Ready_to_Move
+315.0,2070.0,4.0,1.0,1.0,1.0,unfurnished,Raysan,East,5-10 years,4.0,Super Built-up,Ready_to_Move
+175.0,4032.0,4.0,2.0,8.0,13.0,Unknown,Randesan,Unknown,New,4.0,Super Built-up,Under_Construction
+160.0,2502.0,3.0,1.0,3.0,5.0,unfurnished,Raysan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+115.0,2259.0,3.0,1.0,2.0,7.0,unfurnished,Sargasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+74.82,1683.0,2.0,1.0,3.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+151.0,3195.0,4.0,2.0,4.0,8.0,unfurnished,Sargasan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+65.0,1377.0,2.0,1.0,5.0,8.0,Unknown,Randesan,East,New,2.0,Carpet,Ready_to_Move
+51.0,1098.0,2.0,1.0,4.0,5.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+64.0,1593.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+55.0,1755.0,2.0,1.0,3.0,8.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+65.0,1278.0,2.0,1.0,2.0,8.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+55.0,1224.0,2.0,1.0,2.0,5.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+58.0,1305.0,2.0,1.0,2.0,8.0,semi-furnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+54.0,1350.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+65.0,1377.0,2.0,1.0,2.0,6.0,semi-furnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+130.0,1786.8074,2.0,1.0,6.0,6.0,unfurnished,Randesan,East,5-10 years,3.0,Carpet,Ready_to_Move
+90.0,2394.0,3.0,1.0,2.0,6.0,unfurnished,Sargasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+250.0,3915.0,3.0,1.0,5.0,6.0,semi-furnished,Gift City,East,New,4.0,Super Built-up,Ready_to_Move
+195.0,4410.0,4.0,1.0,2.0,13.0,unfurnished,Raysan,East,New,4.0,Super Built-up,Under_Construction
+82.0,1620.0,2.0,1.0,2.0,13.0,unfurnished,Sargasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+140.0,3186.0,4.0,1.0,5.0,13.0,unfurnished,Sargasan,East,1-5 years,4.0,Super Built-up,Ready_to_Move
+65.0,1449.0,2.0,2.0,4.0,6.0,semi-furnished,Kudasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+67.0,1449.0,2.0,1.0,3.0,9.0,unfurnished,Kudasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+370.0,4401.0,6.0,1.0,4.0,7.0,Unknown,Sargasan,Unknown,Unknown,4.0,Super Built-up,Ready_to_Move
+55.0,1170.0,2.0,2.0,5.0,5.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+210.0,3240.0,4.0,3.0,10.0,13.0,Unknown,Randesan,Unknown,Unknown,4.0,Super Built-up,Ready_to_Move
+145.0,2637.0,3.0,3.0,3.0,7.0,semi-furnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+80.0,1764.0,3.0,1.0,1.0,5.0,unfurnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+175.0,2439.0,5.0,1.0,3.0,5.0,Unknown,Sargasan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+100.0,2187.0,3.0,1.0,5.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+99.5,2187.0,3.0,1.0,8.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+67.32,1683.0,2.0,1.0,8.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+144.0,2142.0,3.0,1.0,13.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+110.0,2142.0,3.0,1.0,3.0,9.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+111.0,2196.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+74.0,1152.0,2.0,1.0,5.0,5.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+160.0,1651.0,4.0,2.0,7.0,13.0,unfurnished,Randesan,East,New,4.0,Built-up,Ready_to_Move
+108.0,2187.0,3.0,2.0,10.0,12.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+59.0,1260.0,2.0,2.0,2.0,5.0,semi-furnished,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+71.0,1620.0,2.0,1.0,3.0,5.0,unfurnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+90.0,2394.0,3.0,1.0,3.0,6.0,semi-furnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+78.0,2025.0,3.0,1.0,3.0,5.0,semi-furnished,Randesan,East,10-20 years,3.0,Super Built-up,Ready_to_Move
+57.0,882.0,2.0,1.0,5.0,8.0,semi-furnished,Randesan,Unknown,New,2.0,Carpet,Ready_to_Move
+56.0,1215.0,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+65.0,1233.0,2.0,1.0,4.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+89.0,2151.0,3.0,1.0,11.0,13.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+72.0,782.0,2.0,2.0,11.0,14.0,unfurnished,Sargasan,East,New,2.0,Carpet,Ready_to_Move
+92.2,2160.0,3.0,1.0,2.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+62.85,1440.0,2.0,1.0,2.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+72.0,1413.0,2.0,3.0,4.0,12.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+82.8,2070.0,3.0,1.0,1.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+86.0,854.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,North-East,New,3.0,Carpet,Ready_to_Move
+85.0,2142.0,3.0,1.0,3.0,7.0,unfurnished,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+60.0,810.0,2.0,1.0,4.0,7.0,furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+99.0,1188.0,3.0,1.0,12.0,13.0,unfurnished,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+110.0,1296.0,3.0,1.0,10.0,13.0,unfurnished,Randesan,Other,1-5 years,3.0,Carpet,Ready_to_Move
+45.0,1242.0,2.0,1.0,3.0,5.0,unfurnished,Sargasan,North-East,5-10 years,2.0,Carpet,Ready_to_Move
+87.0,1494.0,2.0,1.0,0.0,11.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+54.0,1260.0,2.0,1.0,0.0,8.0,semi-furnished,Kudasan,East,5-10 years,2.0,Built-up,Ready_to_Move
+75.6,1890.0,3.0,1.0,3.0,14.0,Unknown,Sargasan,East,New,3.0,Carpet,Under_Construction
+65.45,1683.0,2.0,1.0,5.0,13.0,unfurnished,Sargasan,East,New,2.0,Carpet,Under_Construction
+208.0,4158.0,4.0,2.0,14.0,17.0,Unknown,Randesan,East,New,4.0,Super Built-up,Under_Construction
+116.0,1190.0,3.0,3.0,3.0,13.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+62.9,1530.0,2.0,1.0,10.0,12.0,unfurnished,Raysan,East,New,2.0,Super Built-up,Under_Construction
+180.0,3735.0,4.0,3.0,4.0,8.0,Unknown,Koba,East,New,4.0,Super Built-up,Under_Construction
+77.85,865.0,1.0,1.0,12.0,35.0,unfurnished,Gift City,East,New,1.0,Super Built-up,Under_Construction
+357.0,6750.0,4.0,2.0,3.0,19.0,unfurnished,Raysan,East,New,4.0,Super Built-up,Under_Construction
+67.0,1710.0,2.0,3.0,6.0,14.0,Unknown,Kudasan,East,New,2.0,Super Built-up,Under_Construction
+80.0,2205.0,3.0,3.0,4.0,12.0,unfurnished,Adalaj,East,New,3.0,Super Built-up,Under_Construction
+90.0,2295.0,3.0,2.0,4.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+82.0,2040.0,3.0,2.0,5.0,8.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Under_Construction
+126.0,2754.0,3.0,1.0,2.0,13.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Under_Construction
+79.0,1950.0,3.0,2.0,3.0,14.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Under_Construction
+75.0,1566.0,2.0,2.0,4.0,13.0,unfurnished,Raysan,East,New,2.0,Super Built-up,Under_Construction
+148.0,3060.0,3.0,3.0,9.0,13.0,Unknown,Koba,East,New,3.0,Super Built-up,Under_Construction
+125.0,2835.0,3.0,1.0,4.0,19.0,unfurnished,Gandhinagar Taluka,East,New,3.0,Super Built-up,Under_Construction
+75.6,1890.0,3.0,1.0,4.0,14.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+128.0,1426.0,3.0,2.0,13.0,35.0,Unknown,Gift City,East,New,3.0,Super Built-up,Under_Construction
+92.5,2367.0,3.0,1.0,4.0,19.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+55.5,1359.0,2.0,2.0,4.0,14.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Under_Construction
+91.0,1089.0,3.0,2.0,3.0,8.0,unfurnished,Randesan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+60.2,1548.0,2.0,1.0,4.0,13.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Under_Construction
+111.0,2511.0,3.0,3.0,8.0,20.0,Unknown,Randesan,East,New,3.0,Super Built-up,Under_Construction
+86.0,1495.0,2.0,1.0,10.0,14.0,Unknown,Gift City,East,New,2.0,Super Built-up,Under_Construction
+157.0,871.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Under_Construction
+110.0,2900.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+75.0,1674.0,3.0,2.0,3.0,7.0,furnished,Vavol,Unknown,New,3.0,Super Built-up,Ready_to_Move
+110.0,2718.0,4.0,2.0,6.0,13.0,Unknown,Koba,East,New,3.0,Super Built-up,Ready_to_Move
+89.0,2358.0,3.0,3.0,4.0,14.0,unfurnished,Sargasan,North-East,New,3.0,Carpet,Under_Construction
+173.0,1875.0,3.0,2.0,7.0,25.0,Unknown,Gift City,East,New,3.0,Super Built-up,Under_Construction
+122.0,1325.0,2.0,1.0,9.0,25.0,Unknown,Gift City,East,New,2.0,Super Built-up,Under_Construction
+215.0,4842.0,4.0,2.0,11.0,13.0,unfurnished,Kudasan,East,New,4.0,Super Built-up,Ready_to_Move
+208.0,4158.0,5.0,1.0,7.0,17.0,Unknown,Randesan,East,New,4.0,Super Built-up,Under_Construction
+179.0,3789.0,5.0,2.0,7.0,13.0,Unknown,Kudasan,West,New,4.0,Super Built-up,Under_Construction
+211.0,4410.0,4.0,1.0,7.0,13.0,semi-furnished,Koba,East,New,4.0,Super Built-up,Ready_to_Move
+136.0,2880.0,3.0,1.0,4.0,13.0,Unknown,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+182.0,4005.0,4.0,1.0,8.0,14.0,Unknown,Sargasan,East,New,4.0,Super Built-up,Under_Construction
+212.0,4545.0,5.0,1.0,4.0,20.0,Unknown,Kudasan,East,New,4.0,Super Built-up,Under_Construction
+121.0,2412.0,3.0,1.0,6.0,8.0,Unknown,Raysan,East,New,3.0,Super Built-up,Under_Construction
+86.4,1728.0,2.0,1.0,4.0,8.0,unfurnished,Raysan,East,New,2.0,Super Built-up,Ready_to_Move
+255.0,2686.0,3.0,2.0,8.5,25.0,unfurnished,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+112.0,2430.0,3.0,1.0,4.0,9.0,unfurnished,Koba,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+72.0,1773.0,3.0,1.0,2.0,6.0,semi-furnished,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+115.0,2025.0,4.0,2.0,8.0,13.0,Unknown,Sargasan,Unknown,New,4.0,Super Built-up,Ready_to_Move
+170.0,3825.0,4.0,1.0,7.0,14.0,Unknown,Sargasan,East,New,4.0,Built-up,Ready_to_Move
+225.0,4329.0,4.0,1.0,8.0,12.0,Unknown,Raysan,East,New,4.0,Super Built-up,Ready_to_Move
+238.0,4383.0,4.0,1.0,3.0,7.0,unfurnished,Raysan,East,New,4.0,Super Built-up,Ready_to_Move
+158.0,4144.1015,4.0,1.0,7.0,11.0,Unknown,Khoraj,Unknown,New,4.0,Super Built-up,Ready_to_Move
+410.0,4315.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,4.0,Super Built-up,Under_Construction
+348.0,3660.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,4.0,Super Built-up,Under_Construction
+245.00000000000003,2580.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+185.0,1945.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+124.0,1305.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,1.0,Super Built-up,Under_Construction
+62.7,660.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Super Built-up,Under_Construction
+146.0,1540.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+141.0,1485.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+112.0,1175.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+494.00000000000006,3462.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,4.0,Super Built-up,Under_Construction
+356.0,2625.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+297.0,2253.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+57.0,1278.0,3.0,2.0,1.0,8.0,unfurnished,Koba,East,5-10 years,3.0,Carpet,Ready_to_Move
+60.0,1242.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+63.0,1395.0,2.0,1.0,4.0,8.0,furnished,Sargasan,South-West,New,2.0,Super Built-up,Ready_to_Move
+145.0,3060.0,3.0,2.0,2.0,13.0,unfurnished,Koba,East,New,3.0,Super Built-up,Ready_to_Move
+60.0,1395.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+75.0,1782.0,3.0,1.0,6.0,12.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+70.0,1755.0,2.0,1.0,2.0,5.0,unfurnished,Randesan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+54.0,1197.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+91.2,2160.0,3.0,1.0,9.0,12.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Under_Construction
+60.0,1323.0,2.0,2.0,9.0,11.0,unfurnished,Sargasan,East,New,2.0,Built-up,Ready_to_Move
+105.0,1486.0,3.0,3.0,2.0,7.0,unfurnished,Sargasan,East,1-5 years,3.0,Carpet,Ready_to_Move
+110.0,2160.0,3.0,2.0,5.0,13.0,semi-furnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+110.0,1017.0,3.0,2.0,0.0,7.0,unfurnished,Sector 29,North-East,10-20 years,3.0,Super Built-up,Ready_to_Move
+75.0,782.0,2.0,1.0,5.0,14.0,unfurnished,Sargasan,East,New,2.0,Carpet,Ready_to_Move
+98.0,1719.0,3.0,3.0,4.0,9.0,semi-furnished,Sargasan,West,1-5 years,3.0,Super Built-up,Ready_to_Move
+91.19,2691.0,3.0,1.0,6.0,13.0,Unknown,Vavol,East,New,3.0,Super Built-up,Under_Construction
+68.15,2115.0,3.0,1.0,3.0,14.0,unfurnished,Vavol,East,New,3.0,Super Built-up,Ready_to_Move
+110.0,2187.0,3.0,2.0,10.0,14.0,Unknown,Sargasan,North-East,New,3.0,Super Built-up,Ready_to_Move
+100.0,2565.0,3.0,1.0,5.0,14.0,Unknown,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+120.0,2250.0,3.0,2.0,13.0,50.0,semi-furnished,Kudasan,East,1-5 years,3.0,Built-up,Ready_to_Move
+98.0,2295.0,3.0,2.0,10.0,12.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+83.0,1548.0,2.0,1.0,4.0,8.0,furnished,Raysan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+115.0,2475.0,3.0,2.0,9.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+70.0,1845.0,3.0,1.0,1.0,8.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+65.0,1305.0,2.0,1.0,6.0,9.0,unfurnished,Randesan,East,5-10 years,2.0,Carpet,Ready_to_Move
+65.0,1269.0,2.0,1.0,5.0,7.0,unfurnished,Kudasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+65.0,1278.0,2.0,2.0,2.0,5.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+151.0,3186.0,4.0,1.0,5.0,13.0,unfurnished,Sargasan,East,New,4.0,Super Built-up,Ready_to_Move
+58.5,1503.0,2.0,1.0,6.0,13.0,unfurnished,Kudasan,East,New,2.0,Super Built-up,Ready_to_Move
+85.0,1791.0,3.0,1.0,10.0,13.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+67.0,1431.0,2.0,1.0,7.0,14.0,unfurnished,Sargasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+60.0,1269.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+60.0,1170.0,2.0,1.0,4.0,5.0,semi-furnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+80.0,1845.0,3.0,1.0,9.0,13.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+126.0,2736.0,3.0,1.0,6.0,13.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+139.0,2041.0,4.0,2.0,6.0,13.0,Unknown,Sargasan,East,New,4.0,Carpet,Ready_to_Move
+123.0,2592.0,3.0,1.0,4.0,8.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+52.0,1161.0,2.0,1.0,3.0,5.0,Unknown,Randesan,East,New,2.0,Super Built-up,Ready_to_Move
+70.0,831.0,3.0,1.0,1.0,11.0,unfurnished,Sargasan,East,New,3.0,Carpet,Ready_to_Move
+50.0,1422.0,2.0,1.0,6.0,14.0,unfurnished,Vavol,East,New,2.0,Super Built-up,Ready_to_Move
+86.0,869.0,3.0,1.0,8.0,11.0,unfurnished,Sargasan,East,New,3.0,Carpet,Ready_to_Move
+70.0,1557.0,3.0,1.0,7.0,11.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+55.0,1179.0,2.0,1.0,7.0,8.0,Unknown,Raysan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+110.0,2655.0,3.0,2.0,6.0,20.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Under_Construction
+162.0,3870.0,4.0,3.0,6.0,13.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+200.0,4320.0,5.0,3.0,6.0,22.0,Unknown,Raysan,East,New,4.0,Super Built-up,Under_Construction
+270.0,5310.0,5.0,3.0,4.0,8.0,Unknown,Koba,East,New,4.0,Super Built-up,Under_Construction
+105.0,2349.0,4.0,2.0,6.0,13.0,unfurnished,Uvarsad,East,New,3.0,Super Built-up,Under_Construction
+150.0,2651.0,4.0,3.0,6.0,20.0,unfurnished,Koba,East,New,3.0,Super Built-up,Under_Construction
+190.0,4275.0,5.0,3.0,6.0,14.0,unfurnished,Koba,East,New,4.0,Super Built-up,Under_Construction
+146.0,1512.0,3.0,2.0,6.0,13.0,Unknown,Raysan,East,New,3.0,Carpet,Ready_to_Move
+135.0,2862.0,3.0,2.0,6.0,13.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Under_Construction
+75.0,1602.0,3.0,2.0,11.0,12.0,semi-furnished,Sargasan,East,1-5 years,3.0,Built-up,Ready_to_Move
+55.0,1071.0,2.0,1.0,3.0,5.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Super Built-up,Ready_to_Move
+80.0,1890.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+105.0,1755.0,3.0,3.0,2.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+90.0,1683.0,3.0,3.0,5.0,13.0,semi-furnished,Sargasan,North-East,1-5 years,3.0,Built-up,Ready_to_Move
+105.0,2124.0,3.0,3.0,2.0,9.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Built-up,Ready_to_Move
+90.0,2151.0,3.0,3.0,3.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+90.0,2151.0,3.0,3.0,11.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+62.56,1656.0,2.0,3.0,13.0,14.0,Unknown,Randesan,North-East,New,2.0,Built-up,Under_Construction
+64.61,1593.0,2.0,3.0,6.0,14.0,unfurnished,Randesan,North-East,New,2.0,Built-up,Under_Construction
+72.0,963.0,3.0,1.0,4.0,8.0,unfurnished,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+150.0,1875.0,3.0,1.0,2.0,25.0,Unknown,Gift City,Unknown,New,3.0,Carpet,Under_Construction
+166.0,1511.0,2.0,1.0,23.0,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+97.66,2250.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+87.0,2259.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+71.0,1395.0,2.0,1.0,1.0,8.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+57.0,1278.0,3.0,2.0,1.0,8.0,semi-furnished,Kudasan,East,5-10 years,3.0,Carpet,Ready_to_Move
+105.0,2313.0,3.0,1.0,6.0,14.0,semi-furnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+240.0,1876.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+60.0,1773.0,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+91.0,2520.0,2.0,1.0,6.0,11.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Under_Construction
+62.0,1449.0,2.0,1.0,1.0,5.5,unfurnished,Sargasan,South,New,2.0,Carpet,Ready_to_Move
+118.0,1728.0,2.0,2.0,5.0,8.0,unfurnished,Raysan,East,New,2.0,Super Built-up,Ready_to_Move
+62.0,2133.0,3.0,3.0,1.0,13.0,Unknown,Randheja,Unknown,New,3.0,Super Built-up,Under_Construction
+59.4,1485.0,2.0,1.0,1.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+59.85,630.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Super Built-up,Under_Construction
+125.0,2700.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+114.0,1410.0,3.0,1.0,9.0,13.0,Unknown,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+138.0,1384.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+70.0,1242.0,1.0,2.0,7.0,11.0,Unknown,Uvarsad,Unknown,New,2.0,Super Built-up,Ready_to_Move
+110.0,2484.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+120.0,2142.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+41.0,945.0,2.0,2.0,2.0,3.0,unfurnished,Vavol,East,New,2.0,Super Built-up,Ready_to_Move
+55.0,1395.0,2.0,1.0,8.0,13.0,unfurnished,Uvarsad,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+53.0,990.0,2.0,2.0,2.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Carpet,Ready_to_Move
+260.0,1976.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+494.00000000000006,3462.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+358.0,2625.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+341.0,2473.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+296.0,2253.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+251.0,1876.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+110.0,950.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Super Built-up,Under_Construction
+326.0,3100.0,4.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+246.0,2241.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+95.0,900.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Super Built-up,Under_Construction
+165.0,1550.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+254.0,2030.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+272.0,2180.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+250.0,1876.0,3.0,1.0,19.0,35.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+68.68,1845.0,3.0,1.0,6.0,14.0,unfurnished,Khoraj,East,New,3.0,Super Built-up,Ready_to_Move
+70.0,1440.0,2.0,1.0,1.0,11.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+63.48,911.0,2.0,1.0,6.0,10.0,unfurnished,Raysan,Unknown,New,2.0,Carpet,Ready_to_Move
+150.0,1800.0,4.0,2.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,4.0,Carpet,Ready_to_Move
+65.0,882.0,2.0,1.0,4.0,5.0,semi-furnished,Sargasan,North-East,5-10 years,2.0,Super Built-up,Ready_to_Move
+65.0,1377.0,2.0,2.0,4.0,6.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Super Built-up,Ready_to_Move
+100.0,2520.0,3.0,2.0,3.0,10.0,unfurnished,Kudasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+80.0,2160.0,3.0,2.0,8.0,9.0,unfurnished,Other,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+63.0,1332.0,2.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+85.0,2049.0,3.0,2.0,2.0,13.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+120.0,2340.0,3.0,2.0,3.0,8.0,unfurnished,Sargasan,North-West,1-5 years,3.0,Carpet,Ready_to_Move
+110.0,2223.0,3.0,2.0,3.0,7.0,unfurnished,Sargasan,North-East,1-5 years,3.0,Carpet,Ready_to_Move
+82.0,1665.0,3.0,1.0,4.0,9.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Ready_to_Move
+110.0,2205.0,3.0,1.0,3.0,9.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+110.0,1962.0,3.0,2.0,6.0,13.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+150.0,630.0,2.0,2.0,22.0,33.0,unfurnished,Gift City,West,1-5 years,2.0,Carpet,Ready_to_Move
+62.0,1233.0,2.0,2.0,1.0,4.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+52.0,1125.0,2.0,2.0,4.0,5.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+85.0,1728.0,3.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+115.0,2709.0,3.0,1.0,7.0,13.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+75.0,747.0,2.0,1.0,3.0,13.0,Unknown,Randesan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+52.0,1197.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+220.00000000000003,1977.0,3.0,2.0,15.0,35.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+100.0,2475.0,3.0,2.0,6.0,13.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+66.0,1800.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+100.0,1215.0,3.0,2.0,4.0,8.0,Unknown,Kudasan,Other,New,3.0,Carpet,Ready_to_Move
+100.0,1098.0,3.0,1.0,4.0,8.0,furnished,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+90.0,1500.0,4.0,2.0,4.0,8.0,Unknown,Sargasan,East,New,4.0,Carpet,Ready_to_Move
+100.0,2308.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Under_Construction
+130.0,3330.0,4.0,3.0,2.0,13.0,Unknown,Sargasan,North-East,New,4.0,Super Built-up,Under_Construction
+91.88,2205.0,3.0,1.0,11.0,13.0,Unknown,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+105.0,2529.0,3.0,1.0,7.0,13.0,unfurnished,Kudasan,East,New,3.0,Super Built-up,Under_Construction
+135.0,746.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+84.0,1854.0,3.0,1.0,2.0,10.0,unfurnished,Sargasan,East,New,3.0,Carpet,Ready_to_Move
+80.0,1728.0,2.0,2.0,5.0,8.0,unfurnished,Raysan,East,New,2.0,Super Built-up,Ready_to_Move
+56.0,1260.0,2.0,1.0,4.0,5.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+99.0,2322.0,3.0,3.0,8.0,11.0,unfurnished,Raysan,East,Unknown,3.0,Carpet,Ready_to_Move
+75.0,1506.0,2.0,1.0,5.0,8.0,furnished,Randesan,Unknown,New,2.0,Carpet,Ready_to_Move
+58.0,1215.0,2.0,1.0,4.0,5.0,semi-furnished,Sargasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+62.0,1503.0,2.0,1.0,10.0,13.0,Unknown,Kudasan,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+32.0,864.0,1.0,1.0,2.0,5.0,unfurnished,Vavol,East,5-10 years,1.0,Super Built-up,Ready_to_Move
+40.0,1080.0,2.0,1.0,7.0,7.0,unfurnished,Vavol,East,New,2.0,Super Built-up,Ready_to_Move
+86.0,1700.0,3.0,1.0,4.0,5.0,unfurnished,Koba,East,New,3.0,Super Built-up,Ready_to_Move
+65.0,686.0,2.0,1.0,4.0,12.0,unfurnished,Sargasan,East,New,2.0,Carpet,Ready_to_Move
+140.0,777.0,2.0,1.0,8.0,24.0,unfurnished,Gift City,North,New,2.0,Carpet,Ready_to_Move
+50.0,1314.0,2.0,1.0,6.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+45.0,1458.0,2.0,1.0,4.0,5.0,Unknown,Randesan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+35.0,762.0,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,1.0,Super Built-up,Ready_to_Move
+80.0,1710.0,3.0,1.0,7.0,10.0,unfurnished,Raysan,East,New,3.0,Super Built-up,Ready_to_Move
+47.0,963.0,2.0,1.0,3.0,8.0,unfurnished,Sargasan,South,5-10 years,2.0,Super Built-up,Ready_to_Move
+29.0,344.0,1.0,1.0,5.0,5.0,Unknown,Pethapur,Unknown,10-20 years,1.0,Super Built-up,Ready_to_Move
+60.0,1323.0,2.0,1.0,5.0,7.0,unfurnished,Randesan,East,New,2.0,Super Built-up,Ready_to_Move
+80.0,1764.0,3.0,1.0,1.0,5.0,unfurnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+60.0,1305.0,2.0,1.0,2.0,6.0,Unknown,Randesan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+80.0,1854.0,3.0,2.0,9.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+75.0,1800.0,3.0,3.0,1.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+155.0,3573.0,4.0,3.0,0.0,21.0,Unknown,Kudasan,East,New,3.0,Built-up,Under_Construction
+35.0,1080.0,2.0,2.0,5.0,5.0,unfurnished,Dahegam,West,New,2.0,Super Built-up,Ready_to_Move
+118.0,2484.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+121.0,2594.0999,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+229.0,2695.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+155.0,1875.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+75.0,1080.0,2.0,2.0,8.0,13.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+290.0,2110.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+247.00000000000003,1842.0,3.0,2.0,8.5,25.0,Unknown,Gift City,Unknown,New,3.0,Super Built-up,Under_Construction
+65.0,1890.0,2.0,2.0,2.0,10.0,unfurnished,Kudasan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+121.0,2565.0,3.0,1.0,7.0,13.0,Unknown,Kudasan,Unknown,New,3.0,Super Built-up,Under_Construction
+113.0,2475.0,3.0,1.0,9.0,10.0,unfurnished,Khoraj,East,New,3.0,Super Built-up,Ready_to_Move
+91.5,2700.0,3.0,1.0,5.0,10.0,Unknown,Vavol,East,New,3.0,Super Built-up,Under_Construction
+69.5,1845.0,3.0,1.0,7.0,8.0,unfurnished,Kudasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+42.0,1170.0,2.0,1.0,1.0,3.0,unfurnished,Vavol,East,New,2.0,Super Built-up,Ready_to_Move
+113.0,2475.0,3.0,1.0,7.0,11.0,Unknown,Khoraj,Unknown,New,3.0,Super Built-up,Ready_to_Move
+45.0,1179.0,2.0,1.0,5.0,8.0,unfurnished,Vavol,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+43.0,1170.0,2.0,1.0,6.0,7.0,unfurnished,Vavol,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+34.0,810.0,1.0,1.0,1.0,3.0,unfurnished,Vavol,East,5-10 years,1.0,Super Built-up,Ready_to_Move
+61.5,1845.0,3.0,1.0,7.0,11.0,Unknown,Khoraj,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+70.0,1845.0,3.0,1.0,9.0,13.0,Unknown,Kudasan,South-East,New,3.0,Super Built-up,Ready_to_Move
+130.0,2313.0,3.0,1.0,10.0,10.0,unfurnished,Sargasan,East,1-5 years,3.0,Super Built-up,Ready_to_Move
+55.0,1242.0,2.0,1.0,6.0,7.0,unfurnished,Uvarsad,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+135.0,2952.0,4.0,2.0,4.0,8.0,unfurnished,Kudasan,Unknown,Unknown,4.0,Built-up,Ready_to_Move
+78.75,2025.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+85.85,2025.0,3.0,3.0,6.0,13.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Under_Construction
+101.0,2673.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+52.0,1305.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,2.0,Built-up,Ready_to_Move
+108.0,2673.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+62.0,1395.0,2.0,1.0,5.0,11.0,semi-furnished,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+67.0,1593.0,2.0,1.0,4.0,13.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Under_Construction
+134.0,2308.0,3.0,2.0,13.0,14.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Under_Construction
+62.0,1377.0,2.0,2.0,1.0,6.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+58.0,1566.0,2.0,1.0,7.0,14.0,Unknown,Kudasan,Unknown,New,2.0,Super Built-up,Under_Construction
+98.0,2466.0,3.0,2.0,5.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Under_Construction
+92.0,2322.0,3.0,2.0,7.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Under_Construction
+81.0,869.0,3.0,2.0,7.0,11.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+140.0,3141.0,4.0,3.0,5.0,10.0,semi-furnished,Sargasan,Unknown,New,4.0,Super Built-up,Under_Construction
+94.85,2439.0,3.0,3.0,5.0,14.0,Unknown,Uvarsad,Unknown,New,3.0,Super Built-up,Under_Construction
+53.0,1600.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+120.0,1998.0,3.0,1.0,6.0,13.0,Unknown,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+81.81,1800.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+93.07,2295.0,3.0,1.0,0.0,1.0,unfurnished,Kudasan,South-West,New,3.0,Super Built-up,Under_Construction
+46.0,1602.0,2.0,3.0,2.0,13.0,Unknown,Randheja,Unknown,New,2.0,Super Built-up,Under_Construction
+80.0,1710.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+47.0,1485.0,2.0,3.0,1.0,7.0,Unknown,Randheja,Unknown,New,2.0,Super Built-up,Ready_to_Move
+128.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+50.0,900.0,2.0,2.0,2.0,7.0,unfurnished,Sargasan,East,1-5 years,2.0,Carpet,Ready_to_Move
+98.0,1320.0,3.0,1.0,4.0,8.0,furnished,Raysan,Unknown,New,3.0,Carpet,Ready_to_Move
+60.0,1134.0,2.0,1.0,3.0,5.0,furnished,Sargasan,North-East,1-5 years,2.0,Super Built-up,Ready_to_Move
+61.0,1044.0,2.0,2.0,4.0,8.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+70.0,1845.0,3.0,1.0,4.0,14.0,Unknown,Khoraj,East,New,3.0,Super Built-up,Under_Construction
+111.0,1000.0,2.0,1.0,5.0,33.0,unfurnished,Gift City,East,New,1.0,Super Built-up,Under_Construction
+248.0,2020.0,3.0,2.0,9.0,33.0,Unknown,Gift City,East,New,3.0,Super Built-up,Under_Construction
+80.0,800.0,1.0,1.0,8.0,33.0,unfurnished,Gift City,East,New,1.0,Super Built-up,Under_Construction
+183.0,1400.0,2.0,2.0,10.0,13.0,unfurnished,Gift City,East,New,2.0,Super Built-up,Under_Construction
+130.0,1500.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+34.0,600.0,1.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,New,1.0,Carpet,Ready_to_Move
+48.0,1125.0,2.0,1.0,5.0,10.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+50.0,1260.0,2.0,1.0,4.0,5.0,unfurnished,Sargasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+128.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+40.0,1080.0,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+18.0,810.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+46.0,855.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,New,2.0,Carpet,Ready_to_Move
+58.51,1404.0,2.0,2.0,2.0,11.0,Unknown,Sargasan,East,New,2.0,Super Built-up,Under_Construction
+70.0,1683.0,3.0,1.0,8.0,11.0,semi-furnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+65.0,1476.0,2.0,1.0,4.0,13.0,unfurnished,Raysan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+95.0,1255.0,3.0,3.0,2.0,14.0,unfurnished,Sargasan,West,New,3.0,Carpet,Ready_to_Move
+40.0,900.0,1.0,1.0,3.0,8.0,Unknown,Sargasan,East,New,1.0,Super Built-up,Under_Construction
+50.0,1305.0,2.0,1.0,2.0,8.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Under_Construction
+118.0,2259.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+72.0,1728.0,3.0,3.0,12.0,13.0,unfurnished,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+92.0,2736.0,3.0,3.0,13.0,13.0,Unknown,Sargasan,North-East,New,3.0,Built-up,Ready_to_Move
+67.0,907.0,3.0,2.0,7.0,8.0,unfurnished,Raysan,North-East,New,3.0,Carpet,Ready_to_Move
+25.0,738.0,1.0,1.0,3.0,3.0,Unknown,Randheja,Unknown,Unknown,1.0,Super Built-up,Ready_to_Move
+60.0,1395.0,2.0,3.0,5.0,7.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Built-up,Ready_to_Move
+105.0,1872.0,3.0,1.0,7.0,15.0,semi-furnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+50.0,1260.0,2.0,3.0,1.0,5.0,unfurnished,Sargasan,North-East,5-10 years,2.0,Built-up,Ready_to_Move
+55.0,1268.0,2.0,1.0,5.0,6.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+55.0,1242.0,2.0,1.0,1.0,6.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+66.0,1044.0,2.0,2.0,7.0,11.0,Unknown,Sargasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+60.0,1550.0,2.0,3.0,10.0,14.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Under_Construction
+118.0,1095.0,2.0,2.0,21.0,33.0,unfurnished,Gift City,East,New,2.0,Super Built-up,Ready_to_Move
+60.0,1575.0,2.0,1.0,3.0,14.0,unfurnished,Kudasan,East,New,2.0,Super Built-up,Under_Construction
+44.0,1224.0,2.0,1.0,6.0,7.0,Unknown,Koba,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+40.0,630.0,1.0,1.0,1.0,10.0,unfurnished,Sargasan,North-East,10-20 years,1.0,Carpet,Ready_to_Move
+142.0,2637.0,3.0,3.0,3.0,7.0,unfurnished,Kudasan,North-East,1-5 years,3.0,Built-up,Ready_to_Move
+98.0,2190.0,3.0,3.0,6.0,13.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+53.0,1197.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+52.0,1278.0,2.0,1.0,4.0,6.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+58.0,1260.0,2.0,1.0,1.0,6.0,semi-furnished,Uvarsad,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+190.0,3816.0,4.0,3.0,13.0,13.0,Unknown,Sargasan,North-East,1-5 years,4.0,Carpet,Ready_to_Move
+118.0,2520.0,2.0,2.0,5.0,8.0,unfurnished,Raysan,East,New,3.0,Super Built-up,Ready_to_Move
+130.0,2925.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Under_Construction
+78.0,1287.0,3.0,1.0,8.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+35.0,675.0,2.0,1.0,4.0,5.0,unfurnished,Sargasan,South-West,New,1.0,Carpet,Ready_to_Move
+38.0,1170.0,2.0,1.0,2.0,3.0,unfurnished,Vavol,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+50.0,1278.0,2.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+65.0,796.536,1.0,1.0,2.0,6.0,semi-furnished,Koba,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+27.0,1080.0,2.0,1.0,3.0,3.0,unfurnished,Vavol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+150.0,1334.736,4.0,2.0,6.0,15.0,unfurnished,Koba,Unknown,New,4.0,Carpet,Under_Construction
+82.0,1692.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+80.0,1692.0,3.0,1.0,2.0,6.0,furnished,Gift City,Unknown,New,3.0,Built-up,Ready_to_Move
+22.0,579.3130979999999,2.0,1.0,2.0,6.0,unfurnished,Kalol,Other,New,2.0,Carpet,Ready_to_Move
+85.0,1854.0,3.0,1.0,0.0,1.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+32.0,1001.052,2.0,1.0,1.0,5.5,Unknown,Kalol,Unknown,New,2.0,Carpet,Ready_to_Move
+42.0,1173.2759999999998,2.0,1.0,2.0,6.0,unfurnished,Vavol,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+28.0,1325.0,2.0,1.0,2.0,6.0,semi-furnished,Gift City,Unknown,New,2.0,Super Built-up,Ready_to_Move
+12.0,463.4504784,1.0,1.0,2.0,3.0,Unknown,Chiloda,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+35.0,1614.585,1.0,1.0,0.0,1.0,semi-furnished,Vavol,Unknown,New,1.0,Built-up,Ready_to_Move
+21.0,384.0,1.0,1.0,1.0,4.0,unfurnished,Kalol,West,1-5 years,1.0,Carpet,Ready_to_Move
+120.0,2520.0,1.0,1.0,0.0,1.0,Unknown,Raysan,Unknown,New,1.0,Built-up,Ready_to_Move
+110.0,2619.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+38.0,1188.0,2.0,1.0,0.0,1.0,unfurnished,Pethapur,Unknown,New,2.0,Built-up,Ready_to_Move
+50.0,1242.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+70.0,1000.0,3.0,3.0,2.0,6.0,Unknown,Chiloda,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+125.0,2277.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+20.0,528.0,1.0,1.0,1.0,4.0,semi-furnished,Kalol,Unknown,5-10 years,1.0,Super Built-up,Ready_to_Move
+35.0,581.2506,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,1.0,Built-up,Ready_to_Move
+78.0,1854.0,3.0,1.0,8.0,14.0,unfurnished,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+111.0,529.0,2.0,1.0,7.0,33.0,Unknown,Gift City,Unknown,New,1.0,Carpet,Under_Construction
+221.0,2600.0,4.0,3.0,4.5,7.0,furnished,Sector 8,Unknown,10-20 years,4.0,Carpet,Ready_to_Move
+86.0,1602.0,2.0,3.0,12.0,14.0,furnished,Uvarsad,Unknown,New,3.0,Super Built-up,Ready_to_Move
+56.0,400.0,1.0,1.0,1.0,3.0,semi-furnished,Kalol,Other,1-5 years,1.0,Carpet,Ready_to_Move
+32.0,1215.0,2.0,1.0,5.0,5.0,semi-furnished,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+75.0,1500.0,2.0,2.0,5.0,7.0,Unknown,Pethapur,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+47.0,1152.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+52.0,1197.0,2.0,1.0,5.0,5.0,Unknown,Sargasan,North,1-5 years,2.0,Built-up,Ready_to_Move
+48.0,680.0,2.0,1.0,2.0,8.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+65.0,790.0,3.0,2.0,8.0,12.0,unfurnished,Raysan,North-East,New,3.0,Carpet,Ready_to_Move
+95.0,1255.0,3.0,2.0,6.0,14.0,unfurnished,Sargasan,North-East,New,3.0,Carpet,Ready_to_Move
+70.0,1197.0,2.0,1.0,5.0,8.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+127.0,2502.0,3.0,1.0,4.0,8.0,semi-furnished,Sargasan,Other,1-5 years,3.0,Built-up,Ready_to_Move
+55.0,1260.0,2.0,2.0,4.0,5.0,Unknown,Kudasan,Unknown,1-5 years,2.0,Built-up,Ready_to_Move
+83.0,1872.0,3.0,1.0,8.0,14.0,unfurnished,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+80.0,1844.0,3.0,2.0,2.0,5.0,Unknown,Sargasan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+95.0,1255.0,3.0,1.0,7.0,14.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+50.0,739.0,2.0,1.0,1.0,8.0,unfurnished,Raysan,North-East,1-5 years,2.0,Carpet,Ready_to_Move
+62.0,1755.0,3.0,2.0,9.0,11.0,unfurnished,Vavol,Unknown,New,3.0,Carpet,Ready_to_Move
+37.0,1008.0,2.0,1.0,3.0,5.0,Unknown,Randesan,South-East,New,2.0,Super Built-up,Ready_to_Move
+42.0,1260.0,2.0,1.0,4.0,8.0,unfurnished,Koba,South,New,2.0,Super Built-up,Ready_to_Move
+32.0,1200.0,2.0,1.0,4.0,5.0,Unknown,Kalol,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+250.0,2880.0,4.0,2.0,7.0,14.0,furnished,Sargasan,East,New,4.0,Super Built-up,Ready_to_Move
+160.0,1494.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+50.0,1300.0,2.0,2.0,3.0,7.0,furnished,Randheja,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+33.51,860.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,New,1.0,Super Built-up,Ready_to_Move
+25.0,592.0145,1.0,1.0,6.0,7.0,unfurnished,Kalol,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+22.5,592.0145,1.0,1.0,6.0,7.0,unfurnished,Kalol,Unknown,New,1.0,Carpet,Ready_to_Move
+64.51,1683.0,3.0,1.0,8.0,11.0,unfurnished,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+78.0,1953.0,2.0,1.0,3.0,7.0,Unknown,Kudasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+45.0,1200.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+65.0,815.0,2.0,1.0,3.0,6.0,Unknown,Gift City,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+50.0,1125.0,2.0,1.0,3.0,7.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+190.0,1400.0,5.0,3.0,2.0,2.0,furnished,Pethapur,Unknown,10-20 years,5.0,Carpet,Ready_to_Move
+40.0,1008.0,2.0,1.0,4.0,5.0,unfurnished,Randesan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+63.0,1602.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,2.0,Carpet,Under_Construction
+35.0,945.0,2.0,1.0,4.0,8.0,Unknown,Kalol,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+95.0,529.0,2.0,2.0,0.0,1.0,Unknown,Gift City,Unknown,New,1.0,Built-up,Ready_to_Move
+85.0,2025.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+49.0,1161.0,2.0,1.0,4.0,7.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+51.0,1216.332,2.0,1.0,4.0,8.0,unfurnished,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+56.0,1260.0,2.0,1.0,9.0,13.0,unfurnished,Raysan,Unknown,New,2.0,Carpet,Ready_to_Move
+72.0,1413.0,2.0,3.0,9.0,13.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+42.5,1098.0,2.0,1.0,1.0,5.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+80.0,2160.0,3.0,3.0,6.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+110.0,2223.0,3.0,1.0,5.0,13.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+85.0,1100.0,3.0,1.0,5.0,5.0,unfurnished,Kudasan,North,5-10 years,3.0,Carpet,Ready_to_Move
+35.0,1071.0,2.0,1.0,0.0,5.0,Unknown,Pethapur,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+130.0,2025.0,3.0,1.0,9.0,13.0,furnished,Kudasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+50.0,1323.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+42.0,963.0,2.0,1.0,2.0,5.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+36.5,666.0,1.0,1.0,1.0,5.0,unfurnished,Sargasan,East,New,1.0,Carpet,Ready_to_Move
+220.00000000000003,3153.8227,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+70.0,1883.0,2.0,2.0,9.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+54.0,1260.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+115.0,1095.0,2.0,2.0,9.0,33.0,semi-furnished,Gift City,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+70.0,1689.9323,2.0,1.0,9.0,13.0,semi-furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+18.5,630.0,1.0,1.0,3.0,7.0,Unknown,Kolavada,Unknown,Unknown,1.0,Super Built-up,Ready_to_Move
+100.0,2520.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+65.0,1305.0,2.0,1.0,2.0,7.0,semi-furnished,Kudasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+37.71,1250.0,2.0,3.0,4.5,7.0,Unknown,Gandhinagar Taluka,Unknown,New,3.0,Carpet,Ready_to_Move
+150.0,2835.0,3.0,1.0,13.0,13.0,Unknown,Sargasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+49.0,1200.0,2.0,3.0,4.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+38.0,1200.0,2.0,2.0,2.0,6.0,Unknown,Chiloda,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+180.0,4050.0,4.0,2.0,5.0,18.0,Unknown,Koba,Unknown,New,4.0,Super Built-up,Under_Construction
+55.0,1089.0,2.0,1.0,0.0,1.0,Unknown,Pethapur,Unknown,New,2.0,Built-up,Ready_to_Move
+85.0,1773.0,3.0,2.0,0.0,1.0,Unknown,Kudasan,Unknown,New,3.0,Built-up,Ready_to_Move
+80.5,1854.0,3.0,1.0,10.0,14.0,unfurnished,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+75.0,1785.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+138.0,1700.0,2.0,1.0,17.0,33.0,unfurnished,Gift City,North,New,2.0,Super Built-up,Ready_to_Move
+160.0,1325.0,2.0,2.0,21.0,25.0,furnished,Gift City,Unknown,New,2.0,Super Built-up,Ready_to_Move
+110.0,483.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+95.0,600.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Super Built-up,Under_Construction
+65.0,797.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+45.0,1215.0,2.0,1.0,5.0,8.0,unfurnished,Koba,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+40.0,963.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+140.0,1854.0,4.0,2.0,5.0,13.0,unfurnished,Sargasan,Unknown,New,4.0,Carpet,Ready_to_Move
+60.0,1328.0,2.0,3.0,3.0,5.0,semi-furnished,Gandhinagar Taluka,East,1-5 years,3.0,Built-up,Ready_to_Move
+48.5,1600.0,2.0,1.0,6.0,6.0,Unknown,Vavol,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+107.0,1430.0,2.0,1.0,8.0,25.0,semi-furnished,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+44.0,918.0,2.0,1.0,2.0,3.0,furnished,Vavol,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+53.64,1341.0,2.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+135.0,2907.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Ready_to_Move
+116.0,2970.0,4.0,3.0,3.0,14.0,Unknown,Sargasan,North-East,New,4.0,Carpet,Ready_to_Move
+112.0,1875.0,2.0,1.0,7.5,25.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+60.0,1485.0,2.0,3.0,4.5,7.0,furnished,Gandhinagar Taluka,Unknown,New,3.0,Super Built-up,Ready_to_Move
+70.0,1000.0,2.0,2.0,5.0,5.0,Unknown,Sargasan,Unknown,1-5 years,2.0,Built-up,Ready_to_Move
+67.0,1679.1684,2.0,1.0,12.0,13.0,semi-furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+26.5,990.0,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+55.0,1368.0,2.0,1.0,5.0,7.0,semi-furnished,Sargasan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+84.24,2160.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+46.0,1170.0,2.0,1.0,5.0,7.0,semi-furnished,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+71.0,1278.0,2.0,1.0,5.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+40.0,700.0,2.0,0.0,7.0,7.0,Unknown,Sargasan,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+45.0,697.0,2.0,3.0,3.0,4.0,Unknown,Sargasan,Unknown,10-20 years,2.0,Built-up,Ready_to_Move
+45.0,1125.0,2.0,1.0,5.0,6.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+55.0,1152.0,2.0,1.0,13.0,14.0,Unknown,Sargasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+60.0,694.0,2.0,3.0,11.0,13.0,Unknown,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+225.0,2067.0,4.0,3.0,2.0,13.0,Unknown,Ambapur,Unknown,New,4.0,Carpet,Ready_to_Move
+54.0,630.0,2.0,2.0,2.0,6.0,Unknown,Koba,Unknown,New,2.0,Carpet,Ready_to_Move
+65.0,3399.0,3.0,3.0,5.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+95.0,436.0,1.0,1.0,20.0,35.0,unfurnished,Gift City,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+43.0,1269.0,2.0,1.0,4.5,7.0,Unknown,Karai,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+136.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+100.0,2290.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+99.0,2290.0,3.0,1.0,8.0,13.0,unfurnished,Raysan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+76.0,900.0,2.0,1.0,0.0,1.0,Unknown,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+156.0,3168.0,3.0,3.0,0.0,1.0,Unknown,Raysan,Unknown,New,3.0,Built-up,Ready_to_Move
+121.0,2637.1555,3.0,1.0,5.0,8.0,unfurnished,Sargasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+55.0,1557.0,3.0,2.0,3.0,7.0,Unknown,Pethapur,Other,Unknown,3.0,Super Built-up,Under_Construction
+75.0,2025.0,3.0,2.0,1.0,5.5,Unknown,Randesan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+36.0,500.0,1.0,1.0,0.0,1.0,Unknown,Sargasan,Unknown,1-5 years,1.0,Built-up,Ready_to_Move
+75.0,1500.0,3.0,1.0,1.0,5.0,furnished,Randesan,Unknown,10-20 years,3.0,Carpet,Ready_to_Move
+190.0,3528.0,4.0,2.0,9.0,13.0,furnished,Koba,Unknown,New,4.0,Carpet,Ready_to_Move
+45.0,963.0,2.0,1.0,4.0,5.0,unfurnished,Sargasan,North-East,1-5 years,2.0,Super Built-up,Ready_to_Move
+62.0,2133.0,3.0,3.0,3.0,13.0,unfurnished,Randheja,Unknown,New,3.0,Super Built-up,Under_Construction
+22.0,301.0,1.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,1-5 years,1.0,Built-up,Ready_to_Move
+97.0,1098.0,1.0,1.0,0.0,1.0,unfurnished,Sargasan,Unknown,New,1.0,Carpet,Ready_to_Move
+29.0,800.0,2.0,1.0,3.0,3.0,Unknown,Vavol,Unknown,1-5 years,1.0,Built-up,Ready_to_Move
+65.0,700.0,2.0,1.0,5.0,11.0,unfurnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+55.0,1197.0,2.0,1.0,2.0,5.0,furnished,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+65.0,1410.0,2.0,1.0,5.0,11.0,furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+45.0,1161.0,2.0,1.0,6.0,7.0,semi-furnished,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+80.0,1700.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+95.0,2000.0,3.0,3.0,2.0,12.0,unfurnished,Kudasan,North-East,5-10 years,3.0,Built-up,Ready_to_Move
+45.0,1161.0,2.0,1.0,6.0,13.0,semi-furnished,Vavol,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+50.0,1278.0,2.0,2.0,3.0,5.0,unfurnished,Sargasan,North,5-10 years,2.0,Carpet,Ready_to_Move
+32.0,810.0,1.0,1.0,6.0,8.0,Unknown,Koba,Unknown,1-5 years,1.0,Super Built-up,Ready_to_Move
+35.51,702.0,1.0,1.0,1.0,3.0,unfurnished,Kudasan,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+15.5,484.3755,1.0,1.0,0.0,1.0,Unknown,Raysan,Unknown,5-10 years,1.0,Carpet,Ready_to_Move
+20.0,495.0,1.0,1.0,0.0,3.0,Unknown,Raysan,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+105.0,2070.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+30.0,585.0,1.0,1.0,2.0,6.0,semi-furnished,Vavol,East,5-10 years,1.0,Super Built-up,Ready_to_Move
+32.0,567.0,1.0,1.0,3.0,7.0,furnished,Vavol,Other,New,1.0,Built-up,Ready_to_Move
+53.0,1089.0,2.0,1.0,4.0,8.0,semi-furnished,Kudasan,West,New,2.0,Carpet,Ready_to_Move
+60.0,1251.0,2.0,1.0,6.0,8.0,unfurnished,Kudasan,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+69.0,765.0,2.0,1.0,7.0,11.0,furnished,Gift City,Unknown,New,2.0,Built-up,Ready_to_Move
+52.0,1395.0,2.0,1.0,4.0,6.0,unfurnished,Vavol,Unknown,1-5 years,2.0,Built-up,Ready_to_Move
+37.0,1313.1958,2.0,1.0,7.0,11.0,unfurnished,Kalol,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+25.0,558.0,1.0,1.0,3.0,4.0,unfurnished,Randheja,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+45.0,900.0,1.0,2.0,2.0,6.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+25.0,600.0,1.0,1.0,0.0,4.0,semi-furnished,Vavol,Unknown,10-20 years,1.0,Super Built-up,Ready_to_Move
+29.0,720.0,2.0,1.0,3.0,3.0,Unknown,Vavol,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+22.0,372.0,1.0,1.0,0.0,1.0,unfurnished,Kalol,Other,New,1.0,Carpet,Ready_to_Move
+118.0,2484.0,3.0,1.0,9.0,13.0,unfurnished,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+67.0,900.0,2.0,1.0,6.0,13.0,unfurnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+120.0,1157.0,3.0,1.0,4.0,14.0,unfurnished,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+50.0,1125.0,2.0,1.0,4.0,8.0,furnished,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+51.0,1215.0,2.0,1.0,1.0,5.0,unfurnished,Kudasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+30.0,500.0,1.0,2.0,0.0,1.0,Unknown,Vavol,Unknown,New,1.0,Built-up,Ready_to_Move
+12.5,361.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+73.0,838.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+50.0,1170.0,2.0,1.0,3.0,8.0,unfurnished,Koba,East,10-20 years,2.0,Super Built-up,Ready_to_Move
+73.0,1620.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+28.0,646.0,1.0,1.0,8.0,13.0,Unknown,SP Ring Road,Unknown,Unknown,1.0,Built-up,Ready_to_Move
+110.0,2385.0,3.0,1.0,3.0,7.0,Unknown,Koba,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+65.0,1323.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+37.0,1188.0,2.0,1.0,6.0,13.0,unfurnished,Dahegam,Unknown,New,2.0,Built-up,Ready_to_Move
+29.0,315.0,1.0,1.0,5.0,6.0,unfurnished,Pethapur,Other,5-10 years,1.0,Carpet,Ready_to_Move
+55.0,1170.0,2.0,1.0,3.0,8.0,Unknown,Kudasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+54.0,1359.0,2.0,1.0,6.0,7.0,furnished,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+35.0,1125.0,2.0,3.0,1.0,5.0,unfurnished,Sargasan,Unknown,New,2.0,Built-up,Ready_to_Move
+100.0,1854.0,3.0,1.0,6.0,13.0,furnished,Sargasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+16.0,372.0,1.0,1.0,6.0,21.0,Unknown,Kalol,Unknown,New,1.0,Carpet,Ready_to_Move
+99.0,2205.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+25.0,800.0,1.0,1.0,3.0,7.0,unfurnished,Kolavada,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+65.0,1700.0,3.0,1.0,4.0,5.0,semi-furnished,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+55.0,1440.0,2.0,3.0,5.0,5.0,unfurnished,Gandhinagar Taluka,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+63.0,1233.0,2.0,1.0,1.0,1.0,unfurnished,Sargasan,Unknown,10-20 years,2.0,Super Built-up,Ready_to_Move
+65.0,1776.0435,2.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+129.0,1600.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Other,New,2.0,Super Built-up,Under_Construction
+45.51,1000.0,2.0,2.0,2.0,2.0,unfurnished,Gift City,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+68.0,1926.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Other,New,3.0,Built-up,Ready_to_Move
+72.0,2025.0,3.0,1.0,7.0,7.0,Unknown,Sargasan,Other,New,3.0,Super Built-up,Under_Construction
+42.0,629.69,2.0,2.0,2.0,6.0,semi-furnished,Sector 6,Unknown,New,2.0,Carpet,Ready_to_Move
+37.51,796.53,2.0,0.0,3.0,5.0,Unknown,Sargasan,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+95.0,2960.0725,3.0,1.0,1.0,13.0,unfurnished,Sargasan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+130.0,1095.0,2.0,1.0,27.0,33.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+42.0,1179.0,2.0,2.0,8.0,13.0,unfurnished,SP Ring Road,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+150.0,780.0,2.0,1.0,9.0,13.0,Unknown,Gift City,Unknown,New,2.0,Super Built-up,Under_Construction
+39.0,1008.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+95.0,1755.0,3.0,2.0,8.0,14.0,unfurnished,Gift City,Unknown,New,3.0,Super Built-up,Ready_to_Move
+35.0,1125.0,2.0,1.0,4.0,5.0,semi-furnished,Kalol,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+36.0,1500.0,2.0,1.0,1.0,5.5,semi-furnished,Kalol,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+50.0,1125.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+95.0,1000.0,2.0,2.0,0.0,1.0,Unknown,Sector 19,Unknown,New,1.0,Super Built-up,Ready_to_Move
+40.0,1270.1402,2.0,1.0,4.0,8.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+58.0,1674.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Other,Unknown,3.0,Super Built-up,Ready_to_Move
+380.0,1485.0,1.0,3.0,0.0,1.0,Unknown,Sector 6,Unknown,New,3.0,Built-up,Ready_to_Move
+45.0,621.24,2.0,2.0,2.0,3.0,unfurnished,Chiloda,Unknown,New,2.0,Carpet,Ready_to_Move
+61.0,1582.2933,2.0,1.0,5.0,8.0,semi-furnished,Randesan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+68.0,1557.0,3.0,1.0,7.0,13.0,Unknown,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+109.0,1250.31,3.0,2.0,5.0,14.0,unfurnished,Sargasan,North-East,5-10 years,3.0,Carpet,Ready_to_Move
+54.0,1150.0,2.0,1.0,5.0,7.0,semi-furnished,Vavol,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+110.0,1890.0,3.0,2.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+131.0,2277.0,3.0,1.0,8.0,10.0,Unknown,Raysan,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+51.0,1305.0,2.0,1.0,5.0,9.0,semi-furnished,Raysan,Unknown,5-10 years,2.0,Built-up,Ready_to_Move
+60.0,1883.6825,3.0,1.0,4.0,8.0,semi-furnished,Kudasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+49.0,1242.0,2.0,1.0,4.0,8.0,semi-furnished,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+52.0,999.0,2.0,1.0,5.0,8.0,furnished,Randesan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+53.0,999.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,10-20 years,2.0,Carpet,Ready_to_Move
+130.0,2700.0,3.0,1.0,11.0,13.0,unfurnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+140.0,844.86,3.0,1.0,1.0,13.0,semi-furnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+30.0,1125.0,2.0,1.0,3.0,5.0,unfurnished,Pethapur,East,New,2.0,Super Built-up,Ready_to_Move
+22.0,450.0,1.0,1.0,3.0,7.0,Unknown,Randheja,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+11.5,423.0,1.0,1.0,1.0,4.0,unfurnished,Kalol,Unknown,New,1.0,Super Built-up,Ready_to_Move
+31.0,846.0,1.0,1.0,1.0,3.0,unfurnished,Gift City,Unknown,New,1.0,Built-up,Ready_to_Move
+31.0,864.0,1.0,1.0,1.0,3.0,Unknown,Vavol,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+85.21,880.0,2.0,3.0,2.0,9.0,unfurnished,Koba,East,1-5 years,2.0,Carpet,Ready_to_Move
+72.0,2025.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+59.0,1300.0,2.0,1.0,8.0,13.0,Unknown,Koba,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+71.75,1845.0,2.0,1.0,5.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Under_Construction
+25.5,774.0,1.0,1.0,1.0,3.0,unfurnished,Randheja,East,5-10 years,1.0,Carpet,Ready_to_Move
+150.0,827.74,2.0,1.0,8.0,34.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+50.0,1035.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+165.0,871.0,2.0,1.0,19.0,33.0,unfurnished,Gift City,Unknown,New,2.0,Carpet,Under_Construction
+160.0,2250.0,3.0,4.0,3.0,7.0,semi-furnished,Raysan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+67.0,1235.0,2.0,1.0,8.0,13.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+58.0,796.53,3.0,3.0,6.0,7.0,unfurnished,Randheja,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+160.0,990.0,1.0,1.0,0.0,1.0,Unknown,Sector 29,Unknown,New,2.0,Built-up,Ready_to_Move
+42.0,1170.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+128.0,1332.0,3.0,1.0,12.0,13.0,furnished,Kudasan,Unknown,New,3.0,Carpet,Ready_to_Move
+130.0,2043.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+53.26,1431.0,2.0,1.0,7.0,14.0,Unknown,Khoraj,East,New,2.0,Super Built-up,Under_Construction
+85.0,1710.0,4.0,1.0,3.0,7.0,semi-furnished,Vavol,Unknown,New,3.0,Super Built-up,Ready_to_Move
+170.0,871.0,2.0,1.0,24.0,33.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Under_Construction
+66.0,796.53,2.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+50.0,602.78,1.0,1.0,4.0,8.0,Unknown,Sector 28,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+18.0,603.0,1.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+40.0,756.0,2.0,2.0,2.0,6.0,Unknown,Randheja,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+100.0,1205.56,1.0,2.0,5.0,5.0,Unknown,Gandhinagar Taluka,Unknown,New,2.0,Built-up,Ready_to_Move
+67.0,1711.4601,2.0,1.0,8.0,14.0,unfurnished,Sargasan,East,1-5 years,2.0,Carpet,Ready_to_Move
+75.0,1935.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+55.0,1350.0,2.0,1.0,5.0,5.0,unfurnished,Sargasan,East,5-10 years,2.0,Super Built-up,Ready_to_Move
+78.0,782.25,2.0,2.0,14.0,14.0,Unknown,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+29.0,1125.0,2.0,1.0,2.0,6.0,semi-furnished,Kalol,Unknown,New,2.0,Carpet,Ready_to_Move
+27.0,411.18,1.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+60.0,963.0,2.0,1.0,4.0,8.0,furnished,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+70.0,900.0,2.0,1.0,1.0,5.5,unfurnished,Kudasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+65.5,1656.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+46.0,1179.0,2.0,1.0,5.0,8.0,unfurnished,Sargasan,Other,New,2.0,Super Built-up,Ready_to_Move
+80.0,1440.0,2.0,1.0,12.0,13.0,furnished,Sargasan,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+55.01,1557.0,3.0,4.0,3.0,7.0,Unknown,Pethapur,Other,New,3.0,Carpet,Ready_to_Move
+155.0,871.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Under_Construction
+50.0,1130.0,1.0,3.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+231.0,4329.0,4.0,2.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,4.0,Super Built-up,Ready_to_Move
+70.0,1743.7518,2.0,1.0,7.0,7.0,unfurnished,Sector 26,East,1-5 years,3.0,Carpet,Ready_to_Move
+80.0,2100.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+60.0,1422.0,2.0,1.0,0.0,1.0,Unknown,Randesan,Unknown,New,2.0,Built-up,Ready_to_Move
+111.0,2466.0,3.0,1.0,6.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+41.0,1035.0,2.0,1.0,3.0,7.0,furnished,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+140.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+80.0,2160.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+65.0,1808.3352,2.0,1.0,1.0,13.0,furnished,Kudasan,Unknown,Unknown,2.0,Carpet,Under_Construction
+80.0,1510.0,2.0,2.0,1.0,5.5,unfurnished,Randesan,Unknown,10-20 years,3.0,Carpet,Ready_to_Move
+33.0,945.0,2.0,1.0,2.0,6.0,furnished,Kalol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+50.0,1000.0,2.0,1.0,8.0,13.0,Unknown,Other,Unknown,New,2.0,Carpet,Ready_to_Move
+42.0,629.69,2.0,1.0,0.0,1.0,Unknown,Sector 22,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+61.0,1134.0,2.0,1.0,1.0,5.0,furnished,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+40.0,550.0,2.0,1.0,6.0,8.0,unfurnished,Vavol,East,1-5 years,2.0,Carpet,Ready_to_Move
+114.0,2718.0,3.0,3.0,3.0,13.0,Unknown,Raysan,East,Unknown,3.0,Carpet,Under_Construction
+77.0,1566.0,2.0,1.0,8.0,11.0,unfurnished,Raysan,Unknown,New,2.0,Carpet,Ready_to_Move
+54.0,779.844555,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+43.0,1215.0,2.0,1.0,4.0,8.0,Unknown,Koba,Other,Unknown,2.0,Carpet,Ready_to_Move
+20.0,457.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+107.0,483.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Carpet,Under_Construction
+59.0,1467.0,2.0,1.0,5.0,5.0,furnished,Vavol,Unknown,1-5 years,2.0,Super Built-up,Ready_to_Move
+76.0,900.0,2.0,1.0,5.0,6.0,furnished,Sargasan,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+51.0,1278.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+105.0,1230.0,4.0,1.0,5.0,13.0,unfurnished,Sargasan,Unknown,New,3.0,Carpet,Under_Construction
+12.0,550.0,1.0,1.0,2.0,4.0,Unknown,Kalol,Unknown,New,1.0,Carpet,Ready_to_Move
+14.0,550.0,1.0,1.0,2.0,6.0,unfurnished,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+20.0,300.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+12.0,585.0,1.0,0.0,1.0,4.0,Unknown,Kalol,Unknown,New,1.0,Carpet,Ready_to_Move
+82.56,2322.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+10.0,450.0,1.0,1.0,2.0,5.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+10.25,293.0,1.0,1.0,2.0,5.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+19.0,293.0,1.0,1.0,2.0,6.0,unfurnished,Kalol,Unknown,New,1.0,Built-up,Ready_to_Move
+10.0,293.0,1.0,1.0,2.0,6.0,unfurnished,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+107.0,483.0,1.0,1.0,23.0,32.0,Unknown,Gift City,Unknown,New,1.0,Carpet,Under_Construction
+7.0,405.0,1.0,1.0,2.0,3.0,Unknown,Kalol,Unknown,New,1.0,Carpet,Ready_to_Move
+85.0,2025.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Other,Unknown,3.0,Carpet,Ready_to_Move
+11.0,293.0,1.0,1.0,3.0,7.0,unfurnished,Kalol,Unknown,5-10 years,1.0,Built-up,Ready_to_Move
+52.0,972.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+110.0,550.0,1.0,1.0,1.0,3.0,Unknown,Sector 22,Unknown,New,2.0,Carpet,Ready_to_Move
+55.0,1278.0,2.0,2.0,4.0,8.0,Unknown,Koba,Unknown,New,2.0,Super Built-up,Ready_to_Move
+41.0,1035.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+70.0,597.29,2.0,1.0,0.0,1.0,Unknown,Sector 29,Unknown,New,2.0,Carpet,Ready_to_Move
+16.0,450.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+62.0,1076.39,2.0,1.0,3.0,4.0,semi-furnished,Raysan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+55.0,1170.0,2.0,1.0,3.0,7.0,unfurnished,Sargasan,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+70.0,1080.0,2.0,1.0,7.0,11.0,Unknown,Khoraj,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+85.0,1935.03,3.0,1.0,4.0,8.0,semi-furnished,Sargasan,Other,Unknown,3.0,Carpet,Ready_to_Move
+75.0,1845.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+135.0,2250.0,2.0,1.0,4.0,8.0,semi-furnished,Raysan,Unknown,New,3.0,Carpet,Ready_to_Move
+130.0,1035.0,3.0,1.0,7.0,9.0,unfurnished,Sargasan,South-East,New,3.0,Carpet,Ready_to_Move
+58.0,1614.585,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+120.0,2475.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Under_Construction
+55.0,1089.0,2.0,3.0,2.0,4.0,Unknown,Pethapur,Unknown,New,2.0,Carpet,Ready_to_Move
+69.0,672.39,3.0,2.0,6.0,13.0,semi-furnished,Randheja,East,New,3.0,Carpet,Ready_to_Move
+135.0,2583.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+30.0,600.0,2.0,2.0,3.0,5.0,Unknown,Pethapur,Unknown,New,2.0,Carpet,Ready_to_Move
+50.0,1625.3489,2.0,1.0,3.0,7.0,furnished,Kolavada,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+45.0,496.753985,2.0,1.0,3.0,7.0,semi-furnished,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+83.0,2000.0,3.0,1.0,8.0,13.0,Unknown,Sargasan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+75.0,1377.0,2.0,3.0,4.0,8.0,furnished,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+49.0,1528.4738,2.0,2.0,7.0,11.0,Unknown,Sector 26,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+39.75,1776.0435,2.0,2.0,1.0,4.0,Unknown,Kalol,Unknown,New,2.0,Carpet,Ready_to_Move
+45.0,496.753985,2.0,1.0,7.0,11.0,Unknown,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+60.0,770.0,3.0,2.0,1.0,5.5,Unknown,Randheja,Unknown,New,3.0,Carpet,Ready_to_Move
+70.0,1269.0,2.0,2.0,6.0,10.0,unfurnished,Sargasan,East,1-5 years,2.0,Super Built-up,Ready_to_Move
+15.0,210.0,1.0,1.0,4.0,8.0,semi-furnished,Sector 24,Unknown,New,1.0,Carpet,Ready_to_Move
+125.0,2690.975,3.0,1.0,2.0,8.0,furnished,Koba,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+36.0,720.0,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,1.0,Carpet,Ready_to_Move
+52.0,718.16,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+85.0,1845.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+63.5,1905.2103,2.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+61.0,1100.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+130.0,1095.0,3.0,2.0,14.0,32.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Ready_to_Move
+42.0,1100.0,2.0,1.0,5.0,6.0,semi-furnished,Vavol,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+72.0,1269.0,2.0,2.0,6.0,10.0,Unknown,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+53.0,728.93,2.0,1.0,4.0,8.0,Unknown,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+150.0,1090.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+150.0,1533.1,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+45.0,1485.4181999999998,2.0,1.0,4.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+68.0,1485.0,2.0,2.0,0.0,1.0,Unknown,Raysan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+49.9,1278.0,2.0,2.0,7.0,11.0,Unknown,Sector 26,Other,Unknown,2.0,Carpet,Ready_to_Move
+146.0,3060.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Super Built-up,Under_Construction
+20.0,465.43,1.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+185.0,871.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+72.0,1395.0,3.0,2.0,4.0,8.0,furnished,SG Highway,Unknown,New,3.0,Super Built-up,Ready_to_Move
+58.0,1170.0,2.0,2.0,8.0,13.0,Unknown,SP Ring Road,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+110.0,2385.0,3.0,1.0,8.0,13.0,unfurnished,Randesan,South-East,New,3.0,Carpet,Ready_to_Move
+80.0,1780.0,3.0,1.0,2.0,6.0,furnished,Raysan,Unknown,5-10 years,3.0,Carpet,Ready_to_Move
+140.0,777.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+90.0,1302.86,3.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+62.0,769.4,3.0,2.0,1.0,5.5,Unknown,Vavol,Unknown,New,3.0,Carpet,Ready_to_Move
+50.0,1215.0,2.0,1.0,3.0,7.0,furnished,Sargasan,Unknown,5-10 years,2.0,Carpet,Ready_to_Move
+75.0,1782.0,3.0,1.0,6.0,12.0,unfurnished,Sargasan,East,New,3.0,Super Built-up,Ready_to_Move
+90.0,2070.0,3.0,1.0,4.0,8.0,furnished,Sargasan,Other,New,3.0,Carpet,Ready_to_Move
+50.0,1194.7929,2.0,2.0,2.0,6.0,Unknown,Adalaj,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+70.0,1200.0,2.0,1.0,3.0,7.0,Unknown,Sector 22,Unknown,New,3.0,Super Built-up,Ready_to_Move
+80.0,1260.0,2.0,1.0,0.0,1.0,Unknown,Kudasan,Unknown,New,2.0,Built-up,Ready_to_Move
+100.0,2690.975,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+90.0,483.0,1.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,1.0,Carpet,Under_Construction
+75.0,2196.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+80.0,2115.0,3.0,3.0,7.0,7.0,Unknown,Sector 26,Unknown,New,3.0,Super Built-up,Ready_to_Move
+48.0,1215.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+87.0,1350.0,3.0,2.0,6.0,6.0,semi-furnished,Gift City,Unknown,New,3.0,Built-up,Ready_to_Move
+95.0,1980.0,3.0,1.0,7.0,14.0,unfurnished,Randesan,East,New,3.0,Super Built-up,Ready_to_Move
+55.0,925.0,2.0,2.0,3.0,7.0,Unknown,Koba,Unknown,New,2.0,Carpet,Ready_to_Move
+69.0,1494.0,2.0,3.0,7.0,7.0,furnished,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+33.51,756.0,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,1.0,Super Built-up,Ready_to_Move
+15.0,530.0,2.0,1.0,2.0,7.0,Unknown,Kalol,Unknown,1-5 years,1.0,Carpet,Ready_to_Move
+36.0,756.0,2.0,3.0,4.0,8.0,furnished,Sargasan,Unknown,New,1.0,Super Built-up,Ready_to_Move
+120.0,2520.0,3.0,1.0,4.0,8.0,unfurnished,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+90.0,1693.16,3.0,3.0,6.0,8.0,Unknown,Kudasan,Unknown,New,3.0,Built-up,Ready_to_Move
+35.0,990.0,2.0,1.0,4.0,8.0,unfurnished,Kudasan,East,New,2.0,Super Built-up,Ready_to_Move
+45.0,500.0,2.0,2.0,2.0,3.0,Unknown,Vavol,Unknown,New,2.0,Carpet,Ready_to_Move
+65.0,1269.0,2.0,1.0,0.0,1.0,unfurnished,Sargasan,Other,New,2.0,Carpet,Ready_to_Move
+125.0,2232.0,3.0,1.0,3.0,10.0,unfurnished,Sargasan,Unknown,1-5 years,3.0,Super Built-up,Ready_to_Move
+38.0,1026.0,2.0,2.0,1.0,3.0,Unknown,Randheja,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+50.0,1224.0,2.0,2.0,3.0,5.0,Unknown,Randesan,Unknown,New,2.0,Carpet,Ready_to_Move
+65.0,705.0,2.0,2.0,11.0,13.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+95.0,1782.0,3.0,2.0,8.0,8.0,Unknown,Kudasan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+65.0,705.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+41.0,1035.0,2.0,1.0,3.0,7.0,unfurnished,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+110.0,1350.0,3.0,1.0,13.0,14.0,semi-furnished,Koba,Unknown,New,3.0,Carpet,Ready_to_Move
+27.0,731.9452,1.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+50.0,1345.4875,2.0,2.0,2.0,6.0,semi-furnished,Adalaj,Other,New,2.0,Carpet,Ready_to_Move
+60.0,1485.0,3.0,2.0,2.0,6.0,semi-furnished,Vavol,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+60.0,1440.0,2.0,1.0,7.0,7.0,unfurnished,Sargasan,East,New,2.0,Super Built-up,Ready_to_Move
+42.0,1100.0,2.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+151.0,1300.0,3.0,2.0,0.0,1.0,Unknown,Sector 22,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.0,965.0,2.0,1.0,0.0,1.0,Unknown,Sector 22,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+83.0,2340.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+110.0,1325.0,2.0,1.0,11.0,13.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+75.0,1872.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+56.0,1260.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+56.0,1280.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+65.0,1496.1821,2.0,1.0,4.0,8.0,semi-furnished,Sargasan,Unknown,1-5 years,2.0,Carpet,Ready_to_Move
+50.0,990.0,2.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+100.0,1400.0,3.0,1.0,4.0,8.0,Unknown,Kudasan,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+16.0,369.85,1.0,0.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+115.0,956.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+70.0,1251.0,1.0,2.0,6.0,13.0,Unknown,Uvarsad,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+210.0,5015.9774,4.0,2.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,4.0,Carpet,Under_Construction
+78.0,1872.0,3.0,3.0,4.0,8.0,unfurnished,Sargasan,Other,New,3.0,Super Built-up,Ready_to_Move
+180.0,2475.0,3.0,1.0,4.0,8.0,furnished,Raysan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+75.0,1980.0,3.0,2.0,4.0,8.0,Unknown,SG Highway,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+65.0,2484.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+50.0,700.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+33.0,945.0,2.0,1.0,1.0,5.5,Unknown,Kalol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+61.0,1092.0,3.0,1.0,3.0,7.0,semi-furnished,Vavol,Unknown,New,3.0,Carpet,Ready_to_Move
+55.0,1539.0,3.0,3.0,3.0,7.0,Unknown,Vavol,Unknown,New,3.0,Carpet,Ready_to_Move
+82.0,854.22,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Ready_to_Move
+58.0,600.0,1.0,2.0,6.0,13.0,Unknown,Uvarsad,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+40.0,900.0,2.0,2.0,3.0,3.0,Unknown,Vavol,Unknown,5-10 years,2.0,Super Built-up,Ready_to_Move
+37.0,701.81,2.0,1.0,5.5,9.0,Unknown,Dahegam,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+86.5,1845.0,3.0,2.0,4.0,4.0,Unknown,Koba,Unknown,10-20 years,3.0,Carpet,Ready_to_Move
+41.0,558.0,1.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,1.0,Super Built-up,Ready_to_Move
+109.0,2718.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,New,3.0,Super Built-up,Under_Construction
+170.0,630.0,2.0,2.0,11.0,33.0,Unknown,Gift City,Unknown,New,2.0,Carpet,Ready_to_Move
+300.0,6399.0,6.0,2.0,11.0,13.0,unfurnished,Raysan,North-East,New,5.0,Carpet,Under_Construction
+90.0,2160.0,3.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+47.0,1395.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Other,Unknown,2.0,Carpet,Ready_to_Move
+95.0,850.0,1.0,1.0,5.0,24.0,unfurnished,Gift City,North,New,1.0,Carpet,Ready_to_Move
+150.0,1177.0,2.0,1.0,4.0,32.0,unfurnished,Gift City,North,New,2.0,Carpet,Ready_to_Move
+24.0,446.0,1.0,1.0,4.0,8.0,semi-furnished,Kalol,Unknown,New,2.0,Carpet,Ready_to_Move
+24.0,500.0,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+90.0,2200.0,3.0,1.0,9.0,13.0,unfurnished,Raysan,Other,New,3.0,Carpet,Ready_to_Move
+72.0,1250.0,2.0,1.0,4.5,7.0,Unknown,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+240.0,4788.0,4.0,2.0,3.0,12.0,unfurnished,Koba,Unknown,New,4.0,Carpet,Ready_to_Move
+25.0,270.0,1.0,1.0,3.0,4.0,Unknown,Randheja,Unknown,New,1.0,Carpet,Ready_to_Move
+95.0,1908.0,3.0,2.0,4.0,8.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+135.0,645.83,2.0,1.0,4.0,22.0,furnished,Gift City,Unknown,New,2.0,Carpet,Ready_to_Move
+72.11,1413.0,2.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,New,2.0,Carpet,Ready_to_Move
+100.0,1980.0,3.0,1.0,1.0,8.0,furnished,Koba,Unknown,New,3.0,Built-up,Ready_to_Move
+72.0,1413.0,2.0,2.0,1.0,7.0,unfurnished,Kudasan,North-East,5-10 years,2.0,Carpet,Ready_to_Move
+54.0,1388.55,2.0,1.0,4.0,8.0,Unknown,Sargasan,Other,Unknown,2.0,Super Built-up,Ready_to_Move
+90.0,1674.0,3.0,1.0,0.0,1.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+15.0,731.94,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+90.0,1638.0,1.0,1.0,4.0,8.0,furnished,Sargasan,Other,New,3.0,Carpet,Ready_to_Move
+48.0,1162.5012,2.0,3.0,5.0,8.0,Unknown,Koba,Unknown,New,2.0,Carpet,Ready_to_Move
+22.0,647.0,1.0,1.0,2.0,4.0,unfurnished,Kalol,Unknown,5-10 years,1.0,Super Built-up,Ready_to_Move
+38.0,489.97,1.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+49.0,972.0,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+62.0,1278.0,2.0,1.0,5.0,13.0,unfurnished,Gift City,Unknown,New,2.0,Built-up,Ready_to_Move
+39.5,837.0,1.0,1.0,2.0,3.0,Unknown,Vavol,Unknown,10-20 years,1.0,Carpet,Ready_to_Move
+60.0,751.75,3.0,1.0,5.0,7.0,Unknown,Vavol,Unknown,1-5 years,3.0,Carpet,Ready_to_Move
+85.0,1845.0,3.0,1.0,3.0,7.0,unfurnished,Kudasan,Unknown,10-20 years,3.0,Super Built-up,Ready_to_Move
+65.0,687.0,2.0,3.0,4.0,12.0,Unknown,Sargasan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+62.0,1701.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,3.0,Carpet,Under_Construction
+116.0,2798.614,3.0,1.0,4.0,8.0,Unknown,Raysan,Other,New,3.0,Super Built-up,Ready_to_Move
+50.0,1000.0,2.0,1.0,2.0,6.0,Unknown,Randesan,Unknown,New,2.0,Super Built-up,Ready_to_Move
+46.0,1000.0,2.0,1.0,5.0,8.0,Unknown,Randesan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+30.0,675.0,1.0,1.0,3.0,7.0,unfurnished,Vavol,Unknown,New,1.0,Carpet,Ready_to_Move
+50.0,1453.1265,2.0,1.0,0.0,1.0,furnished,Sector 29,North,New,2.0,Carpet,Ready_to_Move
+40.0,1000.0,1.0,2.0,3.0,7.0,unfurnished,Vavol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+51.0,900.0,2.0,1.0,2.0,4.0,semi-furnished,Gift City,Unknown,New,2.0,Built-up,Ready_to_Move
+70.0,2077.4327,3.0,3.0,4.0,5.0,Unknown,Sargasan,Unknown,New,3.0,Built-up,Ready_to_Move
+60.0,1700.0,3.0,2.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+156.0,1095.0,2.0,2.0,26.0,33.0,unfurnished,Gift City,North-East,New,2.0,Super Built-up,Ready_to_Move
+53.55,1377.0,2.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+100.0,2152.78,3.0,3.0,2.0,6.0,Unknown,Uvarsad,Unknown,New,3.0,Super Built-up,Ready_to_Move
+144.0,3600.0,4.0,2.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,4.0,Super Built-up,Under_Construction
+85.0,1506.946,2.0,2.0,1.0,6.0,Unknown,Koba,Unknown,New,3.0,Carpet,Under_Construction
+68.0,1305.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+155.0,3006.0,3.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+85.0,2012.85,3.0,1.0,4.0,8.0,semi-furnished,Sargasan,East,5-10 years,3.0,Super Built-up,Ready_to_Move
+96.0,1755.0,2.0,2.0,7.0,11.0,Unknown,Sector 26,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+135.0,1000.0,1.0,0.0,3.0,7.0,unfurnished,Vavol,Unknown,New,2.0,Super Built-up,Ready_to_Move
+49.0,972.0,2.0,3.0,5.0,8.0,unfurnished,Koba,South-East,New,2.0,Carpet,Ready_to_Move
+72.0,1300.0,3.0,1.0,4.0,8.0,furnished,Sargasan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+180.0,2394.0,3.0,1.0,4.0,8.0,Unknown,Raysan,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+75.0,1800.0,3.0,3.0,5.0,9.0,Unknown,Randesan,Unknown,5-10 years,3.0,Super Built-up,Ready_to_Move
+125.0,1511.0,2.0,1.0,8.5,25.0,Unknown,Gift City,Unknown,Unknown,2.0,Super Built-up,Under_Construction
+49.0,1162.5012,2.0,3.0,5.0,8.0,unfurnished,Koba,East,5-10 years,2.0,Carpet,Ready_to_Move
+60.0,852.5,1.0,1.0,4.5,7.0,Unknown,Sector 8,North-East,New,2.0,Carpet,Ready_to_Move
+51.0,1071.0,2.0,2.0,8.0,13.0,Unknown,SP Ring Road,Other,New,2.0,Carpet,Ready_to_Move
+60.0,1728.0,3.0,3.0,2.0,6.0,Unknown,Chiloda,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+88.0,1035.0,3.0,1.0,5.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+51.0,880.0,2.0,1.0,3.0,3.0,Unknown,Kudasan,Unknown,New,2.0,Carpet,Ready_to_Move
+50.0,1260.0,2.0,1.0,1.0,5.5,unfurnished,Randesan,Unknown,New,2.0,Built-up,Ready_to_Move
+55.0,344.45,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+15.0,550.0,1.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,1.0,Carpet,Ready_to_Move
+72.0,1323.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+70.0,1719.0,3.0,2.0,6.0,8.0,Unknown,Randesan,Unknown,New,3.0,Carpet,Ready_to_Move
+75.0,1674.0,3.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+72.0,1890.0,3.0,2.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,3.0,Super Built-up,Ready_to_Move
+26.0,720.0,1.0,1.0,2.0,3.0,unfurnished,Adalaj,Unknown,New,1.0,Carpet,Ready_to_Move
+38.0,902.97,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+55.0,1100.0,2.0,1.0,5.0,8.0,furnished,Randesan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+95.0,2295.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,New,3.0,Carpet,Under_Construction
+28.0,1302.4319,2.0,1.0,2.0,6.0,Unknown,Kalol,Unknown,Unknown,2.0,Built-up,Ready_to_Move
+39.0,980.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+42.0,600.0,2.0,1.0,3.0,7.0,Unknown,Pethapur,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+67.0,753.47,2.0,1.0,4.0,8.0,Unknown,Sector 21,Unknown,Unknown,2.0,Carpet,Under_Construction
+46.5,1571.5294,2.0,1.0,4.0,8.0,Unknown,Koba,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+92.0,1908.0,3.0,2.0,5.0,8.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+85.0,1845.0,3.0,1.0,6.0,8.0,Unknown,Kudasan,Unknown,10-20 years,3.0,Carpet,Ready_to_Move
+92.0,1908.0,3.0,1.0,5.0,8.0,Unknown,Raysan,Unknown,New,3.0,Super Built-up,Ready_to_Move
+92.0,1908.0,3.0,3.0,5.0,8.0,Unknown,Raysan,Unknown,New,3.0,Carpet,Ready_to_Move
+48.0,1250.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+48.0,450.0,2.0,1.0,0.0,4.0,semi-furnished,Sector 22,Unknown,New,2.0,Carpet,Ready_to_Move
+100.0,1890.0,3.0,1.0,4.0,8.0,furnished,Koba,Other,New,3.0,Carpet,Ready_to_Move
+40.0,1305.0,2.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Carpet,Ready_to_Move
+32.0,1000.0,1.0,1.0,3.0,7.0,Unknown,Vavol,Unknown,Unknown,2.0,Super Built-up,Ready_to_Move
+90.0,2300.0,3.0,2.0,3.0,7.0,Unknown,Gift City,Unknown,Unknown,3.0,Built-up,Ready_to_Move
+78.0,2025.0,3.0,3.0,3.0,7.0,Unknown,Randheja,Unknown,Unknown,3.0,Carpet,Ready_to_Move
+49.0,702.0,2.0,1.0,4.0,8.0,Unknown,Sargasan,Unknown,Unknown,2.0,Carpet,Ready_to_Move
