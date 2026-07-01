@@ -10,3 +10,7 @@ joblib
 pydantic
 python-dotenv
 requests
+Flask
+gunicorn
+requests
+python-dotenv
