@@ -1,0 +1,57 @@
+Feature,Coefficient,Percentage_Impact,Interpretation
+cat__mapped_area_Gift City,0.4909151890041795,63.38,+63.38%
+cat__mapped_area_Kalol,-0.4431227985606199,-35.8,-35.80%
+cat__mapped_area_Sector 22,0.21769357976177367,24.32,+24.32%
+num__bedrooms,0.211193636713543,31.41,+31.41%
+num__area_sqft,0.1879086964949793,0.02,+0.02%
+cat__mapped_area_Pethapur,-0.18187394401677984,-16.63,-16.63%
+cat__mapped_area_Raysan,0.16687412317179928,18.16,+18.16%
+cat__mapped_area_Sector 6,0.16274845384172165,17.67,+17.67%
+cat__mapped_area_Randheja,-0.1514504159907945,-14.05,-14.05%
+num__total_floors,0.11993485559295085,1.86,+1.86%
+cat__mapped_area_Chiloda,-0.11913296593821655,-11.23,-11.23%
+cat__mapped_area_Kolavada,-0.11482852012913732,-10.85,-10.85%
+cat__mapped_area_Sector 19,0.09441936846919324,9.9,+9.90%
+cat__mapped_area_Vavol,-0.0851933913798984,-8.17,-8.17%
+cat__mapped_area_Koba,0.08152819815180512,8.49,+8.49%
+cat__mapped_area_Sector 11,0.07877610056048867,8.2,+8.20%
+cat__mapped_area_Kudasan,0.07657079164873183,7.96,+7.96%
+cat__mapped_area_Sector 24,-0.06825104073216998,-6.6,-6.60%
+cat__mapped_area_SP Ring Road,-0.06737976647611628,-6.52,-6.52%
+cat__property_type_builder floor,-0.060544682772643375,-5.87,-5.87%
+cat__mapped_area_Khoraj,-0.06029021220017741,-5.85,-5.85%
+cat__property_age_New,-0.058536770069254805,-5.69,-5.69%
+cat__mapped_area_Karai,-0.0534988299512873,-5.21,-5.21%
+cat__property_age_5-10 years,-0.05034527273572227,-4.91,-4.91%
+cat__property_age_10-20 years,-0.03950895293717589,-3.87,-3.87%
+num__bathrooms,0.03805329724499566,4.85,+4.85%
+cat__mapped_area_Sargasan,0.03782944297213957,3.86,+3.86%
+cat__mapped_area_Uvarsad,0.035783207845478206,3.64,+3.64%
+cat__mapped_area_Sector 26,-0.03492322710025686,-3.43,-3.43%
+cat__property_age_Unknown,-0.030321992668637554,-2.99,-2.99%
+cat__mapped_area_Dahegam,-0.029925620984653983,-2.95,-2.95%
+cat__mapped_area_Sector 8,0.024402895137518452,2.47,+2.47%
+cat__facing_South-East,-0.023698851047272117,-2.34,-2.34%
+cat__mapped_area_Gandhinagar Taluka,-0.02329047600547508,-2.3,-2.30%
+cat__facing_South,-0.02156554497044222,-2.13,-2.13%
+cat__area_type_Super Built-up,-0.02085028466068623,-2.06,-2.06%
+cat__mapped_area_Randesan,0.020430015505326464,2.06,+2.06%
+cat__facing_North-East,-0.01963421213297553,-1.94,-1.94%
+cat__mapped_area_Sughad,0.01823361860049481,1.84,+1.84%
+cat__facing_North,0.017749629271571133,1.79,+1.79%
+cat__facing_Unknown,0.015517375124887253,1.56,+1.56%
+cat__mapped_area_Other,-0.013315035205072594,-1.32,-1.32%
+cat__area_type_Carpet,0.01275391240159415,1.28,+1.28%
+cat__facing_South-West,0.012478736112114466,1.26,+1.26%
+cat__property_type_penthouse,-0.012055585882513832,-1.2,-1.20%
+cat__facing_West,0.011832747934992095,1.19,+1.19%
+cat__facing_Other,-0.010988023194409028,-1.09,-1.09%
+cat__property_status_Under_Construction,-0.010177114445373425,-1.01,-1.01%
+num__current_floor,0.00837906770631669,0.24,+0.24%
+cat__mapped_area_SG Highway,-0.007833526134120233,-0.78,-0.78%
+cat__furnishing_status_unfurnished,-0.0270779264581033486,-2.67,-2.67%
+cat__mapped_area_Sector 28,0.0055219906358704805,0.55,+0.55%
+cat__mapped_area_Valad,-0.005475074422345025,-0.55,-0.55%
+cat__facing_North-West,0.0019652812349936176,0.2,+0.20%
+num__balconies,0.0009173209550935462,0.13,+0.13%
+cat__furnishing_status_furnished,0.0391784026542351161,4.00,+4.00%
