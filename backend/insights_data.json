@@ -1,0 +1,537 @@
+{
+  "numerical": {
+    "bedrooms": {
+      "short_name": "Bedrooms",
+      "display_name": "🛏 Bedrooms",
+      "impact": "+31.41%",
+      "impact_level": "High",
+      "explanation": "Properties with one additional bedroom are predicted to be **31.41% more expensive**, keeping all other features constant.",
+      "current_value": 2,
+      "current_price": 80,
+      "new_value": 3,
+      "new_price": 105.13,
+      "increase": 25.13,
+      "market_insight": "Bedroom count is one of the most influential factors in property valuation. Homes with more bedrooms generally attract a larger pool of buyers, especially families, leading to stronger demand and higher market prices.",
+      "buyer_insight": "When comparing similar properties, an additional bedroom offers greater flexibility for families, guests, or a home office. Investing in an extra bedroom often provides better long-term value than spending more on cosmetic features.",
+      "seller_insight": "If your property has additional bedrooms, highlight them prominently in your listing. Well-planned and spacious bedrooms increase buyer interest, improve market appeal, and can help justify a higher selling price."
+    },
+    "bathrooms": {
+      "short_name": "Bathrooms",
+      "display_name": "🚿 Bathrooms ",
+      "impact": "+4.85%",
+      "impact_level": "High",
+      "explanation": "Properties with one additional bathroom are predicted to be **4.85% more expensive**, keeping all other features constant.",
+      "current_value": 2,
+      "current_price": 80,
+      "new_value": 3,
+      "new_price": 83.88,
+      "increase": 3.88,
+      "market_insight": "Bathrooms improve a property's comfort and functionality, making them an important factor in pricing. However, their overall influence is moderate, as location, property size, and bedroom count typically have a greater impact on property value.",
+      "buyer_insight": "An additional bathroom enhances daily convenience, especially for larger families. While it adds value, buyers should prioritize location, property size, and bedroom count when comparing similar properties.",
+      "seller_insight": "Well-maintained or renovated bathrooms can increase buyer interest and improve a property's appeal. Highlighting modern fittings and quality finishes can help justify the asking price, even though bathrooms are not the primary driver of property value."
+    },
+    "balconies": {
+      "short_name": "Balconies",
+      "display_name": "🌇 Balconies",
+      "impact": "+0.13%",
+      "impact_level": "Moderate",
+      "explanation": "Properties with one additional balcony are predicted to be **0.13% more expensive**, keeping all other features constant.",
+      "current_value": 2,
+      "current_price": 80,
+      "new_value": 3,
+      "new_price": 80.1,
+      "increase": 0.1,
+      "market_insight": "Balconies enhance a property's lifestyle appeal by providing outdoor space, natural light, and better ventilation. While they can increase buyer interest, their overall influence on property value is relatively low compared to location, property size, bedrooms, and bathrooms.",
+      "buyer_insight": "A balcony adds comfort by offering space for relaxation and outdoor activities. Although it improves everyday living, buyers should prioritize key factors such as location, property size, and bedroom count before paying a premium for additional balconies.",
+      "seller_insight": "If your property features a well-designed balcony or attractive view, highlight it with quality photos in your listing. While balconies have a limited impact on price, they can improve buyer interest and help your property stand out in the market."
+    },
+    "area_sqft": {
+      "short_name": "Property Area (sq ft)",
+      "display_name": "📐 Property Area (sq ft)",
+      "impact": "+0.02%",
+      "impact_level": "Very High",
+      "explanation": "Every additional square foot is associated with a **0.02% increase in predicted property price**, keeping all other features constant.",
+      "current_value": 1200,
+      "current_price": 80,
+      "new_value": 1500,
+      "new_price": 84.8,
+      "increase": 4.8,
+      "market_insight": "Area is one of the most influential factors in property valuation. Larger properties generally achieve higher prices because they offer more usable living space and appeal to a wider range of buyers.",
+      "buyer_insight": "A larger property provides greater comfort, flexibility, and long-term usability. Although it may require a higher investment, it often delivers better value for growing families and stronger resale potential.",
+      "seller_insight": "Highlight your property's usable living area in the listing, as buyers often compare homes based on size. A spacious layout attracts more interest and helps support a competitive asking price."
+    },
+    "total_floors": {
+      "short_name": "Total Floors in Building",
+      "display_name": "🏢 Total Floors in Building",
+      "impact": "+1.86%",
+      "impact_level": "High",
+      "explanation": "Properties in buildings with one additional floor are predicted to be **1.86% more expensive**, keeping all other features constant.",
+      "current_value": 10,
+      "current_price": 80,
+      "new_value": 11,
+      "new_price": 81.49,
+      "increase": 1.49,
+      "market_insight": "Properties in multi-storey residential developments often benefit from modern amenities, better infrastructure, and enhanced community facilities. While the total number of floors can positively influence value, its impact is generally lower than location, property size, and bedroom count.",
+      "buyer_insight": "Focus on the overall quality of the residential development rather than just the building height. Multi-storey complexes often offer elevators, security, parking, and recreational facilities that enhance comfort and long-term living.",
+      "seller_insight": "If your property is part of a well-maintained multi-storey complex, highlight amenities such as security, parking, elevators, and community facilities. These features improve buyer interest and increase the property's overall appeal."
+    },
+    "current_floor": {
+      "short_name": "Floor Number",
+      "display_name": "🏢 Floor Number ",
+      "impact": "+0.24%",
+      "impact_level": "Moderate",
+      "explanation": "Properties located one floor higher are predicted to be **0.24% more expensive**, keeping all other features constant.",
+      "current_value": 5,
+      "current_price": 80,
+      "new_value": 6,
+      "new_price": 80.19,
+      "increase": 0.19,
+      "market_insight": "The property's floor level has a relatively small influence on its value compared to factors such as location, property size, and bedroom count. Higher floors may offer better views, privacy, and ventilation.",
+      "buyer_insight": "Select a floor that best matches your lifestyle and daily needs. Higher floors often provide better views and less noise, while lower floors offer easier access and greater convenience  but these are generally secondary considerations for buyers.",
+      "seller_insight": "If your property is on a desirable floor, highlight benefits such as scenic views, natural light, ventilation, or easy accessibility. While floor level alone has a limited impact on price, these advantages can increase buyer interest and improve your property's appeal."
+      }
+  },
+  "categorical": {
+    "mapped_area": {
+      "short_name": "Location",
+      "display_name": "📍 Location",
+      "baseline": "Adalaj",
+      "baseline_price": 80,
+      "values": {
+        "Gift City": {
+          "impact": "+63.38%",
+          "price": 130.7,
+          "change": 50.7
+        },
+        "Sector 22": {
+          "impact": "+24.32%",
+          "price": 99.46,
+          "change": 19.46
+        },
+        "Raysan": {
+          "impact": "+18.16%",
+          "price": 94.53,
+          "change": 14.53
+        },
+        "Sector 6": {
+          "impact": "+17.67%",
+          "price": 94.14,
+          "change": 14.14
+        },
+        "Sector 19": {
+          "impact": "+9.90%",
+          "price": 87.92,
+          "change": 7.92
+        },
+        "Koba": {
+          "impact": "+8.49%",
+          "price": 86.79,
+          "change": 6.79
+        },
+        "Sector 11": {
+          "impact": "+8.20%",
+          "price": 86.56,
+          "change": 6.56
+        },
+        "Kudasan": {
+          "impact": "+7.96%",
+          "price": 86.37,
+          "change": 6.37
+        },
+        "Sargasan": {
+          "impact": "+3.86%",
+          "price": 83.09,
+          "change": 3.09
+        },
+        "Uvarsad": {
+          "impact": "+3.64%",
+          "price": 82.91,
+          "change": 2.91
+        },
+        "Sector 8": {
+          "impact": "+2.47%",
+          "price": 81.98,
+          "change": 1.98
+        },
+        "Randesan": {
+          "impact": "+2.06%",
+          "price": 81.65,
+          "change": 1.65
+        },
+        "Sughad": {
+          "impact": "+1.84%",
+          "price": 81.47,
+          "change": 1.47
+        },
+        "Sector 28": {
+          "impact": "+0.55%",
+          "price": 80.44,
+          "change": 0.44
+        },
+        "Valad": {
+          "impact": "-0.55%",
+          "price": 79.56,
+          "change": -0.44
+        },
+        "SG Highway": {
+          "impact": "-0.78%",
+          "price": 79.38,
+          "change": -0.62
+        },
+        "Other": {
+          "impact": "-1.32%",
+          "price": 78.94,
+          "change": -1.06
+        },
+        "Gandhinagar Taluka": {
+          "impact": "-2.30%",
+          "price": 78.16,
+          "change": -1.84
+        },
+        "Dahegam": {
+          "impact": "-2.95%",
+          "price": 77.64,
+          "change": -2.36
+        },
+        "Sector 26": {
+          "impact": "-3.43%",
+          "price": 77.26,
+          "change": -2.74
+        },
+        "Karai": {
+          "impact": "-5.21%",
+          "price": 75.83,
+          "change": -4.17
+        },
+        "Khoraj": {
+          "impact": "-5.85%",
+          "price": 75.32,
+          "change": -4.68
+        },
+        "SP Ring Road": {
+          "impact": "-6.52%",
+          "price": 74.78,
+          "change": -5.22
+        },
+        "Sector 24": {
+          "impact": "-6.60%",
+          "price": 74.72,
+          "change": -5.28
+        },
+        "Vavol": {
+          "impact": "-8.17%",
+          "price": 73.46,
+          "change": -6.54
+        },
+        "Kolavada": {
+          "impact": "-10.85%",
+          "price": 71.32,
+          "change": -8.68
+        },
+        "Chiloda": {
+          "impact": "-11.23%",
+          "price": 71.02,
+          "change": -8.98
+        },
+        "Randheja": {
+          "impact": "-14.05%",
+          "price": 68.76,
+          "change": -11.24
+        },
+        "Pethapur": {
+          "impact": "-16.63%",
+          "price": 66.7,
+          "change": -13.3
+        },
+        "Kalol": {
+          "impact": "-35.80%",
+          "price": 51.36,
+          "change": -28.64
+        }
+      },
+      "explanation": "Area premiums are measured relative to the reference area used by the model's One-Hot Encoding. In this model, **Adalaj** is the baseline area. Therefore, all location impacts should be interpreted as differences compared with Adalaj while keeping all other property characteristics constant.",
+      "examples": [
+        {
+          "from": "Adalaj",
+          "to": "Gift City",
+          "price": 130.7,
+          "change": 50.7
+        },
+        {
+          "from": "Adalaj",
+          "to": "Kalol",
+          "price": 51.36,
+          "change": -28.64
+        }
+      ],
+      "insights":
+      {
+        "market": "Location is one of the strongest factors influencing property prices. Areas with better infrastructure, connectivity, employment opportunities, and future development potential generally command higher prices, while less developed locations tend to be more affordable.",
+        "buyer": "Consider both the current price and the area's long-term growth potential when choosing a property. Premium locations often provide better infrastructure, amenities, and resale value, while affordable areas may offer better value for budget-conscious buyers.",
+        "seller": "If your property is located in a high-demand area, highlight nearby infrastructure, schools, business hubs, transport links, and future development projects. A strong location can significantly increase buyer interest and support a higher selling price."
+      },
+      "note": "Area premiums are measured relative to the reference area used by the model's One-Hot Encoding. In this model, **Adalaj** is the baseline area. Therefore, all location impacts should be interpreted as differences compared with Adalaj while keeping all other property characteristics constant."
+    },
+    "area_type": {
+      "short_name": "Area Type",
+      "display_name": "📏 Area Type",
+      "baseline": "Built-up",
+      "baseline_price": 80,
+      "values": {
+        "Carpet": {
+          "impact": "+1.28%",
+          "price": 81.02,
+          "change": 1.02
+        },
+        "Super Built-up": {
+          "impact": "-2.06%",
+          "price": 78.35,
+          "change": -1.65
+        }
+      },
+      "explanation": "Area Type describes how the property's area is measured. Compared to **Built-up Area** (the baseline), properties listed using **Carpet Area** are predicted to be **1.28% more expensive**, while properties listed using **Super Built-up Area** are predicted to be **2.06% less expensive**, keeping all other features constant.",
+      "examples": [
+        {
+          "area_sqft": 1500,
+          "type": "Carpet",
+          "price": 81.02
+        },
+        {
+          "area_sqft": 1500,
+          "type": "Built-up (Baseline)",
+          "price": 80.0
+        },
+        {
+          "area_sqft": 1500,
+          "type": "Super Built-up",
+          "price": 78.35
+        }
+      ],
+      "insights": {
+        "market": "Area Type indicates how a property's area is measured and should be considered alongside the property's size. While its direct impact on price is relatively low, it is important for accurately comparing properties with similar advertised areas.",
+        "buyer": "When comparing properties with the same advertised area, always check the Area Type. Carpet Area provides more usable living space than the same-sized Super Built-up Area, making it an important factor when assessing a property's true value.",
+        "seller": "Clearly specify both the property's area (sqft) and Area Type in your listing. Providing transparent area measurements helps buyers make accurate comparisons, builds trust, and improves the overall appeal of your property."
+      },
+      "note": "These percentages are measured relative to the baseline area type used by the model's One-Hot Encoding. The impact is relatively small and should not be interpreted as a major driver of property value."
+    },
+    "property_status": {
+      "short_name": "Availability",
+      "display_name": "🏗️ Availability",
+      "baseline": "Ready to Move",
+      "baseline_price": 80,
+      "values": {
+        "Under Construction": {
+          "impact": "-1.01%",
+          "price": 79.19,
+          "change": -0.81
+        }
+      },
+      "explanation": "Property Status indicates whether a property is ready for occupancy or still under construction. Compared to **Ready to Move** properties (the baseline category), **Under Construction** properties are predicted to be **1.01% less expensive**, keeping all other features constant.",
+      "examples": [
+        {
+          "status": "Ready to Move (Baseline)",
+          "price": 80.0
+        },
+        {
+          "status": "Under Construction",
+          "price": 79.19
+        }
+      ],
+     "insights": {
+        "market": "Property Status has a relatively small influence on property prices compared to key factors such as location, property size, and bedroom count. While Ready-to-Move and Under-Construction properties may have slight price differences, buyers generally place greater importance on the property's overall value and location.",
+        "buyer": "Choose a property's status based on your needs rather than price alone. Ready-to-Move properties provide immediate possession, while Under-Construction properties may offer flexible payment options and potential long-term appreciation.",
+        "seller": "Clearly mention your property's current status and expected possession timeline in the listing. Providing accurate information builds buyer confidence, improves transparency, and enhances your property's market appeal."
+      },
+      "note": "These percentages are measured relative to the baseline property status used by the model's One-Hot Encoding (**Ready to Move**). The impact is relatively small and should not be interpreted as a major driver of property value."
+    },
+    "property_age": {
+      "short_name": "Age of Property",
+      "display_name": "📅 Age of Property ",
+      "baseline": "1-5 Years",
+      "baseline_price": 80,
+      "values": {
+        "New": {
+          "impact": "-5.69%",
+          "price": 75.45,
+          "change": -4.55
+        },
+        "5-10 Years": {
+          "impact": "-4.91%",
+          "price": 76.07,
+          "change": -3.93
+        },
+        "10-20 Years": {
+          "impact": "-3.87%",
+          "price": 76.9,
+          "change": -3.1
+        },
+        "Unknown": {
+          "impact": "-2.99%",
+          "price": 77.61,
+          "change": -2.39
+        }
+      },
+      "explanation": "Property Age represents how old the property is. Compared to **1–5 Years** properties (the baseline category), **New** properties are predicted to be **5.69% less expensive**, **5–10 Years** properties are **4.91% less expensive**, **10–20 Years** properties are **3.87% less expensive**, and properties with **Unknown** age are **2.99% less expensive**, while keeping all other features such as location, area, bedrooms, and bathrooms constant.",
+      "examples": [
+        {
+          "age": "New",
+          "price": 75.45
+        },
+        {
+          "age": "1-5 Years (Baseline)",
+          "price": 80.0
+        },
+        {
+          "age": "5-10 Years",
+          "price": 76.07
+        },
+        {
+          "age": "10-20 Years",
+          "price": 76.9
+        },
+        {
+          "age": "Unknown",
+          "price": 77.61
+        }
+      ],
+      "insights": {
+        "market": "Property Age has a relatively small influence on property prices compared to key factors such as location, property size, and bedroom count. While newer and well-maintained properties may receive a slight price premium, overall property value depends more on the property's location, size, and condition.",
+        "buyer": "Consider property age along with factors such as construction quality, maintenance, and location rather than price alone. Newer properties may offer modern features and lower maintenance costs, while older homes can provide excellent value if they are well maintained.",
+        "seller": "Highlight the property's condition, renovations, and maintenance history instead of focusing only on its age. A well-maintained home with modern upgrades can attract more buyers and improve the property's market appeal."
+      },
+      "note": "These percentages are measured relative to the baseline property age (**1–5 Years**) used by the model's One-Hot Encoding. They represent the effect of **property age alone**, assuming all other property characteristics remain unchanged."
+    },
+    "furnishing_status": {
+      "short_name": "Furnishing",
+      "display_name": "🪑 Furnishing",
+      "baseline": "Semi-Furnished",
+      "baseline_price": 80,
+      "values": {
+        "Furnished": {
+          "impact": "+4.00%",
+          "price": 83.2,
+          "change": 3.2
+        },
+        "Unfurnished": {
+          "impact": "-2.67%",
+          "price": 77.86,
+          "change": -2.14
+        }
+      },
+      "explanation": "Furnishing Status indicates whether a property is **Furnished, Semi-Furnished, or Unfurnished**. Compared to **Semi-Furnished** properties (the baseline category), **Furnished** properties are predicted to be **4.00% more expensive**, while **Unfurnished** properties are predicted to be **2.67% less expensive**, keeping all other features such as location, area, bedrooms, and bathrooms constant.",
+      "examples": [
+        {
+          "status": "Furnished",
+          "price": 83.2
+        },
+        {
+          "status": "Semi-Furnished (Baseline)",
+          "price": 80.0
+        },
+        {
+          "status": "Unfurnished",
+          "price": 77.86
+        }
+      ],
+    "insights": {
+      "market": "Furnishing Status has a modest influence on property prices. Furnished properties may receive a slight price premium due to their convenience and move-in readiness, but location, property size, and bedroom count have a much greater impact on overall value.",
+      "buyer": "Choose the furnishing status based on your budget and lifestyle. Furnished homes offer immediate convenience, while unfurnished properties provide greater flexibility to design and furnish the space according to your preferences.",
+      "seller": "If your property is furnished, highlight the quality, condition, and key furnishings with clear photos and descriptions. Well-presented interiors can increase buyer interest and help justify a modest price premium."
+    },
+      "note": "These percentages are measured relative to the baseline furnishing status (**Semi-Furnished**) used by the model's One-Hot Encoding. They represent the effect of **furnishing status alone**, assuming all other property characteristics remain unchanged."
+    },
+    "facing": {
+      "short_name": "Property Facing",
+      "display_name": "🧭 Property Facing",
+      "baseline": "East",
+      "baseline_price": 80,
+      "values": {
+        "North": {
+          "impact": "+1.79%",
+          "price": 81.43,
+          "change": 1.43
+        },
+        "South-West": {
+          "impact": "+1.26%",
+          "price": 81.01,
+          "change": 1.01
+        },
+        "West": {
+          "impact": "+1.19%",
+          "price": 80.95,
+          "change": 0.95
+        },
+        "North-West": {
+          "impact": "+0.20%",
+          "price": 80.16,
+          "change": 0.16
+        },
+        "Other": {
+          "impact": "-1.09%",
+          "price": 79.13,
+          "change": -0.87
+        },
+        "North-East": {
+          "impact": "-1.94%",
+          "price": 78.45,
+          "change": -1.55
+        },
+        "South": {
+          "impact": "-2.13%",
+          "price": 78.3,
+          "change": -1.7
+        },
+        "South-East": {
+          "impact": "-2.34%",
+          "price": 78.13,
+          "change": -1.87
+        }
+      },
+      "explanation": "Facing Direction represents the direction a property's main entrance or front side faces. Compared to **East-facing** properties (the baseline category), **North-facing** properties are predicted to be **1.79% more expensive**, while **South-East-facing** properties are predicted to be **2.34% less expensive**, keeping all other features such as location, area, bedrooms, and bathrooms constant.",
+      "examples": [
+        {
+          "direction": "North",
+          "price": 81.43
+        },
+        {
+          "direction": "South-West",
+          "price": 81.01
+        },
+        {
+          "direction": "West",
+          "price": 80.95
+        },
+        {
+          "direction": "North-West",
+          "price": 80.16
+        },
+        {
+          "direction": "East (Baseline)",
+          "price": 80.0
+        },
+        {
+          "direction": "Other",
+          "price": 79.13
+        },
+        {
+          "direction": "North-East",
+          "price": 78.45
+        },
+        {
+          "direction": "South",
+          "price": 78.3
+        },
+        {
+          "direction": "South-East",
+          "price": 78.13
+        }
+      ],
+      "insights": {
+      "market": "Facing Direction has a relatively small influence on property prices compared to key factors such as location, property size, and bedroom count. While certain directions may receive a slight premium based on buyer preferences, their overall impact on property value is limited.",
+      "buyer": "Choose a property's facing direction based on your preferences for natural light, ventilation, and climate rather than price alone. The property's location, size, and layout generally have a much greater impact on long-term value and satisfaction.",
+      "seller": "If your property's facing direction is considered desirable in the local market, mention it as an additional advantage in your listing. However, focus primarily on stronger selling points such as location, property size, layout, and amenities to attract buyers."
+      },
+      "note": "These percentages are measured relative to the baseline facing direction (**East**) used by the model's One-Hot Encoding. They represent the effect of **facing direction alone**, assuming all other property characteristics remain unchanged."
+    }
+  }
+}
