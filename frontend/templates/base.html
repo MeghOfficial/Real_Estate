@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estatify — AI-Powered Real Estate Intelligence Platform. Predict property prices, discover ideal homes, and analyze market trends with advanced machine learning.">
+    <title>{% block title %}Estatify | AI Real Estate Intelligence{% endblock %}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="mainNav">
+        <div class="navbar-inner">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-icon">E</div>
+                <span class="nav-logo-text">Estatify</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="/" class="nav-link {% block nav_home %}{% endblock %}">Home</a>
+                <a href="/prediction" class="nav-link {% block nav_prediction %}{% endblock %}">Prediction</a>
+                <a href="/recommendations" class="nav-link {% block nav_recommendations %}{% endblock %}">Recommendations</a>
+                <a href="/analytics" class="nav-link {% block nav_analytics %}{% endblock %}">Analytics</a>
+                <a href="/explorer" class="nav-link {% block nav_explorer %}{% endblock %}">Explorer</a>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Hamburger (mobile) -->
+                <button class="nav-hamburger" aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-mobile-overlay"></div>
+    <div class="nav-mobile-drawer">
+        <button class="nav-mobile-close" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="nav-mobile-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/prediction" class="nav-link">Prediction</a>
+            <a href="/recommendations" class="nav-link">Recommendations</a>
+            <a href="/analytics" class="nav-link">Analytics</a>
+            <a href="/explorer" class="nav-link">Explorer</a>
+        </div>
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);">
+            <a href="/prediction" class="btn btn-primary w-full" style="text-align:center;">Predict Price</a>
+        </div>
+    </div>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    {% block footer %}
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <a href="/" class="nav-logo" style="display: inline-flex;">
+                        <div class="nav-logo-icon">E</div>
+                        <span class="nav-logo-text">Estatify</span>
+                    </a>
+                    <p class="footer-brand-desc">
+                        AI-powered real estate price prediction and market insights.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/prediction">Prediction</a></li>
+                        <li><a href="/recommendations">Recommendation</a></li>
+                        <li><a href="/analytics">Analysis</a></li>
+                        <li><a href="/insights">Insights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="footer-heading">Tech Stack</h4>
+                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Estatify &bull; Developed by Megh Patel</span>
+                <span>Built with ❤️ and Machine Learning</span>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+    <!-- Shared Scripts -->
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

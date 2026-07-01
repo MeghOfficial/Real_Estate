@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatify | AI Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #111827;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --paper: #ffffff;
+            --soft: #f8fafc;
+            --blue: #2563eb;
+            --blue-dark: #111827;
+            --green: #0f766e;
+            --gold: #b45309;
+            --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: var(--ink);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 18% 30%, rgba(17, 24, 39, 0.12), transparent 34%),
+                radial-gradient(circle at 82% 22%, rgba(15, 23, 42, 0.1), transparent 32%),
+                radial-gradient(circle at 50% 84%, rgba(75, 85, 99, 0.08), transparent 32%),
+                #ffffff;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 18px;
+            z-index: 9;
+            background: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            pointer-events: none;
+        }
+
+        #heroCanvas {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0.42;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 34px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            margin-top: 18px;
+            padding: 20px 28px;
+            border: 1px solid rgba(229, 231, 235, 0.95);
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 18px 60px rgba(15, 23, 42, 0.09);
+            backdrop-filter: blur(18px);
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--ink);
+            font-size: 1.9rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #385267;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 14px;
+            transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--ink);
+            background: #f3f4f6;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: calc(100vh - 138px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 62px 0 112px;
+            text-align: center;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: min(980px, 100%);
+            height: 1px;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, transparent, rgba(17, 24, 39, 0.16), transparent);
+            box-shadow: 0 28px 70px rgba(15, 23, 42, 0.16);
+        }
+
+        .hero h1 {
+            max-width: 980px;
+            margin: 0 auto;
+            color: #07182a;
+            font-size: clamp(2.55rem, 4.35vw, 4.35rem);
+            font-weight: 900;
+            line-height: 1.08;
+            text-wrap: balance;
+        }
+
+        .hero p {
+            max-width: 980px;
+            margin: 20px auto 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+            font-weight: 600;
+            line-height: 1.35;
+            text-wrap: balance;
+        }
+
+        .desktop-break {
+            display: inline;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 34px;
+            padding: 10px 20px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 12px 34px rgba(15, 23, 42, 0.07);
+            color: #6b7280;
+            font-size: 1rem;
+            font-weight: 700;
+            backdrop-filter: blur(16px);
+        }
+
+        .hero-badge::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #111827;
+            box-shadow: 0 0 0 7px rgba(17, 24, 39, 0.08);
+        }
+
+        .hero-accent {
+            color: #111827;
+            text-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 56px;
+            border-radius: 18px;
+            padding: 15px 34px;
+            font-size: 1.06rem;
+            font-weight: 850;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #111827;
+            color: #ffffff;
+            box-shadow: 0 18px 40px rgba(17, 24, 39, 0.22);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.72);
+            color: var(--ink);
+            backdrop-filter: blur(14px);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 34px rgba(8, 75, 130, 0.18);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+            margin: 92px 0 78px;
+            scroll-margin-top: 28px;
+        }
+
+        .card {
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .stat-box {
+            min-height: 132px;
+            padding: 26px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+        }
+
+        .stat-box:hover,
+        .stat-box.metric-active {
+            border-color: #111827;
+            background: #111827;
+            box-shadow: 0 28px 70px rgba(17, 24, 39, 0.24);
+            transform: translateY(-6px);
+        }
+
+        .stat-box strong {
+            display: block;
+            color: #111827;
+            font-size: 2.25rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .stat-box span {
+            display: block;
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.98rem;
+            font-weight: 800;
+        }
+
+        .stat-box:hover strong,
+        .stat-box:hover span,
+        .stat-box.metric-active strong,
+        .stat-box.metric-active span {
+            color: #ffffff;
+        }
+
+        .section {
+            padding-bottom: 78px;
+        }
+
+        .section-heading {
+            margin-bottom: 24px;
+            color: #07182a;
+            font-size: 1.75rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .feature-card {
+            min-height: 244px;
+            padding: 28px;
+            transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(17, 24, 39, 0.18);
+            box-shadow: 0 30px 70px rgba(15, 23, 42, 0.14);
+            transform: translateY(-6px);
+        }
+
+        .icon {
+            display: inline-flex;
+            width: 58px;
+            height: 58px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            background: #f3f4f6;
+            color: #111827;
+            font-size: 1.75rem;
+            font-weight: 900;
+        }
+
+        .feature-card:nth-child(2) .icon {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        .feature-card:nth-child(3) .icon {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        .feature-card:nth-child(4) .icon {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        .feature-card h3 {
+            margin-top: 18px;
+            color: #07182a;
+            font-size: 1.18rem;
+            font-weight: 900;
+        }
+
+        .feature-card p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 1rem;
+            font-weight: 650;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(34px);
+            filter: blur(8px);
+            transition: opacity 0.72s ease, transform 0.72s ease, filter 0.72s ease;
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .reveal-on-scroll .feature-card,
+        .reveal-on-scroll .panel,
+        .reveal-on-scroll.cta {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.56s ease, transform 0.56s ease;
+        }
+
+        .reveal-on-scroll.is-visible .feature-card,
+        .reveal-on-scroll.is-visible .panel,
+        .reveal-on-scroll.is-visible.cta {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-on-scroll.is-visible .feature-card:nth-child(2),
+        .reveal-on-scroll.is-visible .panel:nth-child(2) {
+            transition-delay: 0.08s;
+        }
+
+        .reveal-on-scroll.is-visible .feature-card:nth-child(3) {
+            transition-delay: 0.16s;
+        }
+
+        .reveal-on-scroll.is-visible .feature-card:nth-child(4) {
+            transition-delay: 0.24s;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 24px;
+            padding-bottom: 54px;
+        }
+
+        .panel {
+            padding: 32px;
+        }
+
+        .panel-title {
+            margin-bottom: 22px;
+            color: #07182a;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .check-list,
+        .steps {
+            display: grid;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .check-list li,
+        .steps li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #274258;
+            font-size: 1.04rem;
+            font-weight: 800;
+        }
+
+        .check,
+        .step-number {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            flex: 0 0 36px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 900;
+        }
+
+        .check {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        .step-number {
+            background: var(--ink);
+            color: #ffffff;
+        }
+
+        .arrow {
+            justify-content: flex-start;
+            padding-left: 12px;
+            color: #8aa0b2;
+            font-size: 1.45rem;
+            line-height: 1;
+        }
+
+        .cta {
+            margin-bottom: 52px;
+            padding: 44px 32px;
+            text-align: center;
+            color: #111827;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta p {
+            margin-bottom: 24px;
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 900;
+        }
+
+        .cta .btn-primary {
+            background: #111827;
+            color: #ffffff;
+            box-shadow: 0 18px 40px rgba(17, 24, 39, 0.22);
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 54px 0 38px;
+            padding: 22px 26px;
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+            color: #64748b;
+            font-weight: 750;
+            flex-wrap: wrap;
+        }
+
+        .footer p { margin: 0; }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f3f4f6;
+            color: #111827;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .footer-social a:hover {
+            background: #111827;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .footer {
+                justify-content: center;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .stats,
+            .feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .split-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                padding: 0 18px;
+            }
+
+            .navbar {
+                align-items: flex-start;
+                gap: 22px;
+            }
+
+            .nav-links {
+                gap: 8px;
+                margin-left: 0;
+                justify-content: flex-start;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 56px 0 60px;
+            }
+
+            .desktop-break {
+                display: none;
+            }
+
+            .stats,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="container">
+        <nav class="navbar">
+            <a class="logo" href="/">Estatify</a>
+            <div class="nav-links">
+                <a class="active" href="/">Home</a>
+                <a href="/prediction">Prediction</a>
+                <a href="/recommendations">Recommendation</a>
+                <a href="/analytics">Analysis</a>
+                <a href="/insights">Insights</a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h1>AI-Powered Real Estate<br>Intelligence</h1>
+                <p>Predict property prices with precision, explore in-depth market analysis,<br class="desktop-break">uncover valuable insights, and receive personalized recommendations<br class="desktop-break">-all powered by advanced machine learning.</p>
+                <div class="btn-group">
+                    <a href="/prediction" class="btn btn-primary">Predict Price</a>
+                    <a href="/analytics" class="btn btn-secondary">Explore Analysis</a>
+                </div>
+            </section>
+
+            <section class="stats" aria-label="Project statistics">
+                <div class="stat-box card">
+                    <strong class="metric-value" data-target="1300" data-suffix="+">0</strong>
+                    <span>Properties Analyzed</span>
+                </div>
+                <div class="stat-box card">
+                    <strong class="metric-value" data-target="88" data-suffix="%">0</strong>
+                    <span>Model Accuracy</span>
+                </div>
+                <div class="stat-box card">
+                    <strong class="metric-value" data-target="30" data-suffix="+">0</strong>
+                    <span>Locations Covered</span>
+                </div>
+                <div class="stat-box card">
+                    <strong class="metric-value" data-target="14.42" data-prefix="&#8377;" data-suffix=" Lakhs" data-decimals="2">0</strong>
+                    <span>Avg. Prediction Error</span>
+                </div>
+            </section>
+
+            <section class="section reveal-on-scroll">
+                <h2 class="section-heading">Features</h2>
+                <div class="feature-grid">
+                    <article class="feature-card card">
+                        <span class="icon" aria-hidden="true">&#127968;</span>
+                        <h3>Price Prediction</h3>
+                        <p>Predict the estimated market value of any property.</p>
+                    </article>
+                    <article class="feature-card card">
+                        <span class="icon" aria-hidden="true">&#128202;</span>
+                        <h3>Market Insights</h3>
+                        <p>Understand how different features affect property prices.</p>
+                    </article>
+                    <article class="feature-card card">
+                        <span class="icon" aria-hidden="true">&#127919;</span>
+                        <h3>Property Recommendation</h3>
+                        <p>Find similar properties based on your preferences.</p>
+                    </article>
+                    <article class="feature-card card">
+                        <span class="icon" aria-hidden="true">&#128200;</span>
+                        <h3>Price Analysis</h3>
+                        <p>Compare predicted price with listed price.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="split-section reveal-on-scroll">
+                <div class="panel card">
+                    <h2 class="panel-title">Why Choose Us</h2>
+                    <ul class="check-list">
+                        <li><span class="check" aria-hidden="true">&#10003;</span>Accurate AI Predictions</li>
+                        <li><span class="check" aria-hidden="true">&#10003;</span>Data-Driven Insights</li>
+                        <li><span class="check" aria-hidden="true">&#10003;</span>Property Recommendations</li>
+                        <li><span class="check" aria-hidden="true">&#10003;</span>Easy to Use Interface</li>
+                    </ul>
+                </div>
+
+                <div class="panel card">
+                    <h2 class="panel-title">How It Works</h2>
+                    <ol class="steps">
+                        <li><span class="step-number">1</span>Enter Property Details</li>
+                        <li class="arrow" aria-hidden="true">&#8595;</li>
+                        <li><span class="step-number">2</span>AI Analyzes Features</li>
+                        <li class="arrow" aria-hidden="true">&#8595;</li>
+                        <li><span class="step-number">3</span>Get Estimated Price</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="cta card reveal-on-scroll">
+                <p>Ready to know your property's value?</p>
+                <a href="/prediction" class="btn btn-primary">Predict Property Price</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Estatify &bull; Developed by Megh Patel</p>
+
+            <div class="footer-social">
+                <a href="https://github.com/MeghOfficial" target="_blank" aria-label="GitHub" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" aria-label="LinkedIn" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:bavarvamegh3139@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const heroCanvas = document.getElementById("heroCanvas");
+        const heroContext = heroCanvas.getContext("2d");
+        let particles = [];
+
+        function resizeHeroCanvas() {
+            heroCanvas.width = window.innerWidth * window.devicePixelRatio;
+            heroCanvas.height = window.innerHeight * window.devicePixelRatio;
+            heroContext.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+        }
+
+        function createParticles() {
+            const count = Math.min(70, Math.max(32, Math.floor(window.innerWidth / 24)));
+            particles = Array.from({ length: count }, () => ({
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                size: Math.random() * 2.4 + 0.8,
+                speedX: (Math.random() - 0.5) * 0.22,
+                speedY: (Math.random() - 0.5) * 0.22,
+                alpha: Math.random() * 0.28 + 0.12,
+            }));
+        }
+
+        function drawParticles() {
+            heroContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            heroContext.fillStyle = "#111827";
+
+            particles.forEach((particle) => {
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+
+                if (particle.x < -10) particle.x = window.innerWidth + 10;
+                if (particle.x > window.innerWidth + 10) particle.x = -10;
+                if (particle.y < -10) particle.y = window.innerHeight + 10;
+                if (particle.y > window.innerHeight + 10) particle.y = -10;
+
+                heroContext.globalAlpha = particle.alpha;
+                heroContext.beginPath();
+                heroContext.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                heroContext.fill();
+            });
+
+            heroContext.globalAlpha = 1;
+
+            if (!reduceMotion) {
+                requestAnimationFrame(drawParticles);
+            }
+        }
+
+        const metricValues = document.querySelectorAll(".metric-value");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function formatMetric(element, value) {
+            const decimals = Number(element.dataset.decimals || 0);
+            const prefix = element.dataset.prefix || "";
+            const suffix = element.dataset.suffix || "";
+            const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+            element.textContent = `${prefix}${formatted}${suffix}`;
+        }
+
+        function animateMetric(element) {
+            const target = Number(element.dataset.target || 0);
+            const duration = 1000;
+            const startTime = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                formatMetric(element, target * eased);
+
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                    return;
+                }
+
+                formatMetric(element, target);
+            }
+
+            if (reduceMotion) {
+                formatMetric(element, target);
+                return;
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                metricValues.forEach(animateMetric);
+                observer.disconnect();
+            });
+        }, { threshold: 0.35 });
+
+        const statsSection = document.querySelector(".stats");
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        document.querySelectorAll(".stat-box").forEach((card) => {
+            function activateMetric() {
+                document.querySelectorAll(".stat-box.metric-active").forEach((activeCard) => {
+                    if (activeCard !== card) {
+                        activeCard.classList.remove("metric-active");
+                    }
+                });
+                card.classList.add("metric-active");
+            }
+
+            card.addEventListener("pointerdown", activateMetric);
+            card.addEventListener("mouseenter", activateMetric);
+            card.addEventListener("mouseleave", () => {
+                card.classList.remove("metric-active");
+            });
+        });
+
+        const revealItems = document.querySelectorAll(".reveal-on-scroll");
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -80px 0px",
+        });
+
+        revealItems.forEach((item) => {
+            revealObserver.observe(item);
+        });
+
+        resizeHeroCanvas();
+        createParticles();
+        drawParticles();
+
+        window.addEventListener("resize", () => {
+            resizeHeroCanvas();
+            createParticles();
+        });
+    </script>
+</body>
+</html>

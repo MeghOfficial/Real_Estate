@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Price | Gandhinagar Predictor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #111827;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --paper: #ffffff;
+            --soft: #f8fafc;
+            --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: var(--ink);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 18% 30%, rgba(17, 24, 39, 0.12), transparent 34%),
+                radial-gradient(circle at 82% 22%, rgba(15, 23, 42, 0.1), transparent 32%),
+                radial-gradient(circle at 50% 84%, rgba(75, 85, 99, 0.08), transparent 32%),
+                #ffffff;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 18px;
+            z-index: 9;
+            background: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            pointer-events: none;
+        }
+
+        .container { max-width: 1260px; margin: 0 auto; padding: 0 34px; }
+        .navbar {
+            position: sticky;
+            top: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            margin-top: 18px;
+            padding: 20px 28px;
+            border: 1px solid rgba(229, 231, 235, 0.95);
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 18px 60px rgba(15, 23, 42, 0.09);
+            backdrop-filter: blur(18px);
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--ink);
+            font-size: 1.9rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #385267;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 14px;
+            transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--ink);
+            background: #f3f4f6;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+            transform: translateY(-1px);
+        }
+        .nav-links a.active { background: #e5e7eb; }
+        .form-card, .result-card {
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+        h2 { margin-bottom: 20px; color: #07182a; font-weight: 900; }
+        .form-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px;
+        }
+        .form-group { display: flex; flex-direction: column; }
+        label { font-weight: 800; margin-bottom: 8px; color: #274258; }
+        input, select { padding: 10px; border: 1px solid var(--line); border-radius: 12px; font-size: 1rem; background: #ffffff; color: var(--ink); }
+        .field-hint { margin-top: 6px; color: #607487; font-size: 0.85rem; }
+        .form-error {
+            background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239;
+            border-radius: 12px; padding: 12px 14px; margin-bottom: 18px; font-weight: 600;
+        }
+        button {
+            background: #111827;
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 18px;
+            font-weight: 850;
+            font-size: 1.05rem;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 18px 40px rgba(17, 24, 39, 0.22);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 34px rgba(8, 75, 130, 0.18);
+        }
+        button.is-loading {
+            cursor: wait;
+            opacity: 0.82;
+            transform: none;
+        }
+        .predict-status {
+            display: none;
+        }
+        .result-card { background: rgba(255, 255, 255, 0.92); }
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+        .result-item {
+            border: 1px solid rgba(217, 226, 236, 0.95);
+            border-radius: 20px;
+            background: #ffffff;
+            padding: 22px 24px;
+            box-shadow: 0 16px 42px rgba(15, 23, 42, 0.07);
+            min-height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .result-item.primary {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .result-item.primary .item-label,
+        .result-item.primary .item-detail {
+            color: #d1d5db;
+        }
+        .item-label {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 10px;
+        }
+        .item-value {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.05;
+            color: var(--ink);
+        }
+        .item-detail {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: #607487;
+            font-weight: 700;
+        }
+        .confidence-bar {
+            width: 100%;
+            height: 12px;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.14);
+            margin-top: 16px;
+            overflow: hidden;
+        }
+        .confidence-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #2563eb, #4f46e5);
+            width: 95%;
+            transition: width 1s ease;
+        }
+        .result-note {
+            margin-top: 20px;
+            color: #475569;
+            font-size: 0.96rem;
+            line-height: 1.6;
+            font-weight: 750;
+        }
+        .result-card .result-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .result-card .result-title h2 {
+            margin-bottom: 0;
+        }
+        .result-card .result-highlight {
+            grid-column: 1 / -1;
+            padding: 26px 28px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: #fff;
+            box-shadow: 0 20px 55px rgba(15, 23, 42, 0.18);
+        }
+        .result-card .result-highlight .highlight-label {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .result-card .result-highlight .highlight-value {
+            font-size: clamp(2.8rem, 4vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1;
+        }
+        .result-card .result-highlight .highlight-subtext {
+            margin-top: 10px;
+            color: #cbd5e1;
+            font-size: 0.97rem;
+            font-weight: 600;
+        }
+        .result-card .result-highlight .highlight-amount {
+            display: block;
+            margin-top: 8px;
+            color: #e2e8f0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .result-card .result-item.primary .item-value {
+            color: #fff;
+        }
+        .result-card .result-item.primary .item-detail {
+            color: #d1d5db;
+        }
+        .result-card .result-item .item-value {
+            margin-top: 10px;
+        }
+        .result-card .result-item .item-detail {
+            margin-top: 12px;
+        }
+        .result-card .result-item span {
+            word-break: break-word;
+        }
+        .result-card .result-item.confidence .item-value {
+            font-size: 1.7rem;
+        }
+        .result-card .result-item.confidence .item-detail {
+            margin-top: 16px;
+        }
+        .result-card .result-item.market {
+            min-height: 120px;
+        }
+        .result-card .result-item.market .item-value {
+            font-size: 1.9rem;
+        }
+        .result-card .result-item.market .item-detail {
+            margin-top: 14px;
+        }
+        .result-card .result-item.primary .item-label {
+            color: #d1d5db;
+        }
+        .result-card .result-item.primary .item-value {
+            color: #fff;
+        }
+        .result-card .result-item.primary .item-detail {
+            color: rgba(255,255,255,0.75);
+        }
+        .prediction-breakdown {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.16);
+        }
+        .range-line {
+            color: #d1d5db;
+            font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+            font-weight: 750;
+        }
+        .confidence-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            margin-top: 24px;
+            color: #d1d5db;
+            font-size: 1.02rem;
+            font-weight: 750;
+        }
+        .prediction-breakdown .confidence-bar {
+            background: rgba(255,255,255,0.12);
+            margin-top: 12px;
+        }
+        .prediction-breakdown .confidence-fill {
+            width: var(--confidence-width, 95%);
+            background: linear-gradient(90deg, #3b82f6, #06b6d4, #8b5cf6);
+        }
+        .metric-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .metric-mini-card {
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 18px;
+            padding: 20px 22px;
+            background: rgba(255,255,255,0.04);
+        }
+        .metric-mini-label {
+            display: block;
+            color: #aab4c5;
+            font-size: 0.85rem;
+            font-weight: 850;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .metric-mini-value {
+            display: block;
+            margin-top: 12px;
+            color: #ffffff;
+            font-size: clamp(1.18rem, 1.9vw, 1.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        .result-card .result-item.confidence .item-label,
+        .result-card .result-item.price-per-sqft .item-label,
+        .result-card .result-item.market .item-label {
+            color: #475569;
+        }
+        .summary-label {
+            display: block;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 850;
+            text-transform: uppercase;
+        }
+        .summary-value {
+            display: block;
+            margin-top: 12px;
+            color: #111827;
+            font-size: clamp(1.6rem, 3vw, 2.45rem);
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        .summary-subtext {
+            display: block;
+            margin-top: 10px;
+            color: #607487;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .summary-box.primary {
+            background: #111827;
+            color: #ffffff;
+        }
+        .summary-box.primary .summary-label,
+        .summary-box.primary .summary-subtext {
+            color: #d1d5db;
+        }
+        .summary-box.primary .summary-value {
+            color: #ffffff;
+        }
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 54px 0 38px;
+            padding: 22px 26px;
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+            color: #64748b;
+            font-weight: 750;
+            flex-wrap: wrap;
+        }
+        .footer p { margin: 0; }
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-social a {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f3f4f6;
+            color: #111827;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+        .footer-social a:hover {
+            background: #111827;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 640px) {
+            .footer {
+                justify-content: center;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 900px) {
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 720px) {
+            .container { padding: 0 18px; }
+            .navbar { align-items: flex-start; gap: 22px; }
+            .nav-links { gap: 8px; margin-left: 0; justify-content: flex-start; }
+            .summary-grid { grid-template-columns: 1fr; }
+            .metric-mini-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a class="logo" href="/">Estatify</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a class="active" href="/prediction">Prediction</a>
+                <a href="/recommendations">Recommendation</a>
+                <a href="/analytics">Analysis</a>
+                <a href="/insights">Insights</a>
+            </div>
+        </nav>
+
+        <div class="form-card">
+            <h2>🏠 Enter Property Details</h2>
+            {% if error %}
+            <div class="form-error">{{ error }}</div>
+            {% endif %}
+            <form id="predictionForm" method="POST">
+                <div class="form-grid">
+                    <div class="form-group"><label>Property Area (sq ft)</label><input type="number" name="Area" min="200" max="10000" step="1" placeholder="e.g. 1200" required value="{{ form_data.Area if form_data else '' }}"><span class="field-hint">Range: 200-10,000 sq ft</span></div>
+                    <div class="form-group"><label>Number of Bedrooms</label><input type="number" name="Bedrooms" min="1" max="6" step="1" placeholder="e.g. 3" required value="{{ form_data.Bedrooms if form_data else '' }}"><span class="field-hint">Range: 1-6</span></div>
+                    <div class="form-group"><label>Number of Bathrooms</label><input type="number" name="Bathrooms" min="1" max="6" step="1" placeholder="e.g. 2" required value="{{ form_data.Bathrooms if form_data else '' }}"><span class="field-hint">Range: 1-6</span></div>
+                    <div class="form-group"><label>Number of Balconies</label><input type="number" name="Balconies" min="0" max="4" step="1" placeholder="e.g. 1" required value="{{ form_data.Balconies if form_data else '' }}"><span class="field-hint">Range: 0-4</span></div>
+                    <div class="form-group"><label>Floor Number</label><input type="number" name="Current_Floor" min="0" max="50" step="1" placeholder="e.g. 5" required value="{{ form_data.Current_Floor if form_data else '' }}"><span class="field-hint">Range: 0-50</span></div>
+                    <div class="form-group"><label>Total Floors in Building</label><input type="number" name="Total_Floors" min="0" max="50" step="1" placeholder="e.g. 12" required value="{{ form_data.Total_Floors if form_data else '' }}"><span class="field-hint">Range: 0-50</span></div>
+                    <div class="form-group"><label>Furnishing</label><select name="Furnishing_Status"><option value="Not Sure" {% if not form_data or form_data.Furnishing_Status in ['Not Sure', 'Unknown'] %}selected{% endif %}>Not Sure</option><option value="furnished" {% if form_data and form_data.Furnishing_Status == 'furnished' %}selected{% endif %}>Furnished</option><option value="semi-furnished" {% if form_data and form_data.Furnishing_Status == 'semi-furnished' %}selected{% endif %}>Semi-Furnished</option><option value="unfurnished" {% if form_data and form_data.Furnishing_Status == 'unfurnished' %}selected{% endif %}>Unfurnished</option></select></div>
+                    <div class="form-group"><label>Location</label><select name="Mapped_Area" required><option value="" {% if not form_data or not form_data.Mapped_Area %}selected{% endif %} disabled>Select Location</option><option value="Sargasan" {% if form_data and form_data.Mapped_Area == 'Sargasan' %}selected{% endif %}>Sargasan</option><option value="Kudasan" {% if form_data and form_data.Mapped_Area == 'Kudasan' %}selected{% endif %}>Kudasan</option><option value="Gift City" {% if form_data and form_data.Mapped_Area == 'Gift City' %}selected{% endif %}>Gift City</option><option value="Randesan" {% if form_data and form_data.Mapped_Area == 'Randesan' %}selected{% endif %}>Randesan</option><option value="Vavol" {% if form_data and form_data.Mapped_Area == 'Vavol' %}selected{% endif %}>Vavol</option><option value="Raysan" {% if form_data and form_data.Mapped_Area == 'Raysan' %}selected{% endif %}>Raysan</option><option value="Koba" {% if form_data and form_data.Mapped_Area == 'Koba' %}selected{% endif %}>Koba</option><option value="Kalol" {% if form_data and form_data.Mapped_Area == 'Kalol' %}selected{% endif %}>Kalol</option><option value="Pethapur" {% if form_data and form_data.Mapped_Area == 'Pethapur' %}selected{% endif %}>Pethapur</option><option value="Randheja" {% if form_data and form_data.Mapped_Area == 'Randheja' %}selected{% endif %}>Randheja</option><option value="Khoraj" {% if form_data and form_data.Mapped_Area == 'Khoraj' %}selected{% endif %}>Khoraj</option><option value="Uvarsad" {% if form_data and form_data.Mapped_Area == 'Uvarsad' %}selected{% endif %}>Uvarsad</option><option value="Chiloda" {% if form_data and form_data.Mapped_Area == 'Chiloda' %}selected{% endif %}>Chiloda</option><option value="SP Ring Road" {% if form_data and form_data.Mapped_Area == 'SP Ring Road' %}selected{% endif %}>SP Ring Road</option><option value="Sector 22" {% if form_data and form_data.Mapped_Area == 'Sector 22' %}selected{% endif %}>Sector 22</option><option value="Adalaj" {% if form_data and form_data.Mapped_Area == 'Adalaj' %}selected{% endif %}>Adalaj</option><option value="Gandhinagar Taluka" {% if form_data and form_data.Mapped_Area == 'Gandhinagar Taluka' %}selected{% endif %}>Gandhinagar Taluka</option><option value="Kolavada" {% if form_data and form_data.Mapped_Area == 'Kolavada' %}selected{% endif %}>Kolavada</option><option value="Sector 26" {% if form_data and form_data.Mapped_Area == 'Sector 26' %}selected{% endif %}>Sector 26</option><option value="Karai" {% if form_data and form_data.Mapped_Area == 'Karai' %}selected{% endif %}>Karai</option><option value="Sector 29" {% if form_data and form_data.Mapped_Area == 'Sector 29' %}selected{% endif %}>Sector 29</option><option value="SG Highway" {% if form_data and form_data.Mapped_Area == 'SG Highway' %}selected{% endif %}>SG Highway</option><option value="Dahegam" {% if form_data and form_data.Mapped_Area == 'Dahegam' %}selected{% endif %}>Dahegam</option><option value="Other" {% if form_data and form_data.Mapped_Area == 'Other' %}selected{% endif %}>Other</option><option value="Sector 8" {% if form_data and form_data.Mapped_Area == 'Sector 8' %}selected{% endif %}>Sector 8</option><option value="Sector 6" {% if form_data and form_data.Mapped_Area == 'Sector 6' %}selected{% endif %}>Sector 6</option><option value="Sector 11" {% if form_data and form_data.Mapped_Area == 'Sector 11' %}selected{% endif %}>Sector 11</option><option value="Sughad" {% if form_data and form_data.Mapped_Area == 'Sughad' %}selected{% endif %}>Sughad</option><option value="Valad" {% if form_data and form_data.Mapped_Area == 'Valad' %}selected{% endif %}>Valad</option><option value="Ambapur" {% if form_data and form_data.Mapped_Area == 'Ambapur' %}selected{% endif %}>Ambapur</option><option value="Sector 19" {% if form_data and form_data.Mapped_Area == 'Sector 19' %}selected{% endif %}>Sector 19</option><option value="Sector 28" {% if form_data and form_data.Mapped_Area == 'Sector 28' %}selected{% endif %}>Sector 28</option><option value="Sector 24" {% if form_data and form_data.Mapped_Area == 'Sector 24' %}selected{% endif %}>Sector 24</option><option value="Sector 21" {% if form_data and form_data.Mapped_Area == 'Sector 21' %}selected{% endif %}>Sector 21</option></select></div>
+                    <div class="form-group"><label>Property Facing</label><select name="Facing"><option value="Not Sure" {% if not form_data or form_data.Facing in ['Not Sure', 'Unknown'] %}selected{% endif %}>Not Sure</option><option value="East" {% if form_data and form_data.Facing == 'East' %}selected{% endif %}>East</option><option value="North-East" {% if form_data and form_data.Facing == 'North-East' %}selected{% endif %}>North-East</option><option value="North" {% if form_data and form_data.Facing == 'North' %}selected{% endif %}>North</option><option value="West" {% if form_data and form_data.Facing == 'West' %}selected{% endif %}>West</option><option value="South-East" {% if form_data and form_data.Facing == 'South-East' %}selected{% endif %}>South-East</option><option value="North-West" {% if form_data and form_data.Facing == 'North-West' %}selected{% endif %}>North-West</option><option value="South" {% if form_data and form_data.Facing == 'South' %}selected{% endif %}>South</option><option value="South-West" {% if form_data and form_data.Facing == 'South-West' %}selected{% endif %}>South-West</option><option value="Other" {% if form_data and form_data.Facing == 'Other' %}selected{% endif %}>Other</option></select></div>
+                    <div class="form-group"><label>Age of Property</label><select name="Property_Age"><option value="Not Sure" {% if not form_data or form_data.Property_Age in ['Not Sure', 'Unknown'] %}selected{% endif %}>Not Sure</option><option value="New" {% if form_data and form_data.Property_Age == 'New' %}selected{% endif %}>New</option><option value="1-5 years" {% if form_data and form_data.Property_Age == '1-5 years' %}selected{% endif %}>1-5 Years</option><option value="5-10 years" {% if form_data and form_data.Property_Age == '5-10 years' %}selected{% endif %}>5-10 Years</option><option value="10-20 years" {% if form_data and form_data.Property_Age == '10-20 years' %}selected{% endif %}>10-20 Years</option></select></div>
+                    <div class="form-group"><label>Area Measurement Type</label><select name="Area_Type" required><option value="" {% if not form_data or not form_data.Area_Type %}selected{% endif %} disabled>Select Area Type</option><option value="Carpet" {% if form_data and form_data.Area_Type == 'Carpet' %}selected{% endif %}>Carpet Area</option><option value="Built-up" {% if form_data and form_data.Area_Type == 'Built-up' %}selected{% endif %}>Built-up Area</option><option value="Super Built-up" {% if form_data and form_data.Area_Type == 'Super Built-up' %}selected{% endif %}>Super Built-up Area</option></select></div>
+                    <div class="form-group"><label>Availability</label><select name="Property_Status" required><option value="" {% if not form_data or not form_data.Property_Status %}selected{% endif %} disabled>Select Availability</option><option value="Ready_to_Move" {% if form_data and form_data.Property_Status == 'Ready_to_Move' %}selected{% endif %}>Ready to Move</option><option value="Under_Construction" {% if form_data and form_data.Property_Status == 'Under_Construction' %}selected{% endif %}>Under Construction</option></select></div>
+                </div>
+                <button id="predictButton" type="submit">Predict Price</button>
+            </form>
+        </div>
+
+        {% if prediction %}
+        <div id="predictionResults" class="result-card">
+            <div class="result-title">
+                <h2>Prediction Summary</h2>
+            </div>
+            <div class="result-grid" style="grid-template-columns: 1fr;">
+                <div class="result-item primary">
+                    <span class="item-label">Estimated Price</span>
+                    <span class="item-value">₹ <span id="estimatedPrice" data-target="{{ prediction.predicted_price_lakhs }}">{{ prediction.predicted_price_lakhs }}</span> Lakhs</span>
+                    <div class="prediction-breakdown">
+                        <div class="range-line">Estimated range: ₹{{ prediction.price_range_95_ci.lower|format_lakh_price }} - ₹{{ prediction.price_range_95_ci.upper|format_lakh_price }}</div>
+                        <div class="confidence-row">
+                            <span>Confidence</span>
+                            <span>{{ prediction.model_confidence }}%</span>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" style="--confidence-width: {{ prediction.model_confidence }}%;"></div>
+                        </div>
+                        <div class="metric-mini-grid">
+                            <div class="metric-mini-card">
+                                <span class="metric-mini-label">Price / Sqft</span>
+                                <span class="metric-mini-value">₹{{ "{:,.0f}".format(prediction.price_per_sqft) }}</span>
+                            </div>
+                            <div class="metric-mini-card">
+                                <span class="metric-mini-label">Market Position</span>
+                                <span class="metric-mini-value">{{ prediction.market_segment }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="result-note">The model provides an estimate based on recent trends and property attributes. Actual market prices may vary.</p>
+        </div>
+        {% endif %}
+
+        <footer class="footer">
+            <p>&copy; 2026 Estatify &bull; Developed by Megh Patel</p>
+
+            <div class="footer-social">
+                <a href="https://github.com/MeghOfficial" target="_blank" aria-label="GitHub" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" aria-label="LinkedIn" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:bavarvamegh3139@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('predictionForm');
+            const button = document.getElementById('predictButton');
+
+            if (form && button) {
+                form.addEventListener('submit', function () {
+                    button.disabled = true;
+                    button.classList.add('is-loading');
+                    button.textContent = 'Running AI model...';
+                });
+            }
+
+            function animateNumber(element, start, end, duration, formatter) {
+                const range = end - start;
+                const startTime = performance.now();
+
+                function frame(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const value = start + range * progress;
+                    element.textContent = formatter(value);
+                    if (progress < 1) {
+                        requestAnimationFrame(frame);
+                    }
+                }
+
+                requestAnimationFrame(frame);
+            }
+
+            const estimatedPrice = document.getElementById('estimatedPrice');
+
+            const resultsSection = document.getElementById('predictionResults');
+            if (resultsSection) {
+                const navbar = document.querySelector('.navbar');
+                const navOffset = navbar ? navbar.offsetHeight + 54 : 120;
+                const targetTop = resultsSection.getBoundingClientRect().top + window.pageYOffset - navOffset;
+                window.scrollTo({ top: Math.max(targetTop, 0), behavior: 'smooth' });
+            }
+
+            if (estimatedPrice) {
+                const targetPrice = parseFloat(estimatedPrice.dataset.target) || 0;
+
+                animateNumber(estimatedPrice, 0, targetPrice, 1000, function (value) {
+                    return value.toFixed(2).replace(/\.00$/, '');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

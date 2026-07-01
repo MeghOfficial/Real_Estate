@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Estatify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/insights.css') }}">
+</head>
+<body>
+    <main class="page">
+        <nav class="navbar">
+            <a class="logo" href="/">Estatify</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/prediction">Prediction</a>
+                <a href="/recommendations">Recommendation</a>
+                <a href="/analytics">Analysis</a>
+                <a class="active" href="/insights">Insights</a>
+            </div>
+        </nav>
+
+        <section class="insight-shell">
+            <section class="control-panel" aria-label="Insight controls">
+                <div class="field">
+                    <label for="categoryDropdown">Feature Category</label>
+                    <select id="categoryDropdown">
+                        <option value="numerical">Numerical Features</option>
+                        <option value="categorical">Categorical Features</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="featureDropdown">Feature</label>
+                    <select id="featureDropdown"></select>
+                </div>
+            </section>
+
+            <div id="message" class="message"></div>
+            <section id="insightCard" class="insight-card" aria-live="polite"></section>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-brand">Estatify</div>
+                    <p class="footer-desc">AI-powered real estate price prediction and market insights.</p>
+                </div>
+                <div>
+                    <div class="footer-title">Quick Links</div>
+                    <div class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/prediction">Prediction</a>
+                        <a href="/recommendations">Recommendation</a>
+                        <a href="/analytics">Analysis</a>
+                        <a href="/insights">Insights</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Tech Stack</div>
+                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
+                </div>
+                <div>
+                    <div class="footer-title">Connect</div>
+                    <div class="footer-contact">
+                        <a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Estatify &bull; Developed by Megh Patel</div>
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/insights.js') }}"></script>
+</body>
+</html>

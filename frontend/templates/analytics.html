@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Estatify</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #111827;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --paper: #ffffff;
+            --soft: #f8fafc;
+            --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: var(--ink);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 18% 30%, rgba(17, 24, 39, 0.12), transparent 34%),
+                radial-gradient(circle at 82% 22%, rgba(15, 23, 42, 0.1), transparent 32%),
+                radial-gradient(circle at 50% 84%, rgba(75, 85, 99, 0.08), transparent 32%),
+                #ffffff;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 18px;
+            z-index: 9;
+            background: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            pointer-events: none;
+        }
+
+        .page {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 34px 18px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 16px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            margin-top: 18px;
+            padding: 20px 28px;
+            border: 1px solid rgba(229, 231, 235, 0.95);
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.78);
+            background-clip: padding-box;
+            box-shadow: 0 18px 60px rgba(15, 23, 42, 0.09);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--ink);
+            font-size: 1.9rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #385267;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 14px;
+            transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--ink);
+            background: #f3f4f6;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 54px 0 38px;
+            padding: 22px 26px;
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+            color: #64748b;
+            font-weight: 750;
+            flex-wrap: wrap;
+        }
+
+        .footer p { margin: 0; }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f3f4f6;
+            color: #111827;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .footer-social a:hover {
+            background: #111827;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        #map {
+            width: 100%;
+            height: calc(100vh - 224px);
+            min-height: 560px;
+            margin-top: 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #111827;
+        }
+
+        #map .modebar {
+            left: 8px;
+            right: auto;
+            top: 8px;
+        }
+
+        .message {
+            display: none;
+            margin-top: 24px;
+            padding: 18px;
+            border: 1px solid rgba(248, 113, 113, 0.28);
+            background: rgba(127, 29, 29, 0.2);
+            color: #fecaca;
+            font-size: 1rem;
+        }
+
+        .charts-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .market-overview-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .charts-column {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .bar-chart {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .market-share-chart,
+        .status-chart {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .chart-with-control {
+            position: relative;
+            min-width: 0;
+        }
+
+        .chart-overlay-control {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+        }
+
+        .chart-overlay-control label {
+            color: #475569;
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .chart-overlay-control select {
+            min-width: 112px;
+            padding: 6px 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            background: #f8fafc;
+            color: #0f172a;
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .amenities-panel {
+            margin-top: 28px;
+        }
+
+        .amenities-title {
+            display: none;
+            margin-bottom: 12px;
+            color: #0f172a;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .word-cloud {
+            padding: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            background: #ffffff;
+            display: block;
+            overflow: hidden;
+            min-height: 320px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.05);
+        }
+
+        .word-cloud img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .word-cloud-panel {
+            display: grid;
+            gap: 12px;
+        }
+
+        .word-cloud-title {
+            color: #0f172a;
+            font-size: 1.35rem;
+            font-weight: 900;
+            line-height: 1.08;
+            margin: 0 0 6px 0;
+        }
+
+        .insights-panel {
+            margin-top: 24px;
+            padding: 24px 28px;
+            border-radius: 24px;
+            background: #ffffff;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 28px 90px rgba(15, 23, 42, 0.08);
+        }
+
+        .insights-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .insights-header-title {
+            color: #0f172a;
+            font-size: 1.55rem;
+            font-weight: 900;
+            line-height: 1.05;
+            margin: 0 0 8px 0;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .insight-card {
+            display: block;
+            padding: 20px 22px;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            background: #f8fafc;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+            min-height: 150px;
+        }
+
+        .insight-card-title {
+            margin: 0 0 10px 0;
+            color: #0f172a;
+            font-size: 1.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .insight-card-text {
+            margin: 0;
+            color: #334155;
+            font-size: 0.98rem;
+            line-height: 1.75;
+        }
+
+        .final-takeaway {
+            margin-top: 28px;
+            padding: 24px 26px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+            color: #0f172a;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.7;
+            border: 1px solid #cbd5e1;
+        }
+
+        @media (max-width: 920px) {
+            .footer-main {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer {
+                padding: 22px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Key Market Insights panel */
+        .insights-panel {
+            margin-top: 20px;
+            padding: 24px 28px;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.06);
+        }
+
+        .insights-panel .comparison-title {
+            margin-bottom: 12px;
+            color: #0f172a;
+            font-size: 1.25rem;
+            font-weight: 900;
+        }
+
+        .insight-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .insight-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: #334155;
+            font-weight: 700;
+            background: #f8fafc;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .insight-badge {
+            min-width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #e6f0ff 0%, #dbeafe 100%);
+            color: #0f172a;
+            font-weight: 900;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .insights-full ol {
+            margin-top: 8px;
+            padding-left: 18px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .insights-full p {
+            margin-top: 8px;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .comparison-controls {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .comparison-control label {
+            display: block;
+            margin-bottom: 8px;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .comparison-control select {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: #f8fafc;
+            color: #0f172a;
+            font: inherit;
+        }
+
+        .comparison-title {
+            margin-bottom: 14px;
+            color: #0f172a;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .comparison-section-title,
+        .section-heading {
+            margin-bottom: 16px;
+            color: #0f172a;
+            font-size: 1.35rem;
+            font-weight: 900;
+        }
+
+        .segment-title {
+            color: #0f172a;
+            font-size: 1.35rem;
+            font-weight: 900;
+        }
+
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .segment-title {
+            color: #0f172a;
+            font-size: 1.4rem;
+            font-weight: 900;
+        }
+
+        .segment-filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .segment-filter label {
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .segment-filter select {
+            min-width: 190px;
+            padding: 10px 14px;
+            border: 1px solid rgba(203, 213, 225, 0.95);
+            border-radius: 10px;
+            background: transparent;
+            color: #0f172a;
+            font: inherit;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .metric-card-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border: 1px solid rgba(203, 213, 225, 0.9);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .metric-card-header select {
+            min-width: 120px;
+            padding: 10px 12px;
+            border: 1px solid rgba(203, 213, 225, 0.95);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.96);
+            color: #0f172a;
+            font: inherit;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .segment-summary {
+            margin-top: 16px;
+            overflow-x: auto;
+        }
+
+        .segment-table {
+            width: 100%;
+            min-width: 720px;
+            border-collapse: collapse;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .segment-table th,
+        .segment-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .segment-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-size: 0.86rem;
+            font-weight: 800;
+        }
+
+        .segment-table td {
+            color: #334155;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .segment-table tbody tr:nth-child(odd) td {
+            background: #f8fafc;
+        }
+
+        .segment-table tbody tr:nth-child(even) td {
+            background: #eef6ff;
+        }
+
+        .segment-table .bhk-cell,
+        .segment-table .count-cell {
+            color: #0f172a;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .comparison-warning {
+            display: none;
+            margin-bottom: 14px;
+            padding: 10px 12px;
+            border: 1px solid #fde68a;
+            border-radius: 6px;
+            background: #fffbeb;
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 13px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .comparison-table td {
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .comparison-table tbody tr:nth-child(odd) td {
+            background: #f8fafc;
+        }
+
+        .comparison-table tbody tr:nth-child(even) td {
+            background: #eef6ff;
+        }
+
+        .comparison-table td.metric-name {
+            color: #0f172a;
+            font-weight: 800;
+        }
+
+        .scatter-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+            gap: 18px;
+            margin: 28px 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+            align-items: stretch;
+        }
+
+        .scatter-left,
+        .scatter-right {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 560px;
+            height: 560px;
+        }
+
+        .scatter-chart {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .bhk-pie-wrapper {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 14px;
+            padding: 14px;
+            border: 1px solid rgba(203, 213, 225, 0.9);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bhk-distribution-chart {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .bhk-pie-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .bhk-pie-header h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .bhk-filter-label {
+            display: none;
+        }
+
+        .bhk-pie-header select {
+            min-width: 180px;
+            padding: 10px 14px;
+            border: 1px solid rgba(203, 213, 225, 0.95);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.96);
+            color: #0f172a;
+            font: inherit;
+        }
+
+        .bhk-controls {
+            margin: 8px 6px 12px 6px;
+        }
+
+        .valuation-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .valuation-chart {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sample-listing-panel {
+            min-width: 0;
+            padding: 18px 22px;
+            border: 1px solid #444541;
+            border-radius: 6px;
+            background: #2f302d;
+            color: #f4f4ef;
+        }
+
+        .sample-listing-title {
+            margin-bottom: 14px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .sample-listing-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            padding: 14px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .sample-listing-row:first-of-type {
+            border-top: none;
+        }
+
+        .sample-listing-main {
+            min-width: 0;
+            color: #c8c8c2;
+            font-size: 1rem;
+            font-weight: 800;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sample-listing-price {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 0.98rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .valuation-badge {
+            display: inline-flex;
+            align-items: center;
+            min-height: 20px;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .valuation-badge.below {
+            background: #dff7ef;
+            color: #047857;
+        }
+
+        .valuation-badge.above {
+            background: #fee8df;
+            color: #b23a1e;
+        }
+
+        .valuation-badge.near {
+            background: #f1f2eb;
+            color: #6b6b5e;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .metric-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .metric-card-header select {
+            width: 86px;
+            padding: 5px 7px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .metric-box {
+            min-height: 78px;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+        }
+
+        .metric-box span {
+            display: block;
+            color: #64748b;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .metric-box strong {
+            display: block;
+            margin-top: 8px;
+            color: #0f172a;
+            font-size: 1.35rem;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 0 20px 20px;
+            }
+
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+                border-bottom: none;
+                padding: 24px 0;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            #map {
+                height: 62vh;
+                min-height: 460px;
+                margin-top: 18px;
+            }
+
+            .metrics {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                margin-top: 18px;
+            }
+
+            .metric-box strong {
+                font-size: 1.1rem;
+            }
+
+            .charts-row {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .scatter-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .market-overview-row {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .side-by-side-container {
+                flex-direction: column;
+            }
+
+            .left-chart,
+            .right-chart {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .sample-listing-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .sample-listing-price {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-controls {
+                grid-template-columns: 1fr;
+            }
+
+            .segment-header {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .segment-filter {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .segment-filter select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <nav class="navbar">
+            <a class="logo" href="/">Estatify</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/prediction">Prediction</a>
+                <a href="/recommendations">Recommendation</a>
+                <a class="active" href="/analytics">Analysis</a>
+                <a href="/insights">Insights</a>
+            </div>
+        </nav>
+
+        <section class="metrics">
+            <div class="metric-box">
+                <div class="metric-card-header">
+                    <span id="priceMetricLabel">Price</span>
+                    <select id="priceMetricMode" aria-label="Price metric">
+                        <option value="mean">Mean</option>
+                        <option value="median">Median</option>
+                    </select>
+                </div>
+                <strong id="priceMetricValue">Rs. {{ metrics.average_price|default(0) }} L</strong>
+            </div>
+            <div class="metric-box">
+                <span>Total Property</span>
+                <strong>{{ metrics.total_property|default(0) }}</strong>
+            </div>
+            <div class="metric-box">
+                <span>Unique Locations</span>
+                <strong>{{ metrics.unique_locations|default(0) }}</strong>
+            </div>
+            <div class="metric-box">
+                <div class="metric-card-header">
+                    <span id="priceSqftMetricLabel">Price per SqFt</span>
+                    <select id="priceSqftMetricMode" aria-label="Price per square foot metric">
+                        <option value="mean">Mean</option>
+                        <option value="median">Median</option>
+                    </select>
+                </div>
+                <strong id="priceSqftMetricValue">Rs. {{ "{:,.0f}".format(metrics.average_price_per_sqft|default(0)) }}</strong>
+            </div>
+            <div class="metric-box">
+                <span>Ready to Move</span>
+                <strong id="readyToMoveValue">{{ "%.2f"|format(metrics.ready_to_move_percentage|default(0)) }}%</strong>
+            </div>
+        </section>
+        
+
+        <section class="charts-row">
+            <div id="expensiveAreasChart" class="bar-chart"></div>
+            <div id="affordableAreasChart" class="bar-chart"></div>
+        </section>
+        <section class="market-overview-row">
+            <div id="localityMarketShareChart" class="market-share-chart"></div>
+        </section>
+        <div style="margin-top: 14px; margin-bottom: 18px;">
+            <h3 class="section-heading">Price per Sq.Ft. by Locality</h3>
+            <div style="margin-bottom: 6px; color: #64748b; font-size: 0.95rem; font-weight: 700;">Size = Avg. Area (Sq.Ft.)</div>
+            <div style="color: #64748b; font-size: 0.95rem; font-weight: 700;">Color = Avg. Price per Sq.Ft.</div>
+        </div>
+        <div id="map"></div>
+        <div class="comparison-section-title">Locality Comparison Analysis</div>
+        <section class="comparison-panel">
+            <div class="comparison-controls">
+                <div class="comparison-control">
+                    <label for="area1">Area 1</label>
+                    <select id="area1"></select>
+                </div>
+                <div class="comparison-control">
+                    <label for="area2">Area 2</label>
+                    <select id="area2"></select>
+                </div>
+            </div>
+            <div id="comparisonWarning" class="comparison-warning">Please select two different areas.</div>
+            <div id="comparisonTitle" class="comparison-title"></div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th id="area1Header"></th>
+                        <th id="area2Header"></th>
+                    </tr>
+                </thead>
+                <tbody id="comparisonBody"></tbody>
+            </table>
+        </section>
+        <section class="scatter-panel">
+            <div class="scatter-left">
+                <div id="areaPriceScatterChart" class="scatter-chart"></div>
+            </div>
+            <div class="scatter-right">
+                <div class="bhk-pie-wrapper">
+                    <div class="bhk-pie-header">
+                        <div>
+                            <h3>BHK Distribution</h3>
+                        </div>
+                        <select id="bhkLocalityFilter" aria-label="Locality filter"></select>
+                    </div>
+                    <div id="bhkDistributionChart" class="bhk-distribution-chart"></div>
+                </div>
+            </div>
+        </section>
+        <section id="valuationSection" class="valuation-grid">
+            <div id="marketPricingChart" class="valuation-chart"></div>
+            <div class="sample-listing-panel">
+                <div class="sample-listing-title">Sample listing comparison</div>
+                <div id="sampleListingComparison"></div>
+            </div>
+        </section>
+        <section class="charts-column">
+            <div>
+                <div class="segment-header">
+                    <div class="segment-title">Market Segment Analysis</div>
+                    <div class="segment-filter">
+                        <select id="segmentBhkFilter" aria-label="BHK Filter">
+                            <option value="all">All BHKs</option>
+                            <option value="2">Only 2 BHK</option>
+                            <option value="3">Only 3 BHK</option>
+                            <option value="4">Only 4 BHK</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="marketSegmentChart" class="bar-chart"></div>
+                <div id="marketSegmentSummary" class="segment-summary">
+                    <table class="segment-table">
+                        <thead>
+                            <tr>
+                                <th>BHK</th>
+                                <th>Affordable</th>
+                                <th>Premium</th>
+                                <th>Luxury</th>
+                                <th>Total Listings</th>
+                            </tr>
+                        </thead>
+                        <tbody id="marketSegmentSummaryBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="charts-row">
+                <div class="chart-with-control">
+                    <div class="chart-overlay-control">
+                        <select id="bhkPriceMetricMode" aria-label="Metric selection">
+                            <option value="mean">Mean</option>
+                            <option value="median">Median</option>
+                        </select>
+                    </div>
+                    <div id="bhkPriceChart" class="bar-chart"></div>
+                </div>
+                <div class="chart-with-control">
+                    <div class="chart-overlay-control">
+                        <select id="propertyAgeBhkFilter" aria-label="BHK type filter"></select>
+                    </div>
+                    <div id="propertyAgePriceChart" class="bar-chart"></div>
+                </div>
+            </div>
+        </section>
+        <section class="amenities-panel">
+            <div class="amenities-grid">
+                <div class="word-cloud-panel">
+                    <div class="word-cloud-title">Common Property Amenities</div>
+                    <div id="amenitiesWordCloud" class="word-cloud"></div>
+                </div>
+                <div class="word-cloud-panel">
+                    <div class="word-cloud-title">Common Nearby Facilities</div>
+                    <div id="nearbyWordCloud" class="word-cloud nearby-word-cloud"></div>
+                </div>
+            </div>
+        </section>
+        <div id="message" class="message"></div>
+        <section class="insights-panel insights-full" aria-labelledby="insightsFullTitle">
+            <div class="insights-header">
+                <div>
+                    <h2 class="insights-header-title" id="insightsFullTitle">Key Market Insights</h2>
+                    <p class="final-takeaway">Gandhinagar's real estate market is largely driven by location, family-oriented housing demand, and value-conscious pricing. While premium corridors such as Gift City command substantial premiums, buyers can still find attractive opportunities in emerging and affordable localities.</p>
+                </div>
+            </div>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Gandhinagar leans affordable-to-premium</h3>
+                    <p class="insight-card-text">41% of listings fall in the affordable segment, while 37% belong to the premium category. Luxury homes account for only 22% of the market.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Gift City is the premium hotspot</h3>
+                    <p class="insight-card-text">Gift City records the highest average price per square foot, exceeding ₹16,000 per sq.ft., and stands well above other localities.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Kalol and Dahegam are budget-friendly</h3>
+                    <p class="insight-card-text">With prices around ₹3,200–₹4,000 per sq.ft., these areas are strong choices for buyers seeking affordability.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Activity is concentrated in key areas</h3>
+                    <p class="insight-card-text">Localities such as Sargasan, Kudasan, Gift City, Randesan, and Vavol dominate the market, offering buyers the widest range of choices.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Prices vary significantly across Gandhinagar</h3>
+                    <p class="insight-card-text">The heat map reveals substantial differences in price per square foot, highlighting the importance of locality when making purchasing decisions.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Larger homes generally cost more</h3>
+                    <p class="insight-card-text">While property prices tend to increase with built-up area, homes of similar sizes can have very different prices depending on where they are located.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Family-sized homes dominate demand</h3>
+                    <p class="insight-card-text">2 BHK and 3 BHK properties make up the majority of listings, indicating strong demand from family homebuyers.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Most properties are fairly priced</h3>
+                    <p class="insight-card-text">About 81% of listings align closely with the model's estimated value, suggesting that the Gandhinagar market is relatively efficient.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Opportunities remain for informed buyers</h3>
+                    <p class="insight-card-text">Approximately 9% of listings appear attractively priced, while 10% are listed above estimated value, creating opportunities for negotiation and value discovery.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 class="insight-card-title">Budget expectations vary by home type</h3>
+                    <p class="insight-card-text">Typical pricing ranges are: 2 BHK affordable below ₹65L and premium between ₹65L–₹90L; 3 BHK affordable below ₹80L and premium between ₹80L–₹1.2Cr; 4 BHK affordable below ₹1.3Cr and premium between ₹1.3Cr–₹1.8Cr.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-brand">Estatify</div>
+                    <p class="footer-desc">AI-powered real estate price prediction and market insights.</p>
+                </div>
+                <div>
+                    <div class="footer-title">Quick Links</div>
+                    <div class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/prediction">Prediction</a>
+                        <a href="/recommendations">Recommendation</a>
+                        <a href="/analytics">Analysis</a>
+                        <a href="/insights">Insights</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Tech Stack</div>
+                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
+                </div>
+                <div>
+                    <div class="footer-title">Connect</div>
+                    <div class="footer-contact">
+                        <a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Estatify &bull; Developed by Megh Patel</div>
+        </footer>
+    </main>
+
+    <script>
+        const mapFigure = {{ map_figure | tojson }};
+        const expensiveAreasFigure = {{ expensive_areas_figure | tojson }};
+        const affordableAreasFigure = {{ affordable_areas_figure | tojson }};
+        const localityMarketShareFigure = {{ locality_market_share_figure | tojson }};
+        const marketSegmentFigures = {{ market_segment_figures | tojson }};
+        const marketSegmentSummary = {{ market_segment_summary | default([]) | tojson }};
+        const bhkPriceFigure = {{ bhk_price_figure | tojson }};
+        const propertyAgePriceFigures = {{ property_age_price_figures | tojson }};
+        const areaPriceScatterFigure = {{ area_price_scatter_figure | tojson }};
+        const marketPricingFigure = {{ market_pricing_figure | tojson }};
+        const marketPricingSamples = {{ market_pricing_samples | default([]) | tojson }};
+        const areaComparison = {{ area_comparison | tojson }};
+        const amenities = {{ amenities | tojson }};
+        const amenitiesWordcloudImage = {{ amenities_wordcloud_image | tojson }};
+        const nearbyWordcloudImage = {{ nearby_wordcloud_image | tojson }};
+        const metrics = {{ metrics | tojson }};
+        const isError = {{ error | default(false) | tojson }};
+        const message = {{ message | default("No analytics data available.") | tojson }};
+        const messageEl = document.getElementById("message");
+        const mapConfig = {
+            displaylogo: false,
+            displayModeBar: true,
+            responsive: true,
+            scrollZoom: true,
+        };
+        const chartConfig = {
+            displayModeBar: false,
+            displaylogo: false,
+            responsive: true,
+            scrollZoom: true,
+        };
+
+        function showMessage(text) {
+            document.getElementById("map").style.display = "none";
+            document.querySelectorAll(".charts-row").forEach((row) => {
+                row.style.display = "none";
+            });
+            document.querySelector(".market-overview-row").style.display = "none";
+            document.querySelector(".charts-column").style.display = "none";
+            document.getElementById("valuationSection").style.display = "none";
+            document.querySelectorAll(".amenities-panel").forEach((panel) => {
+                panel.style.display = "none";
+            });
+            document.querySelector(".comparison-panel").style.display = "none";
+            document.querySelector(".scatter-panel").style.display = "none";
+            messageEl.style.display = "block";
+            messageEl.textContent = text;
+        }
+
+        function formatLakhs(value) {
+            return `Rs. ${Number(value).toFixed(1)} L`;
+        }
+
+        function formatRupees(value) {
+            return `Rs. ${Number(value).toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;
+        }
+
+        function formatArea(value) {
+            return Number(value).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+        }
+
+        function renderComparison() {
+            const area1Select = document.getElementById("area1");
+            const area2Select = document.getElementById("area2");
+            const warning = document.getElementById("comparisonWarning");
+            const title = document.getElementById("comparisonTitle");
+            const body = document.getElementById("comparisonBody");
+            const area1Name = area1Select.value;
+            const area2Name = area2Select.value;
+
+            if (area1Name === area2Name) {
+                warning.style.display = "block";
+                title.textContent = "";
+                body.innerHTML = "";
+                document.getElementById("area1Header").textContent = area1Name;
+                document.getElementById("area2Header").textContent = area2Name;
+                return;
+            }
+
+            const row1 = areaComparison.find((area) => area.mapped_area === area1Name);
+            const row2 = areaComparison.find((area) => area.mapped_area === area2Name);
+            if (!row1 || !row2) return;
+
+            warning.style.display = "none";
+            title.textContent = `Comparison: ${area1Name} vs ${area2Name}`;
+            document.getElementById("area1Header").textContent = area1Name;
+            document.getElementById("area2Header").textContent = area2Name;
+
+            const rows = [
+                ["Avg Price", formatLakhs(row1.avg_price_lakhs), formatLakhs(row2.avg_price_lakhs)],
+                ["Avg Price per SqFt", formatRupees(row1.avg_price_per_sqft), formatRupees(row2.avg_price_per_sqft)],
+                ["Avg Area (sq.ft.)", formatArea(row1.avg_area), formatArea(row2.avg_area)],
+            ];
+
+            body.innerHTML = rows.map(([metric, value1, value2]) => `
+                <tr>
+                    <td class="metric-name">${metric}</td>
+                    <td>${value1}</td>
+                    <td>${value2}</td>
+                </tr>
+            `).join("");
+        }
+
+        function setupComparison() {
+            const area1Select = document.getElementById("area1");
+            const area2Select = document.getElementById("area2");
+
+            if (!areaComparison || areaComparison.length < 2) {
+                document.querySelector(".comparison-panel").style.display = "none";
+                return;
+            }
+
+            const options = areaComparison.map((area) => (
+                `<option value="${area.mapped_area}">${area.mapped_area}</option>`
+            )).join("");
+            area1Select.innerHTML = options;
+            area2Select.innerHTML = options;
+            area1Select.value = areaComparison[0].mapped_area;
+            area2Select.value = areaComparison[1].mapped_area;
+
+            area1Select.addEventListener("change", renderComparison);
+            area2Select.addEventListener("change", renderComparison);
+            renderComparison();
+        }
+
+        function setupMetricMode() {
+            const priceMetricMode = document.getElementById("priceMetricMode");
+            const priceValue = document.getElementById("priceMetricValue");
+            const priceSqftMetricMode = document.getElementById("priceSqftMetricMode");
+            const priceSqftValue = document.getElementById("priceSqftMetricValue");
+
+            function renderPriceMetric() {
+                const isMedian = priceMetricMode.value === "median";
+                const price = isMedian ? metrics.median_price : metrics.average_price;
+
+                priceValue.textContent = `Rs. ${Number(price || 0).toFixed(2)} L`;
+            }
+
+            function renderPriceSqftMetric() {
+                const isMedian = priceSqftMetricMode.value === "median";
+                const priceSqft = isMedian ? metrics.median_price_per_sqft : metrics.average_price_per_sqft;
+
+                priceSqftValue.textContent = `Rs. ${Number(priceSqft || 0).toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;
+            }
+
+            priceMetricMode.addEventListener("change", renderPriceMetric);
+            priceSqftMetricMode.addEventListener("change", renderPriceSqftMetric);
+            renderPriceMetric();
+            renderPriceSqftMetric();
+        }
+
+        function renderAmenities() {
+            if (!amenities || !amenities.length) {
+                document.querySelector(".amenities-panel").style.display = "none";
+                return;
+            }
+
+            const wordCloud = document.getElementById("amenitiesWordCloud");
+            if (amenitiesWordcloudImage) {
+                wordCloud.innerHTML = `<img src="data:image/png;base64,${amenitiesWordcloudImage}" alt="Amenities Word Cloud">`;
+            } else {
+                wordCloud.innerHTML = `<img src="{{ url_for('static', filename='images/amenities_wordcloud_balanced.png') }}" alt="Amenities Word Cloud">`;
+            }
+        }
+
+        function renderNearbyWordCloud() {
+            const nearbyWordCloud = document.getElementById("nearbyWordCloud");
+
+            nearbyWordCloud.style.display = "flex";
+            const imageSrc = nearbyWordcloudImage
+                ? `data:image/png;base64,${nearbyWordcloudImage}`
+                : "{{ url_for('static', filename='images/nearby_facilities_wordcloud_balanced.png') }}";
+            nearbyWordCloud.innerHTML = `<img src="${imageSrc}" alt="Nearby Facilities Word Cloud">`;
+        }
+
+        function renderMarketSegmentSummary() {
+            const selectedBhk = document.getElementById("segmentBhkFilter").value;
+            const summaryPanel = document.getElementById("marketSegmentSummary");
+            const summaryBody = document.getElementById("marketSegmentSummaryBody");
+
+            if (!marketSegmentSummary || !marketSegmentSummary.length) {
+                summaryPanel.style.display = "none";
+                return;
+            }
+
+            const rows = selectedBhk === "all"
+                ? marketSegmentSummary
+                : marketSegmentSummary.filter((row) => String(row.bhk) === selectedBhk);
+
+            summaryPanel.style.display = rows.length ? "block" : "none";
+            summaryBody.innerHTML = rows.map((row) => `
+                <tr>
+                    <td class="bhk-cell">${row.bhk} BHK</td>
+                    <td>${row.affordable_rule}</td>
+                    <td>${row.premium_rule}</td>
+                    <td>${row.luxury_rule}</td>
+                    <td class="count-cell">${row.total_count}</td>
+                </tr>
+            `).join("");
+        }
+
+        function setupPropertyAgeChart() {
+            const filter = document.getElementById("propertyAgeBhkFilter");
+            const chart = document.getElementById("propertyAgePriceChart");
+            const panel = chart ? chart.parentElement : null;
+
+            if (!filter || !chart || !propertyAgePriceFigures || !Object.keys(propertyAgePriceFigures).length) {
+                if (panel) {
+                    panel.style.display = "none";
+                }
+                return;
+            }
+
+            const options = Object.keys(propertyAgePriceFigures);
+            filter.innerHTML = options.map((option) => (
+                `<option value="${option}">${option}</option>`
+            )).join("");
+            filter.value = options.includes("All") ? "All" : options[0];
+
+            function render() {
+                const figure = propertyAgePriceFigures[filter.value];
+                if (figure && figure.data && figure.layout) {
+                    try {
+                        Plotly.react("propertyAgePriceChart", figure.data, figure.layout, chartConfig);
+                    } catch (error) {
+                        chart.style.display = "none";
+                        return;
+                    }
+                    chart.style.display = "block";
+                } else {
+                    chart.style.display = "none";
+                }
+            }
+
+            filter.addEventListener("change", render);
+            render();
+        }
+
+        function setupBhkPriceChart() {
+            const chart = document.getElementById("bhkPriceChart");
+            const modeSelect = document.getElementById("bhkPriceMetricMode");
+
+            if (!chart || !modeSelect) {
+                return;
+            }
+
+            function render() {
+                const metric = modeSelect.value;
+                const figure = bhkPriceFigure && bhkPriceFigure[metric] ? bhkPriceFigure[metric] : null;
+
+                if (figure && figure.data && figure.layout) {
+                    try {
+                        Plotly.react("bhkPriceChart", figure.data, figure.layout, chartConfig);
+                        chart.style.display = "block";
+                    } catch (error) {
+                        chart.style.display = "none";
+                    }
+                } else {
+                    chart.style.display = "none";
+                }
+            }
+
+            modeSelect.addEventListener("change", render);
+            render();
+        }
+
+        function escapeHtml(value) {
+            return String(value || "").replace(/[&<>"']/g, (char) => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                "\"": "&quot;",
+                "'": "&#39;",
+            }[char]));
+        }
+
+        async function setupBhkDistributionChart() {
+            const chart = document.getElementById("bhkDistributionChart");
+            const filter = document.getElementById("bhkLocalityFilter");
+            const wrapper = document.querySelector(".bhk-pie-wrapper");
+
+            if (!chart || !filter || !wrapper) {
+                return;
+            }
+
+            let localities = ["All"];
+            try {
+                const localitiesResponse = await fetch("/data/localities");
+                if (localitiesResponse.ok) {
+                    const payload = await localitiesResponse.json();
+                    if (Array.isArray(payload.localities) && payload.localities.length) {
+                        localities = ["All", ...payload.localities];
+                    }
+                }
+            } catch (error) {
+                console.warn("Could not load locality list:", error);
+            }
+
+            filter.innerHTML = localities.map((locality) => (
+                `<option value="${escapeHtml(locality)}">${escapeHtml(locality)}</option>`
+            )).join("");
+            filter.value = "All";
+
+            async function render() {
+                const locality = filter.value || "All";
+                try {
+                    const response = await fetch(`/figures/bhk-distribution?locality=${encodeURIComponent(locality)}`);
+                    if (!response.ok) throw new Error("Failed to load BHK distribution figure");
+                    const figure = await response.json();
+                    if (figure && figure.data && figure.layout) {
+                        Plotly.react("bhkDistributionChart", figure.data, figure.layout, chartConfig);
+                        chart.style.display = "block";
+                    } else {
+                        chart.style.display = "none";
+                    }
+                } catch (error) {
+                    console.warn("BHK distribution chart error:", error);
+                    chart.style.display = "none";
+                }
+            }
+
+            filter.addEventListener("change", render);
+            await render();
+        }
+
+        function renderSampleListingComparison() {
+            const section = document.getElementById("valuationSection");
+            const body = document.getElementById("sampleListingComparison");
+
+            if (!marketPricingSamples || !marketPricingSamples.length) {
+                section.style.display = "none";
+                return;
+            }
+
+            body.innerHTML = marketPricingSamples.map((sample) => `
+                <div class="sample-listing-row">
+                    <div class="sample-listing-main">${escapeHtml(sample.headline)}</div>
+                    <div class="sample-listing-price">
+                        <span>Listed ${escapeHtml(sample.listed)} · Predicted ${escapeHtml(sample.predicted)}</span>
+                        <span class="valuation-badge ${escapeHtml(sample.status)}">${escapeHtml(sample.badge)}</span>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        if (!mapFigure || !mapFigure.data || !mapFigure.layout) {
+            showMessage(isError ? message : "No analytics data available.");
+        } else if (typeof Plotly === "undefined") {
+            showMessage("Plotly could not be loaded. Check your internet connection and refresh.");
+        } else {
+            Plotly.newPlot("map", mapFigure.data, mapFigure.layout, mapConfig);
+
+            if (expensiveAreasFigure && expensiveAreasFigure.data && expensiveAreasFigure.layout) {
+                Plotly.newPlot(
+                    "expensiveAreasChart",
+                    expensiveAreasFigure.data,
+                    expensiveAreasFigure.layout,
+                    chartConfig
+                );
+            } else {
+                document.getElementById("expensiveAreasChart").style.display = "none";
+            }
+
+            if (affordableAreasFigure && affordableAreasFigure.data && affordableAreasFigure.layout) {
+                Plotly.newPlot(
+                    "affordableAreasChart",
+                    affordableAreasFigure.data,
+                    affordableAreasFigure.layout,
+                    chartConfig
+                );
+            } else {
+                document.getElementById("affordableAreasChart").style.display = "none";
+            }
+
+            if (localityMarketShareFigure && localityMarketShareFigure.data && localityMarketShareFigure.layout) {
+                Plotly.newPlot(
+                    "localityMarketShareChart",
+                    localityMarketShareFigure.data,
+                    localityMarketShareFigure.layout,
+                    chartConfig
+                );
+            } else {
+                document.getElementById("localityMarketShareChart").style.display = "none";
+            }
+
+            function renderMarketSegmentChart() {
+                const selectedBhk = document.getElementById("segmentBhkFilter").value;
+                const figure = marketSegmentFigures ? marketSegmentFigures[selectedBhk] : null;
+                if (figure && figure.data && figure.layout) {
+                    Plotly.react("marketSegmentChart", figure.data, figure.layout, chartConfig);
+                } else {
+                    document.getElementById("marketSegmentChart").style.display = "none";
+                }
+            }
+
+            if (marketSegmentFigures) {
+                document.getElementById("segmentBhkFilter").addEventListener("change", () => {
+                    renderMarketSegmentChart();
+                    renderMarketSegmentSummary();
+                });
+                renderMarketSegmentChart();
+                renderMarketSegmentSummary();
+            } else {
+                document.getElementById("marketSegmentChart").style.display = "none";
+                document.getElementById("marketSegmentSummary").style.display = "none";
+            }
+
+            setupComparison();
+
+            async function loadPriceAreaFromAPI() {
+                try {
+                    const res = await fetch('/figures/price-area');
+                    if (!res.ok) throw new Error('Failed to load price-area figure');
+                    const fig = await res.json();
+                    Plotly.react('areaPriceScatterChart', fig.data, fig.layout, chartConfig);
+                    return true;
+                } catch (e) {
+                    console.warn(e);
+                    return false;
+                }
+            }
+
+            // Try to use server-rendered figure if available, otherwise fetch from API
+            (async function initPriceAreaChart() {
+                let ok = false;
+                if (typeof areaPriceScatterFigure !== 'undefined' && areaPriceScatterFigure && areaPriceScatterFigure.data && areaPriceScatterFigure.layout) {
+                    try {
+                        Plotly.newPlot('areaPriceScatterChart', areaPriceScatterFigure.data, areaPriceScatterFigure.layout, chartConfig);
+                        ok = true;
+                    } catch (e) {
+                        ok = false;
+                    }
+                }
+                if (!ok) {
+                    const loaded = await loadPriceAreaFromAPI();
+                    if (!loaded) {
+                        document.querySelector('.scatter-panel').style.display = 'none';
+                    }
+                }
+            })();
+
+            if (marketPricingFigure && marketPricingFigure.data && marketPricingFigure.layout) {
+                Plotly.newPlot(
+                    "marketPricingChart",
+                    marketPricingFigure.data,
+                    marketPricingFigure.layout,
+                    chartConfig
+                );
+                renderSampleListingComparison();
+            } else {
+                document.getElementById("valuationSection").style.display = "none";
+            }
+
+            setupPropertyAgeChart();
+            setupBhkPriceChart();
+            setupBhkDistributionChart();
+            setupMetricMode();
+            renderAmenities();
+            renderNearbyWordCloud();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation | Estatify</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --ink: #111827;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --paper: #ffffff;
+            --soft: #f8fafc;
+            --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: var(--ink);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 18% 30%, rgba(17, 24, 39, 0.12), transparent 34%),
+                radial-gradient(circle at 82% 22%, rgba(15, 23, 42, 0.1), transparent 32%),
+                radial-gradient(circle at 50% 84%, rgba(75, 85, 99, 0.08), transparent 32%),
+                #ffffff;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 18px;
+            z-index: 9;
+            background: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            pointer-events: none;
+        }
+
+        .page {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 34px 32px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            margin-top: 18px;
+            padding: 20px 28px;
+            border: 1px solid rgba(229, 231, 235, 0.95);
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 18px 60px rgba(15, 23, 42, 0.09);
+            backdrop-filter: blur(18px);
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--ink);
+            font-size: 1.9rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #385267;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 14px;
+            transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--ink);
+            background: #f3f4f6;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+        }
+
+        .finder-shell {
+            margin-top: 28px;
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+            overflow: hidden;
+            animation: riseIn 0.45s ease both;
+        }
+
+        .controls-area {
+            padding: 24px;
+        }
+
+        .control-card,
+        .chart-card,
+        .advanced-filters,
+        .property-card,
+        .detail-panel {
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(14px);
+        }
+
+        .control-card {
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+
+        .center-control {
+            max-width: 520px;
+            margin: 0 auto 18px;
+            text-align: center;
+        }
+
+        label,
+        .control-label {
+            display: block;
+            margin-bottom: 9px;
+            color: #274258;
+            font-size: 0.9rem;
+            font-weight: 850;
+        }
+
+        select,
+        input[type="number"] {
+            width: 100%;
+            min-height: 44px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #ffffff;
+            color: var(--ink);
+            font: inherit;
+            font-weight: 700;
+            padding: 10px 12px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        select:focus,
+        input[type="number"]:focus {
+            border-color: #111827;
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.1);
+        }
+
+        .range-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            align-items: end;
+        }
+
+        .range-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .range-label span {
+            color: #111827;
+            font-size: 0.88rem;
+            font-weight: 900;
+        }
+
+        .chart-card {
+            padding: 18px;
+            margin: 18px 0;
+        }
+
+        .chart-title {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .chart-title strong {
+            color: #0f172a;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+
+        .chart-title span {
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 0.84rem;
+            font-weight: 800;
+            padding: 6px 10px;
+        }
+
+        #areaValue {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+            color: #047857;
+        }
+
+        .histogram {
+            display: grid;
+            grid-template-columns: repeat(24, minmax(0, 1fr));
+            align-items: end;
+            gap: 4px;
+            height: 210px;
+            padding: 12px 6px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .histogram-slider {
+            position: relative;
+            padding-bottom: 36px;
+        }
+
+        .histogram-slider .histogram {
+            pointer-events: none;
+        }
+
+        .price-range-fill,
+        .area-range-fill {
+            position: absolute;
+            left: var(--range-left, 0%);
+            right: var(--range-right, 0%);
+            bottom: 19px;
+            height: 8px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #2563eb, #06b6d4, #7c3aed);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .area-range-fill {
+            background: linear-gradient(90deg, #059669, #22c55e, #84cc16);
+        }
+
+        .histogram-range {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 44px;
+            margin: 0;
+            background: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .histogram-range::-webkit-slider-runnable-track {
+            height: 8px;
+            border-radius: 999px;
+            background: #e5e7eb;
+        }
+
+        .histogram-range::-moz-range-track {
+            height: 8px;
+            border-radius: 999px;
+            background: #e5e7eb;
+        }
+
+        .histogram-range::-webkit-slider-thumb {
+            width: 22px;
+            height: 22px;
+            margin-top: -7px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            background: #2563eb;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.26);
+            cursor: grab;
+            appearance: none;
+            -webkit-appearance: none;
+            pointer-events: auto;
+        }
+
+        .histogram-range::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            background: #2563eb;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.26);
+            cursor: grab;
+            pointer-events: auto;
+        }
+
+        .histogram-range.area-range::-webkit-slider-thumb {
+            background: #059669;
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.26);
+        }
+
+        .histogram-range.area-range::-moz-range-thumb {
+            background: #059669;
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.26);
+        }
+
+        .bar {
+            min-height: 5px;
+            border-radius: 4px 4px 0 0;
+            background: linear-gradient(180deg, #2563eb, #93c5fd);
+            opacity: 0.5;
+            transition: height 0.35s ease, opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .bar.area {
+            background: linear-gradient(180deg, #059669, #bbf7d0);
+        }
+
+        .bar.active {
+            opacity: 0.98;
+        }
+
+        .bar:hover {
+            transform: scaleY(1.04);
+        }
+
+        .inline-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill-option {
+            position: relative;
+        }
+
+        .pill-option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pill-option span {
+            display: inline-flex;
+            min-height: 36px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.86);
+            color: #334155;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 8px 14px;
+            transition: all 0.22s ease;
+        }
+
+        .pill-option input:checked + span {
+            border-color: #0f172a;
+            background: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+        }
+
+        .toggle-wrap {
+            text-align: center;
+            margin: 18px 0;
+        }
+
+        .toggle-btn,
+        .details-btn,
+        .back-btn {
+            border: 0;
+            border-radius: 18px;
+            background: #111827;
+            color: #ffffff;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 850;
+            padding: 11px 22px;
+            text-decoration: none;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+        }
+
+        .toggle-btn:hover,
+        .details-btn:hover,
+        .back-btn:hover {
+            background: #1e293b;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+            transform: translateY(-2px);
+        }
+
+        .details-btn {
+            margin-top: 16px;
+        }
+
+        .advanced-filters {
+            display: none;
+            padding: 18px;
+            margin: 18px 0;
+            animation: riseIn 0.3s ease both;
+        }
+
+        .advanced-filters.open {
+            display: block;
+        }
+
+        .advanced-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .result-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin: 24px 0 16px;
+            flex-wrap: wrap;
+        }
+
+        .result-head h2 {
+            color: #0f172a;
+            font-size: 1.25rem;
+            font-weight: 900;
+        }
+
+        .result-head p {
+            color: #64748b;
+            font-weight: 750;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .property-card {
+            overflow: hidden;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            animation: riseIn 0.35s ease both;
+        }
+
+        .property-card:hover {
+            border-color: rgba(17, 24, 39, 0.18);
+            box-shadow: 0 22px 46px rgba(15, 23, 42, 0.13);
+            transform: translateY(-4px);
+        }
+
+        .property-top {
+            padding: 16px;
+            background: #111827;
+            color: #ffffff;
+        }
+
+        .property-top span {
+            display: inline-flex;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.14);
+            padding: 4px 9px;
+            font-size: 0.76rem;
+            font-weight: 850;
+        }
+
+        .property-top h3 {
+            margin-top: 10px;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .property-body {
+            padding: 16px;
+        }
+
+        .price {
+            color: #111827;
+            font-size: 1.25rem;
+            font-weight: 900;
+        }
+
+        .meta-line {
+            margin-top: 8px;
+            color: #475569;
+            font-weight: 750;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 14px 0;
+        }
+
+        .tag {
+            border-radius: 999px;
+            background: #f3f4f6;
+            color: #111827;
+            font-size: 0.78rem;
+            font-weight: 850;
+            padding: 5px 9px;
+        }
+
+        .empty-state {
+            display: none;
+            border: 1px dashed #94a3b8;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.72);
+            color: #475569;
+            font-weight: 850;
+            padding: 34px;
+            text-align: center;
+        }
+
+        .detail-panel {
+            display: none;
+            padding: 22px;
+            margin-top: 18px;
+            animation: riseIn 0.35s ease both;
+        }
+
+        .detail-panel.open {
+            display: block;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin: 18px 0;
+        }
+
+        .detail-item {
+            border-radius: 8px;
+            background: #f8fafc;
+            padding: 12px;
+        }
+
+        .detail-item span {
+            display: block;
+            color: #64748b;
+            font-size: 0.76rem;
+            font-weight: 850;
+            text-transform: uppercase;
+        }
+
+        .detail-item strong {
+            color: #0f172a;
+            font-weight: 900;
+        }
+
+        .description {
+            color: #475569;
+            font-weight: 650;
+        }
+
+        .similar-table {
+            width: 100%;
+            margin-top: 16px;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .similar-table th,
+        .similar-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        .similar-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .similar-table td {
+            background: #ffffff;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .external-link {
+            color: #111827;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin: 54px 0 38px;
+            padding: 28px;
+            border: 1px solid rgba(217, 226, 236, 0.9);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+            color: var(--muted);
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 1.35fr 0.85fr 1.45fr 1fr;
+            gap: 26px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            color: #07182a;
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+
+        .footer-desc,
+        .footer-tech {
+            margin-top: 10px;
+            color: #475569;
+            font-weight: 650;
+            line-height: 1.7;
+        }
+
+        .footer-title {
+            margin-bottom: 10px;
+            color: #0f172a;
+            font-size: 0.9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .footer-links,
+        .footer-contact {
+            display: grid;
+            gap: 8px;
+        }
+
+        .footer a {
+            color: #385267;
+            font-weight: 800;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: #111827;
+            transform: translateX(3px);
+        }
+
+        .footer-bottom {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #e5e7eb;
+            color: #64748b;
+            font-weight: 750;
+            text-align: center;
+        }
+
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 980px) {
+            .footer-main,
+            .property-grid,
+            .detail-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .page { padding: 0 18px 28px; }
+            .navbar { align-items: flex-start; gap: 22px; }
+            .nav-links { gap: 8px; margin-left: 0; justify-content: flex-start; }
+            .controls-area { padding: 16px; }
+            .footer { padding: 22px; }
+            .footer-main,
+            .range-card,
+            .advanced-grid,
+            .property-grid,
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+            .histogram { grid-template-columns: repeat(16, minmax(0, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <nav class="navbar">
+            <a class="logo" href="/">Estatify</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/prediction">Prediction</a>
+                <a class="active" href="/recommendations">Recommendation</a>
+                <a href="/analytics">Analysis</a>
+                <a href="/insights">Insights</a>
+            </div>
+        </nav>
+
+        <section id="searchPage" class="finder-shell">
+            <div class="controls-area">
+                <div class="center-control control-card">
+                    <label for="location-dropdown">Location required</label>
+                    <select id="location-dropdown"></select>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-title">
+                        <strong>Price Distribution</strong>
+                        <span id="budgetValue">Rs. 0L - Rs. 0L</span>
+                    </div>
+                    <div class="histogram-slider">
+                        <div id="price-histogram" class="histogram"></div>
+                        <div id="priceRangeFill" class="price-range-fill"></div>
+                        <input id="budgetMin" class="histogram-range" type="range" aria-label="Minimum budget">
+                        <input id="budgetMax" class="histogram-range" type="range" aria-label="Maximum budget">
+                    </div>
+                </div>
+
+                <div class="control-card">
+                    <div class="control-label">Bedrooms</div>
+                    <div id="bedroom-checklist" class="inline-options"></div>
+                </div>
+
+                <div class="control-card">
+                    <div class="control-label">Construction Status</div>
+                    <div id="status-radio" class="inline-options"></div>
+                </div>
+
+                <div class="toggle-wrap">
+                    <button id="toggle-advanced" class="toggle-btn" type="button">Show Advanced Filters</button>
+                </div>
+
+                <div id="advanced-filters" class="advanced-filters">
+                    <div class="advanced-grid">
+                        <div class="chart-card full-width">
+                            <div class="chart-title">
+                                <strong>Area Distribution</strong>
+                                <span id="areaValue">0 - 0 sqft</span>
+                            </div>
+                            <div class="histogram-slider">
+                                <div id="area-histogram" class="histogram"></div>
+                                <div id="areaRangeFill" class="area-range-fill"></div>
+                                <input id="areaMin" class="histogram-range area-range" type="range" aria-label="Minimum area">
+                                <input id="areaMax" class="histogram-range area-range" type="range" aria-label="Maximum area">
+                            </div>
+                        </div>
+
+                        <div class="control-card full-width">
+                            <div class="control-label">Area Type</div>
+                            <div id="area-type-radio" class="inline-options"></div>
+                        </div>
+
+                        <div class="control-card">
+                            <div class="control-label">Bathrooms</div>
+                            <div id="bathrooms-checklist" class="inline-options"></div>
+                        </div>
+
+                        <div class="control-card">
+                            <div class="control-label">Balconies</div>
+                            <div id="balconies-checklist" class="inline-options"></div>
+                        </div>
+
+                        <div class="control-card full-width">
+                            <div class="control-label">Property Age</div>
+                            <div id="age-checklist" class="inline-options"></div>
+                        </div>
+
+                        <div class="control-card full-width">
+                            <div class="control-label">Furnishing</div>
+                            <div id="furnishing-radio" class="inline-options"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-head">
+                    <div>
+                        <h2>Recommended Properties</h2>
+                        <p id="resultSummary">Loading property matches...</p>
+                    </div>
+                    <select id="sortFilter" aria-label="Sort properties">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price Low to High</option>
+                        <option value="price-high">Price High to Low</option>
+                        <option value="area-high">Area High to Low</option>
+                    </select>
+                </div>
+
+                <div id="property-cards" class="property-grid"></div>
+                <div id="emptyState" class="empty-state">Please select a location or widen your filters.</div>
+            </div>
+        </section>
+
+        <section id="detailPage" class="detail-panel"></section>
+
+        <footer class="footer">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-brand">Estatify</div>
+                    <p class="footer-desc">AI-powered real estate price prediction and market insights.</p>
+                </div>
+                <div>
+                    <div class="footer-title">Quick Links</div>
+                    <div class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/prediction">Prediction</a>
+                        <a href="/recommendations">Recommendation</a>
+                        <a href="/analytics">Analysis</a>
+                        <a href="/insights">Insights</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Tech Stack</div>
+                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
+                </div>
+                <div>
+                    <div class="footer-title">Connect</div>
+                    <div class="footer-contact">
+                        <a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Estatify &bull; Developed by Megh Patel</div>
+        </footer>
+    </main>
+
+    <script>
+        const GLOBAL_MIN_PRICE = 7;
+        const GLOBAL_MAX_PRICE = 500;
+        const GLOBAL_MIN_AREA = 210;
+        const GLOBAL_MAX_AREA = 9000;
+
+        const state = {
+            properties: [],
+            meta: {},
+            advancedOpen: false,
+        };
+
+        const els = {
+            searchPage: document.getElementById("searchPage"),
+            detailPage: document.getElementById("detailPage"),
+            location: document.getElementById("location-dropdown"),
+            budgetMin: document.getElementById("budgetMin"),
+            budgetMax: document.getElementById("budgetMax"),
+            areaMin: document.getElementById("areaMin"),
+            areaMax: document.getElementById("areaMax"),
+            bedrooms: document.getElementById("bedroom-checklist"),
+            status: document.getElementById("status-radio"),
+            areaType: document.getElementById("area-type-radio"),
+            bathrooms: document.getElementById("bathrooms-checklist"),
+            balconies: document.getElementById("balconies-checklist"),
+            ages: document.getElementById("age-checklist"),
+            furnishing: document.getElementById("furnishing-radio"),
+            advanced: document.getElementById("advanced-filters"),
+            toggle: document.getElementById("toggle-advanced"),
+            priceHistogram: document.getElementById("price-histogram"),
+            priceRangeFill: document.getElementById("priceRangeFill"),
+            areaHistogram: document.getElementById("area-histogram"),
+            areaRangeFill: document.getElementById("areaRangeFill"),
+            budgetValue: document.getElementById("budgetValue"),
+            areaValue: document.getElementById("areaValue"),
+            cards: document.getElementById("property-cards"),
+            empty: document.getElementById("emptyState"),
+            summary: document.getElementById("resultSummary"),
+            sort: document.getElementById("sortFilter"),
+        };
+
+        function escapeHtml(value) {
+            return String(value || "").replace(/[&<>"']/g, (char) => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                "\"": "&quot;",
+                "'": "&#39;",
+            }[char]));
+        }
+
+        function money(value) {
+            return `Rs. ${Number(value || 0).toLocaleString("en-IN", { maximumFractionDigits: 1 })}L`;
+        }
+
+        function number(value) {
+            return Number(value || 0).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+        }
+
+        function locationProperties() {
+            return state.properties.filter((property) => property.locality === els.location.value);
+        }
+
+        function getLocationStats(location) {
+            const locProps = state.properties.filter((property) => property.locality === location);
+            if (!locProps.length) {
+                return {
+                    price_min: GLOBAL_MIN_PRICE,
+                    price_max: GLOBAL_MAX_PRICE,
+                    area_min: GLOBAL_MIN_AREA,
+                    area_max: GLOBAL_MAX_AREA,
+                    bedrooms: [],
+                    statuses: [],
+                    bathrooms: [],
+                    balconies: [],
+                };
+            }
+            return {
+                price_min: Math.floor(Math.min(...locProps.map((item) => item.price_lakhs))),
+                price_max: Math.ceil(Math.max(...locProps.map((item) => item.price_lakhs))),
+                area_min: Math.floor(Math.min(...locProps.map((item) => item.area_sqft))),
+                area_max: Math.ceil(Math.max(...locProps.map((item) => item.area_sqft))),
+                bedrooms: uniqueSorted(locProps.map((item) => item.bedrooms)),
+                statuses: uniqueSorted(locProps.map((item) => item.property_status)),
+                bathrooms: uniqueSorted(locProps.map((item) => item.bathrooms)),
+                balconies: uniqueSorted(locProps.map((item) => item.balconies)),
+            };
+        }
+
+        function uniqueSorted(values) {
+            return [...new Set(values.filter((value) => value !== "" && value !== null && value !== undefined))]
+                .sort((a, b) => String(a).localeCompare(String(b), undefined, { numeric: true }));
+        }
+
+        function renderOptions(container, values, type, name, suffix = "", includeAny = false) {
+            const items = includeAny ? [{ label: "Any", value: "" }] : [];
+            values.forEach((value) => items.push({ label: `${value}${suffix}`, value }));
+            container.innerHTML = items.map((item, index) => `
+                <label class="pill-option">
+                    <input type="${type}" name="${name}" value="${escapeHtml(item.value)}" ${includeAny && index === 0 ? "checked" : ""}>
+                    <span>${escapeHtml(item.label)}</span>
+                </label>
+            `).join("");
+        }
+
+        function checkedValues(container) {
+            return Array.from(container.querySelectorAll("input:checked"))
+                .map((input) => input.value)
+                .filter((value) => value !== "");
+        }
+
+        function selectedRadio(container) {
+            const selected = container.querySelector("input:checked");
+            return selected ? selected.value : "";
+        }
+
+        function setupInitialControls() {
+            els.location.innerHTML = state.meta.locations
+                .map((location) => `<option value="${escapeHtml(location)}">${escapeHtml(location)}</option>`)
+                .join("");
+            els.location.value = state.meta.locations.includes("Gift City")
+                ? "Gift City"
+                : (state.meta.locations[0] || "");
+
+            renderOptions(els.areaType, state.meta.area_type || [], "radio", "areaType", "", true);
+            renderOptions(els.ages, ["New", "1-5 years", "5-10 years", "10-20 years"], "checkbox", "age");
+            renderOptions(els.furnishing, ["Unfurnished", "Semi-furnished", "Furnished"], "radio", "furnishing", "", true);
+            updateFiltersForLocation();
+        }
+
+        function updateFiltersForLocation() {
+            const stats = getLocationStats(els.location.value);
+            [els.budgetMin, els.budgetMax].forEach((input) => {
+                input.min = stats.price_min;
+                input.max = stats.price_max;
+                input.step = 1;
+            });
+            [els.areaMin, els.areaMax].forEach((input) => {
+                input.min = stats.area_min;
+                input.max = stats.area_max;
+                input.step = 1;
+            });
+            els.budgetMin.value = stats.price_min;
+            els.budgetMax.value = stats.price_max;
+            els.areaMin.value = stats.area_min;
+            els.areaMax.value = stats.area_max;
+
+            renderOptions(els.bedrooms, stats.bedrooms, "checkbox", "bedrooms", " BHK");
+            renderOptions(els.status, stats.statuses, "radio", "status");
+            renderOptions(els.bathrooms, stats.bathrooms, "checkbox", "bathrooms");
+            renderOptions(els.balconies, stats.balconies, "checkbox", "balconies");
+            bindDynamicInputs();
+            renderSearch();
+        }
+
+        function syncRangeSlider(minInput, maxInput, fillElement, fallbackMin, fallbackMax) {
+            const min = Number(minInput.min || fallbackMin);
+            const max = Number(maxInput.max || fallbackMax);
+            let selectedMin = Number(minInput.value || min);
+            let selectedMax = Number(maxInput.value || max);
+
+            if (selectedMin > selectedMax) {
+                [selectedMin, selectedMax] = [selectedMax, selectedMin];
+                minInput.value = selectedMin;
+                maxInput.value = selectedMax;
+            }
+
+            const span = Math.max(1, max - min);
+            const left = ((selectedMin - min) / span) * 100;
+            const right = 100 - (((selectedMax - min) / span) * 100);
+            fillElement.style.setProperty("--range-left", `${Math.max(0, Math.min(left, 100))}%`);
+            fillElement.style.setProperty("--range-right", `${Math.max(0, Math.min(right, 100))}%`);
+        }
+
+        function getFilters() {
+            let priceMin = Number(els.budgetMin.value || GLOBAL_MIN_PRICE);
+            let priceMax = Number(els.budgetMax.value || GLOBAL_MAX_PRICE);
+            if (priceMin > priceMax) {
+                [priceMin, priceMax] = [priceMax, priceMin];
+                els.budgetMin.value = priceMin;
+                els.budgetMax.value = priceMax;
+            }
+            let areaMin = Number(els.areaMin.value || GLOBAL_MIN_AREA);
+            let areaMax = Number(els.areaMax.value || GLOBAL_MAX_AREA);
+            if (areaMin > areaMax) {
+                [areaMin, areaMax] = [areaMax, areaMin];
+                els.areaMin.value = areaMin;
+                els.areaMax.value = areaMax;
+            }
+
+            return {
+                location: els.location.value,
+                priceMin,
+                priceMax,
+                areaMin,
+                areaMax,
+                bedrooms: checkedValues(els.bedrooms).map(Number),
+                status: selectedRadio(els.status),
+                areaType: selectedRadio(els.areaType),
+                bathrooms: checkedValues(els.bathrooms).map(Number),
+                balconies: checkedValues(els.balconies).map(Number),
+                ages: checkedValues(els.ages),
+                furnishing: selectedRadio(els.furnishing),
+            };
+        }
+
+        function filterProperties() {
+            const f = getFilters();
+            let filtered = state.properties.filter((item) => {
+                if (!f.location || item.locality !== f.location) return false;
+                if (item.price_lakhs < f.priceMin || item.price_lakhs > f.priceMax) return false;
+                if (item.area_sqft < f.areaMin || item.area_sqft > f.areaMax) return false;
+                if (f.bedrooms.length && !f.bedrooms.includes(item.bedrooms)) return false;
+                if (f.status && item.property_status !== f.status) return false;
+                if (f.areaType && item.area_type !== f.areaType) return false;
+                if (f.bathrooms.length && !f.bathrooms.includes(item.bathrooms)) return false;
+                if (f.balconies.length && !f.balconies.includes(item.balconies)) return false;
+                if (f.ages.length && !(f.ages.includes(item.property_age) || item.property_age === "Unknown")) return false;
+                if (f.furnishing && item.furnishing_status.toLowerCase() !== f.furnishing.toLowerCase()) return false;
+                return true;
+            });
+
+            if (els.sort.value === "price-low") {
+                filtered = filtered.sort((a, b) => a.price_lakhs - b.price_lakhs);
+            } else if (els.sort.value === "price-high") {
+                filtered = filtered.sort((a, b) => b.price_lakhs - a.price_lakhs);
+            } else if (els.sort.value === "area-high") {
+                filtered = filtered.sort((a, b) => b.area_sqft - a.area_sqft);
+            }
+            return { filtered, filters: f };
+        }
+
+        function renderHistogram(container, values, min, max, activeMin, activeMax, className) {
+            const bins = window.innerWidth < 720 ? 16 : 24;
+            const width = Math.max(1, (max - min) / bins);
+            const counts = Array.from({ length: bins }, () => 0);
+            values.forEach((value) => {
+                const index = Math.min(bins - 1, Math.max(0, Math.floor((value - min) / width)));
+                counts[index] += 1;
+            });
+            const peak = Math.max(...counts, 1);
+            container.innerHTML = counts.map((count, index) => {
+                const binMin = min + index * width;
+                const binMax = binMin + width;
+                const active = binMax >= activeMin && binMin <= activeMax;
+                const height = Math.max(5, (count / peak) * 185);
+                return `<div class="bar ${className} ${active ? "active" : ""}" style="height:${height}px" title="${count} properties"></div>`;
+            }).join("");
+        }
+
+        function renderCards(items) {
+            if (!items.length) {
+                els.cards.style.display = "none";
+                els.empty.style.display = "block";
+                return;
+            }
+
+            els.cards.style.display = "grid";
+            els.empty.style.display = "none";
+            els.cards.innerHTML = items.slice(0, 30).map((item, index) => `
+                <article class="property-card" style="animation-delay:${Math.min(index * 0.02, 0.34)}s">
+                    <div class="property-top">
+                        <span>${escapeHtml(item.property_status)}</span>
+                        <h3>${escapeHtml(item.locality)} - ${item.bedrooms} BHK</h3>
+                    </div>
+                    <div class="property-body">
+                        <div class="price">${money(item.price_lakhs)}</div>
+                        <div class="meta-line">${number(item.area_sqft)} sqft - ${escapeHtml(item.area_type)}</div>
+                        <div class="meta-line">${item.bathrooms} bath - ${item.balconies} balcony - ${escapeHtml(item.floor_category)}</div>
+                        <button class="details-btn" type="button" data-id="${item.id}">View More Details</button>
+                    </div>
+                </article>
+            `).join("");
+
+            els.cards.querySelectorAll(".details-btn").forEach((button) => {
+                button.addEventListener("click", () => showDetail(Number(button.dataset.id)));
+            });
+        }
+
+        function similarProperties(property) {
+            return state.properties
+                .filter((item) => item.id !== property.id)
+                .map((item) => {
+                    const score =
+                        (item.locality === property.locality ? 0.35 : 0) +
+                        (item.bedrooms === property.bedrooms ? 0.22 : 0) +
+                        (item.property_status === property.property_status ? 0.12 : 0) +
+                        (item.area_type === property.area_type ? 0.1 : 0) +
+                        (item.property_age === property.property_age ? 0.08 : 0) +
+                        (1 - Math.min(Math.abs(item.price_lakhs - property.price_lakhs) / 500, 1)) * 0.08 +
+                        (1 - Math.min(Math.abs(item.area_sqft - property.area_sqft) / 9000, 1)) * 0.05;
+                    return { ...item, similarity: score };
+                })
+                .sort((a, b) => b.similarity - a.similarity)
+                .slice(0, 5);
+        }
+
+        function showDetail(id) {
+            const property = state.properties.find((item) => item.id === id);
+            if (!property) return;
+            const similar = similarProperties(property);
+            els.searchPage.style.display = "none";
+            els.detailPage.classList.add("open");
+            els.detailPage.innerHTML = `
+                <button class="back-btn" type="button" id="backToSearch">Back to Search</button>
+                <h2 style="margin-top:18px;color:#0f172a;">${escapeHtml(property.locality)} - ${property.bedrooms} BHK</h2>
+                <div class="detail-grid">
+                    <div class="detail-item"><span>Price</span><strong>${money(property.price_lakhs)}</strong></div>
+                    <div class="detail-item"><span>Area</span><strong>${number(property.area_sqft)} sqft</strong></div>
+                    <div class="detail-item"><span>Area Type</span><strong>${escapeHtml(property.area_type)}</strong></div>
+                    <div class="detail-item"><span>Bedrooms</span><strong>${property.bedrooms}</strong></div>
+                    <div class="detail-item"><span>Bathrooms</span><strong>${property.bathrooms}</strong></div>
+                    <div class="detail-item"><span>Balconies</span><strong>${property.balconies}</strong></div>
+                    <div class="detail-item"><span>Status</span><strong>${escapeHtml(property.property_status)}</strong></div>
+                    <div class="detail-item"><span>Age</span><strong>${escapeHtml(property.property_age)}</strong></div>
+                    <div class="detail-item"><span>Furnishing</span><strong>${escapeHtml(property.furnishing_status)}</strong></div>
+                    <div class="detail-item"><span>Facing</span><strong>${escapeHtml(property.facing)}</strong></div>
+                    <div class="detail-item"><span>Floor</span><strong>${property.current_floor}/${property.total_floors}</strong></div>
+                    <div class="detail-item"><span>Floor Category</span><strong>${escapeHtml(property.floor_category)}</strong></div>
+                </div>
+                <p class="description">${escapeHtml(property.description)}</p>
+                <p style="margin-top:12px;"><a class="external-link" href="${escapeHtml(property.property_url)}" target="_blank" rel="noopener">Open original listing</a></p>
+                <h3 style="margin-top:24px;color:#0f172a;">Top 5 Similar Properties</h3>
+                <table class="similar-table">
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Price</th>
+                            <th>Sqft</th>
+                            <th>Beds</th>
+                            <th>Status</th>
+                            <th>Listing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${similar.map((item) => `
+                            <tr>
+                                <td>${escapeHtml(item.locality)}</td>
+                                <td>${money(item.price_lakhs)}</td>
+                                <td>${number(item.area_sqft)}</td>
+                                <td>${item.bedrooms}</td>
+                                <td>${escapeHtml(item.property_status)}</td>
+                                <td><a class="external-link" href="${escapeHtml(item.property_url)}" target="_blank" rel="noopener">Open listing</a></td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+            `;
+            document.getElementById("backToSearch").addEventListener("click", () => {
+                els.detailPage.classList.remove("open");
+                els.detailPage.innerHTML = "";
+                els.searchPage.style.display = "block";
+            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function renderSearch() {
+            const { filtered, filters } = filterProperties();
+            const locProps = locationProperties();
+            const prices = locProps.map((item) => item.price_lakhs);
+            const areas = locProps.map((item) => item.area_sqft);
+            const stats = getLocationStats(filters.location);
+            els.budgetValue.textContent = `${money(filters.priceMin)} - ${money(filters.priceMax)}`;
+            els.areaValue.textContent = `${number(filters.areaMin)} - ${number(filters.areaMax)} sqft`;
+            syncRangeSlider(els.budgetMin, els.budgetMax, els.priceRangeFill, GLOBAL_MIN_PRICE, GLOBAL_MAX_PRICE);
+            syncRangeSlider(els.areaMin, els.areaMax, els.areaRangeFill, GLOBAL_MIN_AREA, GLOBAL_MAX_AREA);
+            els.summary.textContent = filters.location
+                ? `Showing ${Math.min(filtered.length, 30)} of ${filtered.length} matches in ${filters.location}`
+                : "Please select a location.";
+            renderHistogram(els.priceHistogram, prices, stats.price_min, stats.price_max, filters.priceMin, filters.priceMax, "");
+            renderHistogram(els.areaHistogram, areas, stats.area_min, stats.area_max, filters.areaMin, filters.areaMax, "area");
+            renderCards(filtered);
+        }
+
+        function bindDynamicInputs() {
+            document.querySelectorAll("#bedroom-checklist input, #status-radio input, #bathrooms-checklist input, #balconies-checklist input").forEach((input) => {
+                input.addEventListener("change", renderSearch);
+            });
+        }
+
+        function bindStaticInputs() {
+            [els.budgetMin, els.budgetMax, els.areaMin, els.areaMax].forEach((input) => {
+                input.addEventListener("input", renderSearch);
+                input.addEventListener("change", renderSearch);
+            });
+            [
+                els.sort,
+            ].forEach((input) => {
+                input.addEventListener("input", renderSearch);
+                input.addEventListener("change", renderSearch);
+            });
+            [els.areaType, els.ages, els.furnishing].forEach((container) => {
+                container.addEventListener("change", renderSearch);
+            });
+            els.location.addEventListener("change", updateFiltersForLocation);
+            els.toggle.addEventListener("click", () => {
+                state.advancedOpen = !state.advancedOpen;
+                els.advanced.classList.toggle("open", state.advancedOpen);
+                els.toggle.textContent = state.advancedOpen ? "Hide Advanced Filters" : "Show Advanced Filters";
+            });
+        }
+
+        async function init() {
+            try {
+                const response = await fetch("/recommendations/data");
+                const data = await response.json();
+                if (!response.ok || data.error) throw new Error(data.error || "Unable to load recommendations.");
+                state.properties = data.properties || [];
+                state.meta = data.meta || {};
+                setupInitialControls();
+                bindStaticInputs();
+                renderSearch();
+            } catch (error) {
+                els.summary.textContent = error.message;
+                els.empty.textContent = "Recommendation data could not be loaded. Start the backend service and refresh.";
+                els.empty.style.display = "block";
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
