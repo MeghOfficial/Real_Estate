@@ -139,15 +139,12 @@
             font-weight: 750;
             flex-wrap: wrap;
         }
-
         .footer p { margin: 0; }
-
         .footer-social {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         .footer-social a {
             display: inline-flex;
             width: 38px;
@@ -160,13 +157,18 @@
             text-decoration: none;
             transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
-
         .footer-social a:hover {
             background: #111827;
             color: #ffffff;
             transform: translateY(-2px);
         }
-
+        @media (max-width: 640px) {
+            .footer {
+                justify-content: center;
+                padding: 20px;
+                text-align: center;
+            }
+        }
         #map {
             width: 100%;
             height: calc(100vh - 224px);
@@ -1237,35 +1239,21 @@
         </section>
 
         <footer class="footer">
-            <div class="footer-main">
-                <div>
-                    <div class="footer-brand">Estatify</div>
-                    <p class="footer-desc">AI-powered real estate price prediction and market insights.</p>
-                </div>
-                <div>
-                    <div class="footer-title">Quick Links</div>
-                    <div class="footer-links">
-                        <a href="/">Home</a>
-                        <a href="/prediction">Prediction</a>
-                        <a href="/recommendations">Recommendation</a>
-                        <a href="/analytics">Analysis</a>
-                        <a href="/insights">Insights</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="footer-title">Tech Stack</div>
-                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
-                </div>
-                <div>
-                    <div class="footer-title">Connect</div>
-                    <div class="footer-contact">
-                        <a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a>
-                    </div>
-                </div>
+            <p>&copy; 2026 Estatify &bull; Developed by Megh Patel</p>
+
+            <div class="footer-social">
+                <a href="https://github.com/MeghOfficial" target="_blank" aria-label="GitHub" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" aria-label="LinkedIn" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:bavarvamegh3139@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <div class="footer-bottom">&copy; 2026 Estatify &bull; Developed by Megh Patel</div>
         </footer>
     </main>
 

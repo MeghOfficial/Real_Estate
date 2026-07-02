@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights | Estatify</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/insights.css') }}">
 </head>
 <body>
@@ -38,36 +40,22 @@
             <section id="insightCard" class="insight-card" aria-live="polite"></section>
         </section>
 
-        <footer class="footer">
-            <div class="footer-main">
-                <div>
-                    <div class="footer-brand">Estatify</div>
-                    <p class="footer-desc">AI-powered real estate price prediction and market insights.</p>
-                </div>
-                <div>
-                    <div class="footer-title">Quick Links</div>
-                    <div class="footer-links">
-                        <a href="/">Home</a>
-                        <a href="/prediction">Prediction</a>
-                        <a href="/recommendations">Recommendation</a>
-                        <a href="/analytics">Analysis</a>
-                        <a href="/insights">Insights</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="footer-title">Tech Stack</div>
-                    <p class="footer-tech">Python &bull; FastAPI &bull; Flask &bull; HTML &bull; CSS &bull; JavaScript &bull; Plotly &bull; Scikit-learn &bull; pandas &bull; NumPy</p>
-                </div>
-                <div>
-                    <div class="footer-title">Connect</div>
-                    <div class="footer-contact">
-                        <a href="https://github.com/MeghOfficial" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="mailto:bavarvamegh3139@gmail.com">bavarvamegh3139@gmail.com</a>
-                    </div>
-                </div>
+       <footer class="footer">
+            <p>&copy; 2026 Estatify &bull; Developed by Megh Patel</p>
+
+            <div class="footer-social">
+                <a href="https://github.com/MeghOfficial" target="_blank" aria-label="GitHub" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/megh-bavarva-588b78284/" target="_blank" aria-label="LinkedIn" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:bavarvamegh3139@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <div class="footer-bottom">&copy; 2026 Estatify &bull; Developed by Megh Patel</div>
         </footer>
     </main>
 

@@ -9,7 +9,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 # Your FastAPI backend URL
-API_BASE = "https://real-estate-1-l00c.onrender.com/"
+API_BASE = "https://real-estate-1-l00c.onrender.com"
 
 GENERAL_ERROR_MSG = "Something went wrong. Please try again later."
 BASE_DIR = Path(__file__).resolve().parent.parent
