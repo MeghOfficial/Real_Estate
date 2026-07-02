@@ -16,12 +16,11 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, HTMLResponse
 from pydantic import BaseModel, Field, model_validator
+from pathlib import Path
 
-MODEL_PATH = Path(
-    "C://Users//MEGH BAVARVA//Desktop//Data Scientist//Project//Real_Estate//Code//backend//models//model_full_data.pkl"
-)
+BASE_DIR = Path(__file__).resolve().parent
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "models" / "model_full_data.pkl"
 
 app = FastAPI(title="Real Estate Price Predictor API")
 
@@ -194,7 +193,8 @@ MARKET_SEGMENT_RULES = {
 
 
 def _analytics_group_df() -> pd.DataFrame:
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
 
     df_coords = pd.DataFrame(AREA_COORDS)
@@ -214,7 +214,8 @@ def _analytics_group_df() -> pd.DataFrame:
 
 
 def _analytics_metrics() -> dict:
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     price_per_sqft = df["Price"] * 100000 / df["Area"]
 
@@ -230,7 +231,8 @@ def _analytics_metrics() -> dict:
 
 
 def _area_comparison_summary() -> list[dict]:
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df["price_inr"] = df["Price"] * 100000
     df["price_per_sqft"] = df["price_inr"] / df["Area"]
@@ -257,7 +259,8 @@ def _area_comparison_summary() -> list[dict]:
 
 
 def _recommendation_data() -> dict:
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_recommender_ready.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_recommender_ready.csv"
     df = pd.read_csv(data_path).reset_index(names="id")
 
     numeric_columns = [
@@ -505,7 +508,8 @@ def _analytics_map_figure(group_df: pd.DataFrame):
 
 
 def _expensive_areas_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df["price_inr"] = df["Price"] * 100000
     df["price_per_sqft"] = df["price_inr"] / df["Area"]
@@ -551,7 +555,8 @@ def _expensive_areas_figure():
 
 
 def _affordable_areas_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df["price_inr"] = df["Price"] * 100000
     df["price_per_sqft"] = df["price_inr"] / df["Area"]
@@ -596,7 +601,8 @@ def _affordable_areas_figure():
 
 
 def _locality_market_share_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
 
     locality_counts = df["Mapped_Area"].value_counts().reset_index()
@@ -644,7 +650,8 @@ def _locality_market_share_figure():
 
 
 def _property_status_distribution_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
 
     status_counts = df["Property_Status"].value_counts().reset_index()
@@ -695,7 +702,8 @@ def _property_status_distribution_figure():
 
 
 def _market_segment_figures():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df["Bedrooms"] = df["Bedrooms"].astype(int)
     df["Price_inr"] = df["Price"] * 100000
@@ -807,7 +815,8 @@ def _market_segment_figures():
 
 
 def _market_segment_summary() -> list[dict]:
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df["Bedrooms"] = df["Bedrooms"].astype(int)
     df["Price_inr"] = df["Price"] * 100000
@@ -839,7 +848,8 @@ def _market_segment_summary() -> list[dict]:
 
 
 def _bhk_price_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     # Prepare BHK categories and convert price to Crore for nicer labels
     df = df.dropna(subset=["Bedrooms", "Price"]).copy()
@@ -940,7 +950,8 @@ def _bhk_price_figure():
 
 
 def _property_age_price_figures():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     age_order = ["New", "1-5 years", "5-10 years", "10-20 years"]
     df_age = df[df["Property_Age"].isin(age_order)].copy()
@@ -1016,7 +1027,8 @@ def _property_age_price_figures():
 
 
 def _area_price_scatter_figure():
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df = df.dropna(
         subset=[
@@ -1093,7 +1105,8 @@ def _area_price_scatter_figure():
 
 
 def _bhk_distribution_figure(locality: str = "All"):
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     df = df.dropna(subset=["Bedrooms"]).copy()
     df["Bedrooms"] = df["Bedrooms"].astype(int)
@@ -1149,7 +1162,8 @@ def get_bhk_price_figure():
 @app.get("/data/localities", response_class=JSONResponse)
 def get_localities():
     try:
-        data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
+        PROJECT_ROOT = BASE_DIR.parent
+        data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv" 
         df = pd.read_csv(data_path)
         localities = sorted(df["Mapped_Area"].dropna().unique().tolist())
         return JSONResponse(content={"localities": localities})
@@ -1166,8 +1180,10 @@ def _format_price_lakh(value: float) -> str:
 def _market_pricing_analysis():
     if model is None:
         return None, []
+    
+    PROJECT_ROOT = BASE_DIR.parent
+    data_path = PROJECT_ROOT / "data" / "gandhinagar_property_apartments_final.csv"
 
-    data_path = BASE_DIR / "data" / "gandhinagar_property_apartments_final.csv"
     df = pd.read_csv(data_path)
     feature_columns = [
         "Area",
@@ -1387,7 +1403,7 @@ def recommendations_data():
 @app.get("/insights/data")
 def insights_data():
     try:
-        data_path = BASE_DIR / "backend" / "insights_data.json"
+        data_path = BASE_DIR / "insights_data.json"
         with data_path.open("r", encoding="utf-8") as file:
             insights_payload = json.load(file)
         return JSONResponse(content=insights_payload)
