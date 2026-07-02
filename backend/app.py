@@ -92,8 +92,10 @@ def _load_model():
 
 try:
     model = _load_model()
-except Exception:
-    model = None
+    print("Model loaded successfully")
+except Exception as e:
+    print(f" {e}")
+    raise
 
 
 AREA_COORDS = {
