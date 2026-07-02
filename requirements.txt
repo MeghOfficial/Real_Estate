@@ -10,7 +10,4 @@ joblib
 pydantic
 python-dotenv
 requests
-Flask
-gunicorn
-requests
-python-dotenv
+category_encoders==2.9.0
